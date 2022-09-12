@@ -1,13 +1,14 @@
-<a href="https://www.amazon.com/"
+<a class="back-a"
+href="https://www.amazon.com/"
 target="_blank">
     Back to amazon
 </a>
 
-<p> 
+<p class="nice-p">
     Nike Bllack Runnning Shose
 </p>
 
-<p>
+<p class="stok-p">
     $39 - in stoke.
 </p>
 
@@ -15,10 +16,75 @@ target="_blank">
     Free delivery tommorow.
 </p>
 
-<button>
+<button class="add-btn">
     Add to Card
 </button>
 
-<button>
-    Buy now!
+<button class="buy-btn">
+    Buy now
 </button>
+
+<style>
+
+    .back-a{
+    color: rgb(0, 113,133);
+    cursor: pointer;
+    }
+
+    .back-a:hover{
+        color: red;
+    }
+
+   .nice-p{
+    font-weight: bolder;
+    font-size: 25px;
+    color: black;
+   } 
+
+   .stok-p{
+    color: rgb(0,118,0);
+    font-weight: bolder;
+   }
+
+   .add-btn{
+    background-color: rgb(255, 216, 20);
+    border: none;
+    height: 36px;
+    width: 115px;
+    border-radius: 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+   }
+
+   .add-btn:hover{
+    background-color: rgb(240, 203, 17);
+   }
+
+   .add-btn:active{
+    opacity: 0.5;
+   }
+
+   .buy-btn{
+    background-color: rgb(255, 164, 28);
+    border: none;
+    height: 36px;
+    width: 115px;
+    border-radius: 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+   }
+
+   .buy-btn:hover{
+    background-color: rgb(238, 153, 26);
+   }
+
+   .buy-btn:active{
+    opacity: 0.5;
+   }
+</style>
+
