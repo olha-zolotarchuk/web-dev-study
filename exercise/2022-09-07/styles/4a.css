@@ -1,0 +1,128 @@
+.uber-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    transition: opacity 0.15s;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.uber-btn:hover {
+    opacity: 0.7;
+}
+
+.amazon-btn {
+    background-color: rgb(255, 216, 20);
+    border: none;
+    border-radius: 30px;
+    transition: backround-color 0.15s;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.amazon-btn:hover {
+    background-color: rgb(245, 205, 4);
+}
+
+.githab-btn {
+    background-color: rgb(46, 164, 79);
+    border: none;
+    border-radius: 78px;
+    color: white;
+    font-weight: bold;
+    transition: box-shadow 0.15s;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.githab-btn:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.bootstrap-btn {
+    background-color: rgb(121, 82, 179);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.15s;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+.bootstrap-btn:hover {
+    background-color: rgb(107, 64, 172);
+}
+
+.downloand-btn {
+    background-color: white;
+    border-radius: 5px;
+    color: rgb(108, 117, 125);
+    font-weight: bold;
+    border-color: rgb(108, 117, 125);
+    border-width: 1px;
+    border-style: solid;
+    transition: background-color 0.3s,
+        color 0.3s;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.downloand-btn:hover {
+    background-color: rgb(108, 117, 125);
+    color: white;
+}
+
+.linkedln-btn {
+    background-color: rgb(10, 102, 194);
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    margin-left: 8px;
+    border: none;
+    transition: bacround-color 0.2s;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.linkedln-btn:hover {
+    background-color: rgb(4, 73, 143);
+}
+
+.save-btn {
+    background-color: white;
+    border-radius: 20px;
+    color: rgb(10, 102, 194);
+    font-weight: bold;
+    margin-left: 8px;
+    border-color: rgb(10, 102, 194);
+    border-style: solid;
+    transition: border-width 0.2s,
+        background-color 0.2s;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.save-btn:hover {
+    border-width: 4px;
+    background-color: rgb(228, 228, 238);
+}
+
+a {
+    text-decoration: none;
+}

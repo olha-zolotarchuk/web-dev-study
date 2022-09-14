@@ -1,0 +1,16 @@
+.model {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 550;
+    margin-bottom: 0;
+}
+
+.order {
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.touchless-span {
+    text-decoration: underline;
+}
