@@ -19,34 +19,90 @@
         }
 
         .c {
-            border: 10px;
-            width: 200px;
-            height: 200px;
-        
+            width: 310px;
+            height: 100px;
+            display: inline-block;
+            border: 1px solid gray;
+            font-family: Arial, Helvetica, sans-serif;
 
 
         }
 
+        .c-text {
+            margin-left: 15px;
+        }
 
+        .c-btn {
+            margin-left: 15px;
+            cursor: pointer;
+        }
 
+        .c-btn:hover {
+            transform: scale(1.1, 1.1);
+        }
 
+        .c-btnn {
+            cursor: pointer;
+        }
+
+        .c-btn:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .e {
+            background-color: rgb(37, 37, 37);
+            width: 370px;
+            height: 100px;
+            color: white;
+        }
+
+        .ee {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 19px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 16px;
+            margin-bottom: 10px;
+
+        }
+
+        .eee {
+            font-size: 15px;
+            margin-left: 19px;
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 0;
+            margin-top: 0;
+
+        }
+
+        .f {
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            width: 480px;
+            height: 75px;
+            display:flex;
+            align-items:center;
+           
+        
+        }
 
         .jpg {
-            width: 65px;
+            width: 55px;
             border-radius: 80%;
-            height: 65px;
+            height: 55px;
             object-fit: cover;
             vertical-align: middle;
             margin-left: 10px;
+            /* margin-top: 10px; */ 
         }
 
         .what {
             font-size: 19px;
             vertical-align: auto;
             border: none;
-            margin-left: 4px;
-            padding: 7px;
-            vertical-align: middle;
+            /* vertical-align: middle; */
+            margin-left: 10px;
 
         }
 
@@ -64,7 +120,7 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 15px;
-            vertical-align: middle;
+            /* vertical-align: middle; */
         }
 
         .tweet:active {
@@ -75,7 +131,108 @@
             opacity: 80%;
             transform: scale(1.1, 1.1);
         }
+
+        .cat {
+            width: 175px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            margin-right: 10px;
+
+        }
+
+        .cat-im {
+            width: 175px;
+            height: 190px;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        .cat-p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin: 0;
+            margin-left: 7px;
+            margin-top: 6px;
+        }
+
+        .cat-pp {
+            font-family: Arial, Helvetica, sans-serif;
+            color: gray;
+            margin: 0;
+            margin-left: 7px;
+            margin-top: 3px;
+            font-size: 15px;
+        }
+
+        .cat-btn {
+            background-color: rgba(23, 91, 240, 0.747);
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            height: 34px;
+            width: 105px;
+            margin-left: 7px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .cat-btn:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+
+        .google-copi {
+            text-align: center;
+            width: 700px;
+            margin-top: 35px;
+
+
+        }
+
+
+        .search-google {
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+            padding-left: 10px;
+            padding: 6px;
+            margin-top: 20px;
+
+        }
+
+        .search-google:focus {
+            outline: none;
+        }
+
+        .google-inp {
+            background-color: rgb(247, 245, 245);
+            border: none;
+            font-size: large;
+            width: 160px;
+            height: 50px;
+            text-align: center;
+            margin-left: 9px;
+
+
+        }
+
+        .google-inp::placeholder {
+            color:black;
+            opacity: 1; 
+        }
+
+
+
+
+        body {
+            padding-left: 32px;
+            padding-bottom: 800px;
+        }
     </style>
+
 </head>
 
 <body>
@@ -84,48 +241,53 @@
 
     </div>
 
-    <p>............................................................................................................................................................................ </p>
+    <p>............................................................................................................................................................................
+    </p>
 
 
     <div class="green">
 
     </div>
 
-    <p>............................................................................................................................................................................ </p>
+    <p>............................................................................................................................................................................
+    </p>
 
 
     <div class="c">
-        <p>
+        <p class="c-text">
             Satisfied whith our service?
         </p>
 
-        <button>
+        <button class="c-btn">
             Yes
         </button>
 
-        <button>
+        <button class="c-btnn">
             No
         </button>
     </div>
 
-    <p>............................................................................................................................................................................. </p>
+    <p>.............................................................................................................................................................................
+    </p>
 
 
     <div class="e">
 
-        <p>
+        <p class="ee">
             Install YouTube Music
         </p>
 
-        <p>
+        <p class="eee">
             Add YouTube Music to your desktop for quick and easy access
         </p>
 
-        <p>............................................................................................................................................................................. </p>
-
     </div>
 
-    <div class="e">
+    <p>.............................................................................................................................................................................
+    </p>
+
+
+    <div class="f">
         <span>
             <img class="jpg" src="thumbnails/test2.jpg">
 
@@ -140,6 +302,101 @@
 
     <p>........................................................................................challenge
         exercises.................................................................................... </p>
+
+    <div class="cat">
+
+        <img class="cat-im" src="thumbnails/test2.jpg">
+
+        <p class="cat-p">
+            Oliver
+        </p>
+
+        <p class="cat-pp">
+            2 mutual friends
+        </p>
+
+        <button class="cat-btn">
+            Add Friend
+        </button>
+
+    </div>
+
+    <p>........................................................................................challenge
+        exercises.................................................................................... </p>
+
+    <div class="cat">
+
+        <img class="cat-im" src="thumbnails/test2.jpg">
+
+        <p class="cat-p">
+            Oliver
+        </p>
+
+        <p class="cat-pp">
+            2 mutual friends
+        </p>
+
+        <button class="cat-btn">
+            Add Friend
+        </button>
+
+    </div>
+
+
+    <div class="cat">
+
+        <img class="cat-im" src="thumbnails/cat.jpg">
+
+        <p class="cat-p">
+            Mimi
+        </p>
+
+        <p class="cat-pp">
+            3 mutual friends
+        </p>
+
+        <button class="cat-btn">
+            Add Friend
+        </button>
+
+    </div>
+
+    <div class="cat">
+
+        <img class="cat-im" src="thumbnails/cat2.jpg">
+
+        <p class="cat-p">
+            Rex
+        </p>
+
+        <p class="cat-pp">
+            4 mutual friends
+        </p>
+
+        <button class="cat-btn">
+            Add Friend
+        </button>
+
+    </div>
+
+    <p>........................................................................................challenge
+        exercises.................................................................................... </p>
+
+    <div class="google-copi">
+
+        <img class="google" src="thumbnails/google_logo.svg">
+
+        <input class="search-google" type="text" size="50" placeholder="Search Google or type a URL">
+
+    </div>
+
+    <div class="google-copi">
+        <input class="google-inp" type="text" placeholder="Google Search">
+
+        <input class="google-inp" type="text" placeholder="I'm Feeling Lucky">
+
+    </div>
+
 
 
 </body>
