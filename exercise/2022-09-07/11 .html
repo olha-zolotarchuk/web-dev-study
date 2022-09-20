@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exercises 11</title>
+    <style>
+        .cat {
+            width: 175px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+            /* display: inline-block; */
+            margin-right: 10px;
+
+        }
+
+        .cat-im {
+            width: 175px;
+            height: 190px;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        .cat-p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin: 0;
+            margin-top: 6px;
+        }
+
+        .cat-pp {
+            font-family: Arial, Helvetica, sans-serif;
+            color: gray;
+            font-size: 15px;
+            display: inline-block;
+        }
+
+        .cat-btn {
+            background-color: rgba(23, 91, 240, 0.747);
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            height: 34px;
+            width: 105px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .desc {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+
+        .cat-btn:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .ver-dog {
+            /* display: inline-block; */
+            padding-top: 5px;
+
+        }
+
+        .dog-img {
+            width: 40px;
+            border-radius: 40px;
+            vertical-align: middle;
+            /* display: inline-block; */
+        }
+
+        body {
+            padding-left: 32px;
+            padding-bottom: 800px;
+        }
+        .cat-colums{
+            display: grid;
+            grid-template-columns: 1fr 175px 175px 175px 1fr ;
+            gap: 10px;
+            /* align-items: center; */ 
+        }
+        @media only screen and (max-width: 600px) {
+            .cat-colums{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="
+    display: grid;
+    grid-template-columns: 200px 75px;
+    
+    ">
+        <div style="background-color: lightblue"> 200px</div>
+        <div style="background-color:lightpink"> 75px</div>
+    </div>
+
+    <p>............................................................................................................................................................................
+    </p>
+
+    <div style="
+    display:grid;
+    grid-template-columns: 50px 1fr 75px;
+    ">
+        <div style="background-color: lightblue"> col1</div>
+        <div style="background-color: lightpink;">col2</div>
+        <div style="background-color:lightblue">col3</div>
+    </div>
+
+    <p>............................................................................................................................................................................
+    </p>
+
+    <div style="display:grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    column-gap: 20px;
+    row-gap: 10px;
+    ">
+        <div style="background-color:lightpink">col1</div>
+        <div style="background-color:lightpink">col2</div>
+        <div style="background-color:lightpink">col3</div>
+        <div style="background-color:lightpink">col4</div>
+        <div style="background-color:lightpink">col5</div>
+        <div style="background-color:lightpink">col6</div>
+    </div>
+
+
+    <p>........................................................................................challenge
+        exercises.................................................................................... </p>
+
+    <div class="cat-colums">
+        <div></div>
+        <div class="cat">
+
+            <img class="cat-im" src="thumbnails/test2.jpg">
+
+            <div class="desc">
+
+                <p class="cat-p">
+                    Oliver
+                </p>
+
+                <div class="ver-dog">
+
+                    <img class="dog-img" src="thumbnails/dog.jpeg">
+
+                    <div class="cat-pp">
+                        2 mutual friends
+                    </div>
+                </div>
+
+                <div>
+                    <button class="cat-btn">
+                        Add Friend
+                    </button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="cat">
+
+            <img class="cat-im" src="thumbnails/cat.jpg">
+
+            <div class="desc">
+
+                <p class="cat-p">
+                    Mimi
+                </p>
+
+                <div class="ver-dog">
+
+                    <img class="dog-img" src="thumbnails/dog.jpeg">
+
+                    <p class="cat-pp">
+                        3 mutual friends
+                    </p>
+
+                </div>
+
+                <div>
+                    <button class="cat-btn">
+                        Add Friend
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cat">
+
+            <img class="cat-im" src="thumbnails/cat2.jpg">
+
+            <div class="desc">
+
+                <p class="cat-p">
+                    Rex
+                </p>
+
+                <div class="ver-dog">
+
+                    <img class="dog-img" src="thumbnails/dog.jpeg">
+
+                    <p class="cat-pp">
+                        4 mutual friends
+                    </p>
+                </div>
+
+                <div>
+                    <button class="cat-btn">
+                        Add Friend
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+        <div></div>
+    </div>
+
+</body>
+
+</html>
