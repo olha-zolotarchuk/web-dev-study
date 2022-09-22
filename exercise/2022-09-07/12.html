@@ -18,7 +18,7 @@
             border-radius: 7px;
             display: flex;
             flex-direction: column;
-            padding: 8px 16px 8px 16px ;
+            padding: 8px 16px 8px 16px;
             gap: 20px;
         }
 
@@ -85,6 +85,65 @@
         }
 
         .dw-f:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .osn-g {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 350px;
+        }
+
+        .desi-g {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .cat-g {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+        }
+
+        .text-g {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 300px;
+            gap: 1px;
+        }
+
+        .name-g {
+            font-weight: bold;
+        }
+
+        .tex-g {
+            color: gray;
+            font-size: 17px;
+        }
+
+        .texx-g {
+            font-size: 15px;
+            color: gray;
+        }
+
+        .fol-btn {
+            background-color: rgb(71, 118, 248);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            height: 34px;
+            width: 70px;
+        }
+
+        .fol-btn:hover {
             transform: scale(1.1, 1.1);
         }
     </style>
@@ -169,25 +228,38 @@ align-items: center;">
         exercises.................................................................................... </p>
 
 
-    <div>
-        <img class="cat" src="exercise/2022-09-07/thumbnails/cat">
-        <div>Oliver</div>
-        <div>the cat</div>
-        <div>Popular</div>
-        <button>Follow</button>
+    <div class="osn-g">
+        <div class="desi-g">
+            <img class="cat-g" src="thumbnails/test2.jpg">
+            <div class="text-g">
+                <div class="name-g">Oliver</div>
+                <div class="tex-g">the cat</div>
+                <div class="texx-g">Popular</div>
+            </div>
+            <div class="btn-fl"> <button class="fol-btn">Follow</button></div>
+        </div>
 
-        <img class="cat" src="thumbnails/t">
-        <div>Mimi</div>
-        <div>Sleepy Cat</div>
-        <div>Popular</div>
-        <button>Follow</button>
+        <div class="desi-g">
+            <img class="cat-g" src="thumbnails/cat2.jpg">
+            <div class="text-g">
+                <div class="name-g">Mimi</div>
+                <div class="tex-g">Sleepy Cat</div>
+                <div class="texx-g">Popular</div>
+            </div>
+            <div class="btn-fl"><button class="fol-btn">Follow</button></div>
+        </div>
 
-        <img class="cat" src="thumbnails/t">
-        <div>Rex</div>
-        <div>Happy Bulldog</div>
-        <div>Popular</div>
-        <button>Follow</button>
+        <div class="desi-g">
+            <img class="cat-g" src="thumbnails/dog.jpeg">
+            <div class="text-g">
+                <div class="name-g">Rex</div>
+                <div class="tex-g">Happy Bulldog</div>
+                <div class="texx-g">Popular</div>
+            </div>
+            <div class="btn-fl"><button class="fol-btn">Follow</button></div>
+        </div>
     </div>
+
 
 
 </body>
