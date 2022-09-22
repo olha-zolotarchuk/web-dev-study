@@ -3,6 +3,91 @@
 
 <head>
     <title>exercises 12</title>
+
+    <style>
+        body {
+            padding-left: 32px;
+            padding-bottom: 800px;
+        }
+
+        .sms-e {
+            border-color: rgb(182, 178, 178);
+            border-style: solid;
+            border-width: 1px;
+            width: 350px;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            padding: 8px 16px 8px 16px ;
+            gap: 20px;
+        }
+
+        .row-e {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        .number {
+            background-color: rgb(77, 114, 216);
+            color: white;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            border-radius: 18px;
+            text-align: center;
+            padding: 5px 12px 3px 12px;
+        }
+
+        .search-f {
+            display: flex;
+            background-color: rgb(119, 73, 163);
+            height: 55px;
+            width: 750px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .home-f {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .search {
+            border-radius: 30px;
+            border: none;
+            width: 450px;
+            height: 29px;
+            padding-left: 19px;
+        }
+
+        .dw-f {
+            border-color: white;
+            color: white;
+            border-width: 1px;
+            background-color: rgb(119, 73, 163);
+            border-style: solid;
+            height: 30px;
+            width: 90px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .dw-f:hover {
+            transform: scale(1.1, 1.1);
+        }
+    </style>
 </head>
 
 <body>
@@ -56,22 +141,28 @@ align-items: center;">
     <p>........................................................................................challenge
         exercises.................................................................................... </p>
 
-    <div>
-        <div>Home</div>
-        <div>14</div>
-        <div>Notifications</div>
-        <div>3</div>
-        <div>Messages</div>
-        <div>5</div>
+    <div class="sms-e">
+        <div class="row-e">
+            <div class="text">Home</div>
+            <div class="number">14</div>
+        </div>
+        <div class="row-e">
+            <div class="text">Notifications</div>
+            <div class="number">3</div>
+        </div>
+        <div class="row-e">
+            <div class="text">Messages</div>
+            <div class="number">5</div>
+        </div>
     </div>
 
     <p>........................................................................................challenge
         exercises.................................................................................... </p>
 
-    <div>
-        <div>Home</div>
+    <div class="search-f">
+        <div class="home-f">Home</div>
         <input class="search" type="text" placeholder="Search">
-        <button>Download</button>
+        <button class="dw-f">Download</button>
     </div>
 
     <p>........................................................................................challenge
@@ -79,12 +170,12 @@ align-items: center;">
 
 
     <div>
-        <img class="cat" src="thumbnails/t">
+        <img class="cat" src="exercise/2022-09-07/thumbnails/cat">
         <div>Oliver</div>
         <div>the cat</div>
         <div>Popular</div>
         <button>Follow</button>
-     
+
         <img class="cat" src="thumbnails/t">
         <div>Mimi</div>
         <div>Sleepy Cat</div>
@@ -97,8 +188,8 @@ align-items: center;">
         <div>Popular</div>
         <button>Follow</button>
     </div>
-    
-    
+
+
 </body>
 
 </html>
