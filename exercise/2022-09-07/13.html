@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exercises 13</title>
+    <style>
+        body {
+            padding-left: 32px;
+            padding-bottom: 800px;
+        }
+
+        .inbox {
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+            width: 370px;
+            padding: 10px;
+        }
+
+        .all {
+            color: gray;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-bottom: 19px;
+        }
+
+        .mes {
+            display: flex;
+            gap: 10px;
+            padding: 11px;
+        }
+
+        .name {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cat {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 100%;
+        }
+
+        .names {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .time {
+            color: grey;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+        }
+
+        .tema {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .text-g {
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .cart {
+            display: flex;
+            gap: 11px;
+            width: 400px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .name-f {
+            font-weight: bold;
+        }
+
+        .mail {
+            color: grey;
+            font-weight: normal;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .link {
+            border: solid;
+            border-width: 1px;
+            border-color: rgb(209, 205, 205);
+            border-radius: 20px;
+            height: 90px;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .color {
+            width: 160px;
+            height: 90px;
+            background-color: rgb(209, 205, 205);
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .youtube {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        p {
+            margin: 0;
+            padding-left: 15px;
+            line-height: 24px;
+        }
+
+        .y {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="
+    display: flex;
+    height: 60px;    
+    ">
+        <div style="
+        background-color: lightpink;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        ">
+            <div style="
+             background-color: black;
+             color: white;
+             width: 40px;
+            "> item1</div>
+        </div>
+
+        <div style="
+        background-color: lightblue;
+        width: 200px;"></div>
+    </div>
+
+    <p>............................................................................................................................................................................
+    </p>
+
+    <div style="display: flex;
+    height: 60px;
+    ">
+        <div style="
+        background-color: lightpink;
+        width: 100px;
+        ">
+        </div>
+
+        <div style="
+        background-color: lightblue;
+        width: 200px;">
+            <div>row1</div>
+            <div style="display: flex;
+            justify-content: space-between;
+            ;">
+                <div style="background-color:
+                black;color: 
+                white;
+                width: 40px;
+                display: flex;
+            ">row2</div>
+                <div style="background-color:
+            black;color: 
+            white;
+            width: 40px;
+            display: flex;
+           ">row3</div>
+            </div>
+        </div>
+    </div>
+
+    <p>........................................................................................challenge
+        exercises.................................................................................... </p>
+
+    <div class="inbox">
+        <div class="all">ALL INBOXES</div>
+
+        <div class="mes">
+            <img class="cat" src="thumbnails/test2.jpg">
+            <div class="text">
+                <div class="name">
+                    <div class="names">Chewy Promotions</div>
+                    <div class="time">4:58 PM</div>
+                </div>
+                <div class="tema">Biggest sales of the year!</div>
+                <div class="text-g"> Hey there! We`re writing to tell you about our...</div>
+            </div>
+        </div>
+    </div>
+
+
+    <p>........................................................................................challenge
+        exercises.................................................................................... </p>
+
+    <div class="inbox">
+        <div class="all">ALL INBOXES</div>
+        <div class="mes">
+            <img class="cat" src="thumbnails/test2.jpg">
+            <div class="text">
+                <div class="name">
+                    <div class="names">Chewy Promotions</div>
+                    <div class="time">4:58 PM</div>
+                </div>
+                <div class="tema">Biggest sales of the year!</div>
+                <div class="text-g"> Hey there! We`re writing to tell you about our...</div>
+            </div>
+        </div>
+
+        <div class="mes">
+            <img class="cat" src="thumbnails/cat2.jpg">
+            <div class="text">
+                <div class="name">
+                    <div class="names">Best Buy</div>
+                    <div class="time">12:32 PM</div>
+                </div>
+                <div class="tema">Your Best Buy eReceipt</div>
+                <div class="text-g"> Thank you for shopping at Best Buy, here is...</div>
+            </div>
+        </div>
+
+        <div class="mes">
+            <img class="cat" src="thumbnails/dog.jpeg">
+            <div class="text">
+                <div class="name">
+                    <div class="names">Netflix</div>
+                    <div class="time">9:00 PM</div>
+                </div>
+                <div class="tema">Here`s what`s coming soon to Netflix</div>
+                <div class="text-g"> Brand new movies and shows, old favorites...</div>
+            </div>
+        </div>
+    </div>
+
+
+    <p>........................................................................................challenge
+        exercises.................................................................................... </p>
+
+        <br />
+    <div class="cart">
+        <div>
+            <img class="cat" src="thumbnails/test2.jpg">
+        </div>
+        <div class="info">
+            <div class="name-f"> supersimple.dev <span class="mail">@SuperSimppleDev</span>
+            </div>
+            <div> What is backend web development? A complete overview. New video is up!</div>
+
+
+            <div class="link">
+                <div class="color">
+                </div>
+                <div class="youtube">
+                    <p class="y">youtube.com</p>
+                    <p class="f">Backend web development - a complete overview (2021)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
