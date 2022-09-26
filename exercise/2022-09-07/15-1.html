@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exercises 15</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        .clothing {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .discont {
+            position: absolute;
+            background-color: black;
+            color: white;
+            top: 10px;
+            right: 12px;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 7px;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 6px;
+        }
+
+        .btn:hover {
+            transform: scale(1.1, 1.1);
+            cursor: pointer;
+        }
+       
+        .add:hover{
+            background-color: rgb(235, 229, 229);
+            opacity: 0.8;
+        }
+
+        .add {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            height: 100px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img class="clothing" src="thumbnails/clothing.webp">
+        <div class="discont">20% OFF</div>
+
+        <div class="add">
+            <button class="btn">Add to Cart</button>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
