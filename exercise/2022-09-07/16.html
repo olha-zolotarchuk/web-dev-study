@@ -14,6 +14,52 @@
     <link rel="stylesheet" href="styles/y-video.css">
     <link rel="stylesheet" href="styles/y-sidebar.css">
 
+    <style>
+        .profile-picture-d {
+            width: 45px;
+            border-radius: 40px;
+            margin-right: 10px;
+        }
+
+        .chennel-picture {
+            position: relative;
+            white-space: nowrap;
+            height: max-content;
+        }
+      
+        .chennel-picture:hover .tooltips-channel-d {
+            opacity: 1;
+        }
+    
+        .tooltips-channel-d {
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(245, 244, 244);
+            width: 200px;
+            padding: 13px 7px 13px 13px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+            position: absolute;        
+            transition: 0.3s;
+            opacity: 0;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+    
+        .name-d {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+    
+        .number-d {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(95, 94, 94);
+            font-size: 14px;
+        }
+    
+    </style>
+
 </head>
 
 <body>
@@ -36,6 +82,7 @@
             </button>
 
         </div>
+
         <div class="right-section">
             <div class="upload-icon-container">
                 <img class="upload-icon" src="icons/upload.svg">
@@ -89,21 +136,39 @@
         <div class="video-previw">
 
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+                <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY&ab_channel=MarquesBrownlee">
+                    <img class="thumbnail" src="thumbnails/thumbnail-1.webp"></a>
                 <div class="video-time">14:20</div>
+
             </div>
 
             <div class="vide-info-grid">
 
+
                 <div class="chennel-picture">
                     <img class="profile-picture" src="chennel-pictures/channel-1.jpeg">
+                    <div class="tooltips-channel-d">
+                        <img class="profile-picture-d" src="chennel-pictures/channel-1.jpeg">
+                        <div class="text-d">
+                            <div class="name-d">
+                                Marques Brownle
+                            </div>
+                            <div class="number-d">
+                                15M subscribers
+                            </div>
+                        </div>
+                    </div>
                 </div>
+             
 
                 <div class="video-info">
-
-                    <p class="video-title">
-                        Talking Tech and AI with Google CEO Sundar Pichai!
-                    </p>
+                    <a style="text-decoration: none;
+                    color: black;
+                    " href="https://www.youtube.com/watch?v=n2RNcPRtAiY&ab_channel=MarquesBrownlee">
+                        <p class="video-title">
+                            Talking Tech and AI with Google CEO Sundar Pichai!
+                        </p>
+                    </a>
 
                     <p class="video-author">
                         Marques Brownle
@@ -112,7 +177,10 @@
                     <p class="video-stats">
                         3.4M views &#183; 6 months ago
                     </p>
+
                 </div>
+
+               
             </div>
         </div>
 
@@ -127,6 +195,17 @@
 
                 <div class="chennel-picture">
                     <img class="profile-picture" src="chennel-pictures/channel-2.jpeg">
+                    <div class="tooltips-channel-d">
+                        <img class="profile-picture-d" src="chennel-pictures/channel-2.jpeg">
+                        <div class="text-d">
+                            <div class="name-d">
+                                Markiplier
+                            </div>
+                            <div class="number-d">
+                                30M subscribers
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
