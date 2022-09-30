@@ -9,6 +9,12 @@
     padding-top: 5px;
 }
 
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 190px;
+    }
+}
+
 .sidebar-link {
     height: 74px;
     display: flex;
@@ -17,6 +23,7 @@
     flex-direction: column;
     cursor: pointer;
 }
+
 
 .sidebar-link:hover {
     background-color: rgb(235, 235, 235);
@@ -28,8 +35,20 @@
 
 }
 
-.sidebar-link div{
+.sidebar-link div {
     /* font-family: Roboto,Arial; */
     font-size: 10px;
-
 }
+
+@media (min-width: 1200px) {
+    .sidebar-link,
+    .sidebar-link div, 
+    .sidebar-link img {
+        flex-direction: row;
+        justify-content: left;
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
