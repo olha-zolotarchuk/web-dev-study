@@ -9,4 +9,5 @@
 ### 3. [Programming with JavaScript / Meta / Coursera (~42h)](https://www.coursera.org/learn/programming-with-javascript)
 
 
-[Porfolio Web-Site](https://olha-zolotarchuk.github.io/web-dev-study/public)
+
+#[Porfolio Web-Site](https://olha-zolotarchuk.github.io/web-dev-study/public)
