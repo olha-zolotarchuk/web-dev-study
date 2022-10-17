@@ -10,4 +10,4 @@
 
 
 
-# [Porfolio Web-Site](https://olha-zolotarchuk.github.io/web-dev-study/public)
+# [Portfolio Web-Site](https://olha-zolotarchuk.github.io/web-dev-study/public)
