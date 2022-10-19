@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            var counter = 0
+            function onTestButtonClick() {
+                counter++
+                console.log("hello " + counter)
+                const colors = ["#002942", "#0CA7DB", "red", "green", "blue", "yellow", "purple"];
+
+                const randomIndex = Math.floor(Math.random() * colors.length);
+
+                const randomColor = colors[randomIndex];
+                console.log(randomColor)
+                document.body.style.background = randomColor;
+            }
+
+            function reset() {
+                counter = 0;
+                document.body.style.background = 'white'
+            }
+            // const elem = document.getElementById("test-button");
+            // elem.onclick = onTestButtonClick;
+            // console.log("init")
+        </script>
+    </head>
+    <body>
+        <button id="test-button" onclick="onTestButtonClick()">click on me</button>
+        <button id="test-button" onclick="reset()">Reset</button>
+        <input type="text" />
+    </body>
+</html>
+
