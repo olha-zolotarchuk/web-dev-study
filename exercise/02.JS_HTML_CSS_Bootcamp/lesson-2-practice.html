@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+
+            const from = 14;
+            const to = 20;
+            function isTimeIn() {
+                const time = document.getElementById("time").value
+                const isValidTime = time >= 0 && time <= 23;
+                const isShopClosed = time < 14 || time >= 20;
+
+                if (!isValidTime) {
+                    alert("invalid time")
+                    return;
+                }
+
+                if (isShopClosed) {
+                    alert("closed")
+                    return;
+                } 
+                    
+                alert("open")
+            }
+        </script>
+    </head>
+    <body>
+        <label for="time">time</label><input id="time" type="text" value="12">
+        <button onclick="isTimeIn()">Check</button>
+    </body>
+</html> 
