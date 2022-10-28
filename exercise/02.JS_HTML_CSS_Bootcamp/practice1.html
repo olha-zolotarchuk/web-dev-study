@@ -1,35 +1,48 @@
 <html>
-    <head>
-        <script>
 
-            const from = 14;
-            const to = 20;
-            function isTimeIn() {
-                const time = document.getElementById("time").value
-                const isValidTime = time >= 0 && time <= 23;
-                const isShopClosed = time < 14 || time >= 20;
+<head>
+    <script>
 
-                if (!isValidTime) {
-                    alert("invalid time")
-                    return;
-                }
+        const x1 = 2;
+        const x2 = 9;
+        const y1 = 3;
+        const y2 = 6;
 
-                if (isShopClosed) {
-                    alert("closed")
-                    return;
-                } 
-                    
-                alert("open")
+        function isPointIn() {
+            const pointX = document.getElementById("pointX").value
+            const pointY = document.getElementById("pointY").value
+            console.log(pointX, pointY)
+            console.log(2 <= pointX && pointX <= 9, 3 <= pointY && pointY <= 6)
+            const perfectly = 2 <= pointX && pointX<= 9 && 3 <= pointY && pointY <= 6;
+
+            // const perfectlyY = 3 <= pointY && pointY <= 6;
+
+            if (perfectly) {
+                alert("perfectly")
+                return;
             }
-        </script>
-    </head>
-    <body>
-        <label for="time">time</label><input id="time" type="text" value="12">
-        <button onclick="isTimeIn()">Check</button>
-    </body>
-</html> 
 
-let bottomLeft = [
-    topRight
-    bottomRight
-    topLeft = [3, 5}
+        //    else if (perfectlyY) {
+        //         alert("perfectly")
+        //         // return;
+        //     }\
+
+            alert("guessed wrong")
+        }
+    </script>
+</head>
+
+<body>
+    <label for="pointX">x</label>
+    <input id="pointX" type="text" value="3">
+    <label for="pointY">y</label>
+    <input id="pointY" type="text" value="4">
+    <button onclick="isPointIn()">Check</button>
+    <svg viewBox="0 0 100 100">
+        <line x1="50" y1="0" x2="50" y2="100" stroke="black" />
+        <line x1="0" y1="50" x2="100" y2="50" stroke="black" />
+
+    </svg>
+</body>
+
+</html>
