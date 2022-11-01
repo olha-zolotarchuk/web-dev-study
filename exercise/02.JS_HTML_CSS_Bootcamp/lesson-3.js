@@ -173,3 +173,29 @@ for (let i = 0; i < blogPosts.length; i++) {
 // VM2089:10 Jan 20, 2021
 // VM2089:11 some post content here
 // undefined
+
+
+/**/
+
+for (let i = 0; i <100; i++){
+    console.log(i);
+}
+
+/**/
+
+const arr = ['eifoiefe', 'ksjbefj', 'iehfwoif', 'efwwef', 20, 20, 40, 50];
+undefined
+for (let i = 0; i < arr.length; i++){
+    if (typeof arr[i] === 'number'){
+        console.log(arr[i]);
+    }
+}
+// 2VM1244:3 20
+// VM1244:3 40
+// VM1244:3 50
+
+/**/
+
+function myFuction() {
+    concole.log('helllo world, this is my first function');
+    }
