@@ -199,3 +199,112 @@ for (let i = 0; i < arr.length; i++){
 function myFuction() {
     concole.log('helllo world, this is my first function');
     }
+    undefined
+    const myVar = 20;
+    undefined
+    typeof myFuction
+    'function'
+    myFuction()
+
+
+/**/
+
+(function anotherFunction() {
+    console.log('hello');
+})();
+// VM2459:2 hello
+
+
+/**/
+
+function myFunction(param1, param2){
+    console.log(param1);
+    console.log(param2);
+}
+undefined
+myFunction();
+// VM3254:2 undefined
+// VM3254:3 undefined
+undefined
+myFunction(20, 'some string');
+// VM3254:2 20
+// VM3254:3 some string
+
+/**/
+
+
+function myFunction() {
+    console.log('some string');
+}
+undefined
+const anotherFunction = function () {
+    console.log('another thing');
+}
+undefined
+typeof anotherFunction
+'function'
+myFunction();
+// VM4711:2 some string
+undefined
+anotherFunction();
+// VM4726:2 another thing
+undefined
+
+/**/
+
+
+const arrowFunction = () => {
+    console.log('i am an arrow function');
+}
+undefined
+arrowFunction();
+// VM382:2 i am an arrow function
+undefined
+
+/**/
+
+const myFunction = () => {
+    console.log('something');
+}
+undefined
+const result = myFunction();
+// VM663:2 something
+undefined
+result
+undefined
+
+/**/
+
+const returnFunction = () => {
+    const a = 20;
+    return a;
+}
+undefined
+// const result = returnFunction();
+undefined
+result
+20
+const returnFunction2 = () => {
+    const a = 20;
+    return a < 30; //true 
+}
+undefined
+const result2 = returnFunction2();
+undefined
+result2
+true
+
+
+/**/
+
+const myFunction = () => {
+    let myNumber = 20;
+    return myNumber;
+    myNumber = 50;
+}
+undefined
+myFunction();
+20
+
+/**/
+
