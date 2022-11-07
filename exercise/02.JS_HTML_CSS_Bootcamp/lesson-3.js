@@ -7,7 +7,7 @@ if ('some string' === 'another string') {
 // VM5953:4 the string are not equal
 undefined
 // if () {} else {}
-const myExpression = (20 === 20) && (50 ===50);
+const myExpression = (20 === 20) && (50 === 50);
 
 /**/
 
@@ -17,8 +17,8 @@ const jsExpression = firstNumber > secondNumber;
 
 if (jsExpression) {
     console.log('this is expression is true');
-    }
-    
+}
+
 
 if (jsExpression) {
     console.log('this is expression is true');
@@ -28,7 +28,7 @@ if (jsExpression) {
 
 
 if (jsExpression) {
-    console.log ('the expression is true');
+    console.log('the expression is true');
 } else if (firstNumber > 0) {
     console.log('the is expression is false and the firstNumber is greater than 0');
 } else {
@@ -36,7 +36,7 @@ if (jsExpression) {
 }
 
 
-if (jsExpression) { console.log('just a different formatting')};
+if (jsExpression) { console.log('just a different formatting') };
 // VM7821:6 this is expression is true
 // VM7821:11 this is expression is true
 // VM7821:18 the expression is true
@@ -77,7 +77,7 @@ if (jsExpression) { console.log('just a different formatting')};
 
 const colors = ['orange', 'green', 'yellow', 'purple', 'blue'];
 
-const randomIndex = Math.floor(Math.random() * colors.length );
+const randomIndex = Math.floor(Math.random() * colors.length);
 
 const randomColor = colors[randomIndex];
 
@@ -100,26 +100,26 @@ if (randomColor === 'orange') {
 
 const colors1 = ['orange', 'green', 'yellow', 'purple', 'blue'];
 
-const randomIndex1 = Math.floor(Math.random() * colors1.length );
+const randomIndex1 = Math.floor(Math.random() * colors1.length);
 
 const randomColor1 = colors1[randomIndex1];
 
 switch (randomColor1) {
-  case 'orange':
-    console.log('the color is orange');
-    break;
-  case 'green':
-    console.log('the color is green');
-    break;
- case 'yellow':
-    console.log('the color is yellow');
-    break;
-case 'purple':
-    console.log('the color is purple');
-    break;
-case 'blue':
-    console.log('the color is blue');
-    break;
+    case 'orange':
+        console.log('the color is orange');
+        break;
+    case 'green':
+        console.log('the color is green');
+        break;
+    case 'yellow':
+        console.log('the color is yellow');
+        break;
+    case 'purple':
+        console.log('the color is purple');
+        break;
+    case 'blue':
+        console.log('the color is blue');
+        break;
     default:
         console.log('no color found');
 }
@@ -129,36 +129,36 @@ case 'blue':
 
 const blogPosts = [
     {
-    title: 'What is JavaScript?',
-    author: 'Zach  Gollwitzer',
-    publishDate: 'Dec 20, 2020',
-    content: 'some post content here'
-},
-{
-    title: 'How do Arrays work?',
-    author: 'Zach  Gollwitzer',
-    publishDate: 'Jan 1, 2021',
-    content: 'some post content here'
-},
-{
-    title: 'How long does it take to learn coding?',
-    author: 'Zach  Gollwitzer',
-    publishDate: 'Jan 20, 2021',
-    content: 'some post content here'
-}
+        title: 'What is JavaScript?',
+        author: 'Zach  Gollwitzer',
+        publishDate: 'Dec 20, 2020',
+        content: 'some post content here'
+    },
+    {
+        title: 'How do Arrays work?',
+        author: 'Zach  Gollwitzer',
+        publishDate: 'Jan 1, 2021',
+        content: 'some post content here'
+    },
+    {
+        title: 'How long does it take to learn coding?',
+        author: 'Zach  Gollwitzer',
+        publishDate: 'Jan 20, 2021',
+        content: 'some post content here'
+    }
 ]
 undefined
 for (let i = 0; i < blogPosts.length; i++) {
     const postTitle = blogPosts[i].title;
-    const postAuthor= blogPosts[i].author;
+    const postAuthor = blogPosts[i].author;
     const postDate = blogPosts[i].publishDate;
     const postContent = blogPosts[i].content;
 
 
-   console.log(postTitle);
-   console.log(postAuthor);
-   console.log(postDate);
-   console.log(postContent);
+    console.log(postTitle);
+    console.log(postAuthor);
+    console.log(postDate);
+    console.log(postContent);
 }
 // VM2089:8 What is JavaScript?
 // VM2089:9 Zach  Gollwitzer
@@ -177,7 +177,7 @@ for (let i = 0; i < blogPosts.length; i++) {
 
 /**/
 
-for (let i = 0; i <100; i++){
+for (let i = 0; i < 100; i++) {
     console.log(i);
 }
 
@@ -185,8 +185,8 @@ for (let i = 0; i <100; i++){
 
 const arr = ['eifoiefe', 'ksjbefj', 'iehfwoif', 'efwwef', 20, 20, 40, 50];
 undefined
-for (let i = 0; i < arr.length; i++){
-    if (typeof arr[i] === 'number'){
+for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
         console.log(arr[i]);
     }
 }
@@ -198,26 +198,26 @@ for (let i = 0; i < arr.length; i++){
 
 function myFuction() {
     concole.log('helllo world, this is my first function');
-    }
-    undefined
-    const myVar = 20;
-    undefined
-    typeof myFuction
-    'function'
-    myFuction()
+}
+undefined
+const myVar = 20;
+undefined
+typeof myFuction
+'function'
+myFuction()
 
 
-/**/
+    /**/
 
-(function anotherFunction() {
-    console.log('hello');
-})();
+    (function anotherFunction() {
+        console.log('hello');
+    })();
 // VM2459:2 hello
 
 
 /**/
 
-function myFunction(param1, param2){
+function myFunction(param1, param2) {
     console.log(param1);
     console.log(param2);
 }
@@ -307,4 +307,87 @@ myFunction();
 20
 
 /**/
+
+const myNumber = 20;
+undefined
+let myfunction1 = () => {
+    if (myNumber < 50) {
+        return 'returned the functiion early';
+    }
+
+    return 40;
+}
+undefined
+myfunction1();
+'returned the functiion early'
+let myfunction = () => {
+    if (myNumber < 50) {
+        return 'returned the functiion early';
+    }
+    return 50;
+    return 40;
+}
+undefined
+myfunction1();
+'returned the functiion early'
+
+/**/
+
+function myFunction() {
+    return 20;
+}
+undefined
+myFunction();
+20
+const aliasVariable = myFunction;
+undefined
+aliasVariable();
+20
+const myObj = {
+    prop1: 50,
+    prop2: myFunction
+}
+undefined
+myObj.prop2();
+20
+
+/**/
+
+const myString = 'zach';
+undefined
+myString.replace('h', 'k');
+'zack'
+myString
+'zach'
+const newName = myString.replace('h', 'k');
+undefined
+newName
+'zack'
+myString.toUpperCase();
+
+/**/
+
+let str = 'hello world';
+undefined
+const result1 = str.toUpperCase().split(" ");
+undefined
+result1
+(2) ['HELLO', 'WORLD']
+result1.indexOf("WOLD");
+-1
+str;
+'hello world'
+const step1 = str.toUpperCase();
+undefined
+const step2 = step1.split(" ");
+undefined
+step2
+// (2) ['HELLO', 'WORLD']0: "HELLO"1: "WORLD"length: 2[[Prototype]]: Array(0)
+const stepp3 = step2.indexOf("WORLD");
+undefined
+stepp3
+1
+
+/**/
+
 
