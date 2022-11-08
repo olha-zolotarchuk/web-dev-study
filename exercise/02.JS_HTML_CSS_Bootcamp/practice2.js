@@ -1,0 +1,1 @@
+alert("Я – JavaScript! Test2");
