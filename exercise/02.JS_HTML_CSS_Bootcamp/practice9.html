@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Practice 9</title>
+
+    <script>
+        let loginUser = prompt('Login');
+
+        if (loginUser === 'Admin') {
+           
+            let password = prompt('Password?');
+
+            if (password ==='Host'){
+                alert ('Welcome!')
+            } else if (password === '' || password === null ){
+                alert ('Canceled')
+            } else {
+                alert ('Wrong password')
+            }
+
+        } else if (loginUser=== '' || loginUser === null ){
+            alert ('Canceled')
+        } else { 
+            alert ('I dont know you')
+        }
+        
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
