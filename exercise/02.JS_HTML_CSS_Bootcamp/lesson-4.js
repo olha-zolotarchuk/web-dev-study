@@ -76,5 +76,31 @@ function solution(str){
 
 
   /**/
+function isDiv (n,x,y) {
+  const result1 = n/x;
+  const result2 = n/y;
+    
+  if (result1 % 1  === 0 && result2 % 1 === 0 ){
+    return true;
+    }else{
+      return false;
+    }
+  }
+
+
+  /**/
+  
+  function makeNegative(num) {
+    if (num < 0){
+    return num;
+      } else {
+        return num *-1;
+      }
+    }
+
+
+
+  /**/
 
   
+
