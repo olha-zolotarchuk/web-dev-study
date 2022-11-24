@@ -1,0 +1,43 @@
+
+
+<html>
+    <head>
+
+        <script>
+            (function(window, document, undefined){
+
+            window.onload = init;
+
+            function init(){
+
+                const responsePromise = fetch("https://dummyjson.com/products")
+                const products = document.getElementById("products")
+                
+                responsePromise.then((r) => {
+                    r.json().then((res) => {
+
+                        res.products.forEach(p => {
+                        console.log(p.title) 
+                        products.innerHTML = products.innerHTML + "<tr><td>" + p.title +"</td> <td>" + p.description + "</td><td>" + p.price + "</td></tr>"
+                        });
+                        
+                        console.log(res.products)
+                    })
+                })
+
+                console.log("test")
+
+            }
+
+            })(window, document, undefined);
+          
+        </script>
+    </head>
+    <body>
+        <H1>page</H1>
+        <table id="products">
+            
+        </table> 
+    </body>
+</html>
+    
