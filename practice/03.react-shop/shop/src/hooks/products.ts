@@ -5,7 +5,7 @@ export type Product = {
     title: string;
     thumbnail: string;
     price: number;
-    images: string[];   
+    images: string[];
 }
 
 export const useProduct = (productId: number): Product | null => {
