@@ -17,3 +17,4 @@ export const ProductCard : React.FC<ProductProps> = ({product}) => {
 
     </div>
 }
+// console.log(ProductCard)
