@@ -9,6 +9,8 @@ export const Home : React.VFC = ({}) => {
     const p2 = useProduct(5);
     const p3 = useProduct(37);
 
+    console.log(productId)
+
     return <div>
         Home
         <ProductCard product={p1} />

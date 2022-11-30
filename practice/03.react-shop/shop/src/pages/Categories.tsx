@@ -1,19 +1,15 @@
-import React, { useState } from "react"
-import { useCategory } from "../hooks/category"
+import React from "react";
+import { useCategories } from "../hooks/categories";
+import { CategoryTable } from "../components/CategoryTable";
 
-export const Categories : React.VFC = ({}) => {
-  
+export const Categories: React.VFC = ({}) => {
+  const categories: string[] | null = useCategories();
+  return (
+    <div>
+      Categories
 
-
- const [category, setCategory] = useState<string>()
- const p1 = useCategory;
-
-     return <div>Categories
-
-<p>ntjd</p>
-     </div>
- 
-    }
-
-
-console.log()
+       <CategoryTable categories={categories} /> 
+        
+            </div>
+  );
+};
