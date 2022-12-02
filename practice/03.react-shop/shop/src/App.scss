@@ -1,6 +1,36 @@
 .product-cart {
   img {
-   width: 100px;
-   height: 100px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.category-table {
+  table,
+  th,
+  td {
+    margin-left: 10px;
+    border: 1px solid black;
+  }
+
+  tbody {
+    border: 1px solid black;
+  }
+  a {
+    text-decoration: none;
+    color: red;
+  }
+
+  tr:nth-child(odd) {
+    background: blue;
+  }
+
+  tr:nth-child(even) {
+    background: yellow;
+  }
+
+  @media (min-width: 1200px) {
+    body {
+    }
   }
 }
