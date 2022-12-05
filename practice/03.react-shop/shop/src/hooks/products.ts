@@ -11,6 +11,7 @@ export type Product = {
 export const useProduct = (productId: number): Product | null => {
     const [product, setProduct] = useState<Product | null> (null)
 
+
     useEffect(() => {
         fetch('https://dummyjson.com/products/' + productId).then(async(r) => {
             setProduct(await r.json())

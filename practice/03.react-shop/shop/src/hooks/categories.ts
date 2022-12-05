@@ -10,3 +10,4 @@ export const useCategories = (): string[] | null=> {
   }, []);
   return categories;
 };
+
