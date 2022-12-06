@@ -10,7 +10,7 @@ export const Category: React.VFC = ({}) => {
 
   return (<div> Category {categoryId}
   
-  {products?.map((p) => <ProductCard key={p.id} product={p}/>)}
+  <div className="category"> {products?.map((p) => <ProductCard key={p.id} product={p}/>)} </div>
   
   </div>
   )

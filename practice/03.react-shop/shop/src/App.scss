@@ -28,9 +28,46 @@
   tr:nth-child(even) {
     background: yellow;
   }
+}
 
-  @media (min-width: 1200px) {
-    body {
+.category {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  img {
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .product-cart {
+    a {
+      text-decoration: none;
+      width: 500px;
+
+      display: flex;
+      align-items: center;
+
+      padding-top: 50px;
+    }
+
+    .thumbnail {
+      padding-right: 50px;
+    }
+
+    .title {
+      color: rgb(102, 82, 82);
+      padding-right: 50px;
+      // padding-left: 50px;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .price {
+      color: rgb(7, 7, 7);
+      font-weight: bolder;
+      font-size: x-large;
+
     }
   }
 }
