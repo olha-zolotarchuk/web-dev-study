@@ -9,6 +9,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <title>HomePage</title>
   </head>
   <body>
@@ -67,7 +71,25 @@
                   </button>
                 </form>
               </div>
-              <div class="body-main-block__slider"></div>
+              <!-- Slider main container -->
+              <div class="body-main-block__slider slider-main-block swiper">
+                <!-- Additional required wrapper -->
+                <div class="slider-main-block__wrapper swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="slider-main-block__swiper swiper-slide">
+                    <img src="img/01.jpg" alt="Slider Image" />
+                  </div>
+                  <div class="slider-main-block__swiper swiper-slide">
+                    <img src="img/01.jpg" alt="Slider Image" />
+                  </div>
+                  <div class="slider-main-block__swiper swiper-slide">
+                    <img src="img/01.jpg" alt="Slider Image" />
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="s  swiper-button-prev"></div>
+                <div class="slider-main-block__arrow swiper-button-next"></div>
+              </div>
             </div>
             <div class="main-block__partners partners-main-block">
               <div class="partners-main-block__label">Our Amazing Partners</div>
@@ -80,5 +102,7 @@
       </main>
       <footer class="footer"></footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
