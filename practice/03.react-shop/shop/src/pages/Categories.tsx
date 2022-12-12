@@ -9,6 +9,7 @@ export const Categories: React.VFC = ({}) => {
     <div>
       Categories
       <CategoryTable categories={categories} />  
+
     </div>
   );
 };
