@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import { Product } from "./pages/Product";
 import { Categories } from "./pages/Categories";
 import { Category } from "./pages/Category";
+import { Users } from "./pages/Users";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -27,6 +28,9 @@ function App() {
             <li>
               <Link to="/category">Category</Link>
             </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
           </ul>
         </nav>
 
@@ -38,6 +42,8 @@ function App() {
           
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/category/:categoryId" element={<Category />} />
+
+          <Route path="/users" element={<Users/>} />
         </Routes>
       </div>
     </Router>

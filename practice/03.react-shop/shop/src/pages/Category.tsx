@@ -7,7 +7,7 @@ import { ProductCard} from "../components/ProductCard";
 export const Category: React.VFC = ({}) => {
   const { categoryId } = useParams();
   const products = useCategory(categoryId);
-  console.log(products);
+  // console.log(products);
 
   return (<div> Category {categoryId}
   {/* <Rating rating={3}/> */}
