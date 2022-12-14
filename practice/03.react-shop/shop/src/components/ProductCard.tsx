@@ -7,6 +7,7 @@ type ProductProps = {
 
 export const ProductCard: React.FC<ProductProps> = ({ product }) => {
   if (product == null) return null;
+  console.log(ProductCard)
 
   return (
     <div className="product-cart">
@@ -25,4 +26,3 @@ export const ProductCard: React.FC<ProductProps> = ({ product }) => {
     </div>
   );
 };
-// console.log(ProductCard)
