@@ -7,8 +7,18 @@ export type User = {
   lastName: string;
   image: string;
   gender: string;
-  lat: string;
+  // address: string;
 };
+
+// export type Address={
+ 
+// }
+
+
+// export type Coordinates = {
+//   lat: string;
+//   lng: string;
+// }
 
 
 export const useUsers = (): User[] | null => {
