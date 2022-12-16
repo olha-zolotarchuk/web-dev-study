@@ -1,9 +1,9 @@
 import React from "react";
 import PrettyRating, { IconsInterface } from "pretty-rating-react";
-import {
-  faStar,
-  faStarHalfAlt,
-} from "@fortawesome/free-solid-svg-icons";
+  import {
+    faStar,
+    faStarHalfAlt,
+  } from "@fortawesome/free-solid-svg-icons";
 import {
   faStar as farStar,
 } from "@fortawesome/free-regular-svg-icons";

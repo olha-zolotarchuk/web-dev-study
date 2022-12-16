@@ -1,12 +1,9 @@
 import React from "react";
 import { User } from "../hooks/users";
 import {
-  faStar,
-  faStarHalfAlt,
+  faMars, faVenus 
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faStar as farStar,
-} from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 type UserProps = {
   user: User;
@@ -15,17 +12,22 @@ type UserProps = {
 export const UserCard: React.FC<UserProps> = ({ user }) => {
   if (user == null) return null;
 
+
+  const genderFragment = user.gender === "male" ?  <FontAwesomeIcon icon={faMars} size="2x" /> : <FontAwesomeIcon icon={faVenus} size="2x" />
+
+
   return (
     <div>
-<div><faStar/></div>
       <img className="user-image" src={user.image} />
       <div>
         {user.firstName}
         {user.lastName}
       </div>
       <div>
-        <div>{user.gender}</div>
-        {/* <div>{user.address}</div> */}
+        {genderFragment}   
+      </div>
+      <div>
+        {user.address}
       </div>
     </div>
   );
