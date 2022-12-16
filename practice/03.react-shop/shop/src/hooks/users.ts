@@ -1,3 +1,4 @@
+import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useState } from "react";
 // import { Users } from "../pages/Users";
 
@@ -7,19 +8,19 @@ export type User = {
   lastName: string;
   image: string;
   gender: string;
-  // address: string;
+  address: Address;
 };
 
-// export type Address={
- 
-// }
+export type Address={
+  lat: string;
+  lng: string;
+}
 
 
-// export type Coordinates = {
-//   lat: string;
-//   lng: string;
-// }
-
+export type Coordinates = {
+  lat: string;
+  lng: string;
+}
 
 export const useUsers = (): User[] | null => {
   const [users, setUsers] = useState<User[] | null>(null);
