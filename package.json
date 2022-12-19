@@ -1,0 +1,6 @@
+{
+	"scripts": {
+		 "start": "yarn --cwd practice/03.react-shop/shop start",
+		 "install": "yarn --cwd practice/03.react-shop/shop install"
+	}	
+}
