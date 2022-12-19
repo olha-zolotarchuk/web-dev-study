@@ -1,6 +1,7 @@
 import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useState } from "react";
 // import { Users } from "../pages/Users";
+import React from 'react';
 
 export type User = {
   id: number;
@@ -12,8 +13,9 @@ export type User = {
 };
 
 export type Address={
-  lat: string;
-  lng: string;
+ city: string;
+ address: string;
+ coordinates: Coordinates;
 }
 
 
