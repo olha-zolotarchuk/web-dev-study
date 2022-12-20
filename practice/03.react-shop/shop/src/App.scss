@@ -83,25 +83,44 @@
   }
 }
 
-.user-table {
-  table,
-  th,
-  td {
-    margin-left: 10px;
-    border: 1px solid black;
-  }
+.user-card {
+  margin: 15px;
+  box-shadow: 0px 0px 8px rgb(203 255 64 / 56%);
 
-  tbody {
-    border: 1px solid black;
-  }
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+
+  align-items: center;
+
   a {
     text-decoration: none;
-    color: rgb(153, 8, 8);
   }
-}
 
-.user-image{
-  width: 100px;
-  height: 100px;
-  padding-left: 11px;
+  .user-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .user-name{
+
+    display: grid;
+    grid-template-columns: auto auto;
+    
+
+  }
+
+  .user-gender{
+    padding-top: 15px;
+
+  }
+
+  .user-birthDate{
+    padding-top: 15px;
+  }
+
+  .user-email{
+    padding-top: 15px;
+  }
 }
