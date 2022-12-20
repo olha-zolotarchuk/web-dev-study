@@ -9,7 +9,7 @@ export const Users: React.VFC = ({}) => {
   return (
     <div>
       Users
-      <div className="users">
+      <div >
 
         {users?.map((user, i) => (
           <UserCard key={i} user={user} />

@@ -1,6 +1,7 @@
 import React from "react";
 import { User } from "../hooks/users";
-import { faMars, faVenus } from "@fortawesome/free-solid-svg-icons";
+import { faMars, faVenus} from "@fortawesome/free-solid-svg-icons";
+// import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type UserProps = {
@@ -18,17 +19,36 @@ export const UserCard: React.FC<UserProps> = ({ user }) => {
     );
 
   return (
-    <div>
+    <div className="user-card">
       <img className="user-image" src={user.image} />
-      <div>
-        {user.firstName}
-        {user.lastName}
+
+      <div className="user-name">
+      <div>{user.firstName}</div>
+      <div>{user.lastName}</div>
+        <div className="user-gender">{genderFragment}</div>
       </div>
-      <div>{genderFragment}</div>
+
       <div>
-        <a href="https://www.google.es/maps/@39.01036,-0.1732906,15z?hl=en">{user.address.city}
-        {user.address.address}</a>
+        <div className="">{user.age}</div>
+        <div className="user-birthDate">{user.birthDate}</div>
       </div>
+
+      <div>
+        <a
+          className="user-coordinates"
+          href={
+            "http://maps.google.com/maps?q=" +
+            user.address.coordinates.lat +
+            "," +
+            user.address.coordinates.lng
+          }
+        >
+          {user.address.city}<br></br>
+          {user.address.address}
+        </a>
+        <div className="user-email">{user.email}</div>
+      </div>
+
     </div>
   );
 };

@@ -10,6 +10,9 @@ export type User = {
   image: string;
   gender: string;
   address: Address;
+  age: string;
+  email: string;
+  birthDate: string;
 };
 
 export type Address={
