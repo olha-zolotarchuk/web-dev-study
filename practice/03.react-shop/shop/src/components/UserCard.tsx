@@ -1,7 +1,6 @@
 import React from "react";
 import { User } from "../hooks/users";
 import { faMars, faVenus} from "@fortawesome/free-solid-svg-icons";
-// import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type UserProps = {
@@ -18,14 +17,15 @@ export const UserCard: React.FC<UserProps> = ({ user }) => {
       <FontAwesomeIcon icon={faVenus} size="2x" />
     );
 
+
   return (
     <div className="user-card">
       <img className="user-image" src={user.image} />
 
       <div className="user-name">
-      <div>{user.firstName}</div>
-      <div>{user.lastName}</div>
-        <div className="user-gender">{genderFragment}</div>
+      {`${user.firstName} ${user.lastName}`}
+        <div className="user-gender">
+          {genderFragment}</div>
       </div>
 
       <div>
@@ -37,18 +37,18 @@ export const UserCard: React.FC<UserProps> = ({ user }) => {
         <a
           className="user-coordinates"
           href={
-            "http://maps.google.com/maps?q=" +
-            user.address.coordinates.lat +
-            "," +
-            user.address.coordinates.lng
-          }
+            `http://maps.google.com/maps?q=${user.address.coordinates.lat},${user.address.coordinates.lng}`}
         >
           {user.address.city}<br></br>
-          {user.address.address}
+          {user.address.address}<br></br>
         </a>
-        <div className="user-email">{user.email}</div>
+        <a href={`mailto:${user.email}?subject=Hello`}>{user.email}
+        </a>
       </div>
-
+      {user.address.coordinates.lat}
+        {user.address.coordinates.lng}
     </div>
   );
 };
+
+
