@@ -1,13 +1,17 @@
 import React from "react";
 import { User } from "../hooks/users";
-import { faMars, faVenus} from "@fortawesome/free-solid-svg-icons";
+import { faMars, faVenus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { type } from "@testing-library/user-event/dist/type";
 
 type UserProps = {
   user: User;
+  temperature:string;
 };
 
-export const UserCard: React.FC<UserProps> = ({ user }) => {
+
+
+export const UserCard: React.FC<UserProps> = ({ user,temperature }) => {
   if (user == null) return null;
 
   const genderFragment =
@@ -17,15 +21,13 @@ export const UserCard: React.FC<UserProps> = ({ user }) => {
       <FontAwesomeIcon icon={faVenus} size="2x" />
     );
 
-
   return (
     <div className="user-card">
       <img className="user-image" src={user.image} />
 
       <div className="user-name">
-      {`${user.firstName} ${user.lastName}`}
-        <div className="user-gender">
-          {genderFragment}</div>
+        {`${user.firstName} ${user.lastName}`}
+        <div className="user-gender">{genderFragment}</div>
       </div>
 
       <div>
@@ -36,19 +38,18 @@ export const UserCard: React.FC<UserProps> = ({ user }) => {
       <div>
         <a
           className="user-coordinates"
-          href={
-            `http://maps.google.com/maps?q=${user.address.coordinates.lat},${user.address.coordinates.lng}`}
+          href={`http://maps.google.com/maps?q=${user.address.coordinates.lat},${user.address.coordinates.lng}`}
         >
-          {user.address.city}<br></br>
-          {user.address.address}<br></br>
+          {user.address.city}
+          <br></br>
+          {user.address.address}
+          <br></br>
         </a>
-        <a href={`mailto:${user.email}?subject=Hello`}>{user.email}
-        </a>
+        <a href={`mailto:${user.email}?subject=Hello`}>{user.email}</a>
       </div>
-      {user.address.coordinates.lat}
-        {user.address.coordinates.lng}
+      {temperature}
+      {/* {user.address.coordinates.lat}
+      {user.address.coordinates.lng} */}
     </div>
   );
 };
-
-

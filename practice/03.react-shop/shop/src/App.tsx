@@ -16,25 +16,25 @@ function App() {
     <Router>
       <div>
         <nav>
-          <ul>
-            <li>
+          <ul className="pages">
+            <div className="page-home">
               <Link to="/">Home</Link>
-            </li>
-            <li>
+            </div>
+            <div>
               <Link to="/categories">Categories</Link>
-            </li>
-            <li>
+            </div>
+            <div>
               <Link to="/cart">Cart</Link>
-            </li>
-            <li>
+              </div>
+            <div>
               <Link to="/category">Category</Link>
-            </li>
-            <li>
+              </div>
+            <div>
               <Link to="/users">Users</Link>
-            </li>
-            <li>
+              </div>
+            <div>
               <Link to="/weathers">Weather</Link>
-            </li>
+              </div>
           </ul>
         </nav>
 

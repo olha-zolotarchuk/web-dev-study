@@ -1,33 +1,31 @@
 import React from "react";
 import { useWeather, Weather } from "../hooks/weather";
 import { User, useUsers } from "../hooks/users";
-import { UserCard } from "../components/UserCard";
+
 
 export const Weathers: React.VFC = ({}) => {
-  const weathers: Weather | null = useWeather();
   const users: User[] | null = useUsers();
+  const weathers: {[key: string]:Weather} | null = useWeather(users || []);
+ 
 
- if (users==null){
-  return null
- }
+  if (users == null) {
+    return null;
+  }
 
   return (
     <div>
       Weather
-      <div>
-    
-        {weathers?.time}
-        {weathers?.temperature}
-
-        {/* <UserCard User = {users} /> */}
-        {users[4]?.address.coordinates.lng}
-
+       
+        {users.map((user, i) => (
+          <div key={i}>
+            {user.id
+             +" --- "+
+            user.address.coordinates.lat
+            +" --- "+
+            user.address.coordinates.lng + " --- "}            
+            {weathers && weathers[user.id]?.temperature}            
+          </div>
+        ))}
       </div>
-    </div>
   );
 };
-
-
-//         {users?.address.coordinates.lat}
-//         {user.address.coordinates.lng}
-

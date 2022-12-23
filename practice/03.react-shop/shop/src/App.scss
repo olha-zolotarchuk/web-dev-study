@@ -103,21 +103,38 @@
     height: 120px;
   }
 
-  .user-name{
-
-
+  .user-name {
   }
 
-  .user-gender{
-    padding-top: 15px;
-
-  }
-
-  .user-birthDate{
+  .user-gender {
     padding-top: 15px;
   }
 
-  .user-email{
+  .user-birthDate {
     padding-top: 15px;
+  }
+
+  .user-email {
+    padding-top: 15px;
+  }
+}
+
+.pages {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  text-transform: uppercase;
+  color: rgb(153, 8, 8);
+  font-size: large;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    color: rgb(3, 125, 129);
+  }
+  .page-home {
   }
 }
