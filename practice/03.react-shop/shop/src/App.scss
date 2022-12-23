@@ -118,7 +118,10 @@
     padding-top: 15px;
   }
 }
-
+ 
+body{
+  padding-top: 60px;
+}
 .pages {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;

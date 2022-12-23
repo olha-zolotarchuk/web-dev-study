@@ -3,13 +3,12 @@ import { User } from "../hooks/users";
 import { faMars, faVenus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { type } from "@testing-library/user-event/dist/type";
+import { WindSpeed } from "../hooks/speed";
 
 type UserProps = {
   user: User;
   temperature:string;
 };
-
-
 
 export const UserCard: React.FC<UserProps> = ({ user,temperature }) => {
   if (user == null) return null;
