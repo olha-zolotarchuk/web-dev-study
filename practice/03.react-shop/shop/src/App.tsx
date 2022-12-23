@@ -8,6 +8,7 @@ import { Categories } from "./pages/Categories";
 import { Category } from "./pages/Category";
 import { Users } from "./pages/Users";
 import { Weathers } from "./pages/Weather";
+import { Speed } from "./pages/Speed";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -35,6 +36,9 @@ function App() {
             <div>
               <Link to="/weathers">Weather</Link>
               </div>
+              <div>
+              <Link to="/wind-speed">Speed</Link>
+              </div>
           </ul>
         </nav>
 
@@ -49,6 +53,8 @@ function App() {
 
           <Route path="/users" element={<Users/>} />
           <Route path="/weathers" element={<Weathers/>} />
+
+          <Route path="/wind-speed" element={<Speed/>} />
 
         </Routes>
       </div>

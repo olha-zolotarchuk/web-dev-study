@@ -6,7 +6,7 @@ import { User, useUsers } from "../hooks/users";
 export const Weathers: React.VFC = ({}) => {
   const users: User[] | null = useUsers();
   const weathers: {[key: string]:Weather} | null = useWeather(users || []);
- 
+
 
   if (users == null) {
     return null;
