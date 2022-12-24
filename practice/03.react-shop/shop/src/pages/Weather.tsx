@@ -23,7 +23,8 @@ export const Weathers: React.VFC = ({}) => {
             user.address.coordinates.lat
             +" --- "+
             user.address.coordinates.lng + " --- "}            
-            {weathers && weathers[user.id]?.temperature}            
+            {weathers && weathers[user.id]?.temperature + " --- "}  
+            {weathers && weathers[user.id]?.windspeed}            
           </div>
         ))}
       </div>

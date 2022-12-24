@@ -4,6 +4,7 @@ import { User } from "./users";
 export type Weather = {
   time: string;
   temperature: string;
+  windspeed: string;
 };
 
 export const useWeather = (

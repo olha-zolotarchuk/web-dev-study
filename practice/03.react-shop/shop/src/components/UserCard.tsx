@@ -3,7 +3,7 @@ import { User } from "../hooks/users";
 import { faMars, faVenus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { type } from "@testing-library/user-event/dist/type";
-import { WindSpeed } from "../hooks/speed";
+import { useWindSpeed } from "../hooks/speed";
 
 type UserProps = {
   user: User;
@@ -11,6 +11,8 @@ type UserProps = {
 };
 
 export const UserCard: React.FC<UserProps> = ({ user,temperature }) => {
+  const windspeed = useWindSpeed(user);
+
   if (user == null) return null;
 
   const genderFragment =
@@ -46,7 +48,7 @@ export const UserCard: React.FC<UserProps> = ({ user,temperature }) => {
         </a>
         <a href={`mailto:${user.email}?subject=Hello`}>{user.email}</a>
       </div>
-      {temperature}
+      {temperature +"---" + windspeed?.windspeed}
       {/* {user.address.coordinates.lat}
       {user.address.coordinates.lng} */}
     </div>
