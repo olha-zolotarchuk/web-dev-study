@@ -2,7 +2,7 @@ import { useWindSpeed , WindSpeed } from "../hooks/speed";
 import React from "react";
 
 export const Speed: React.VFC = ({}) => {
-    const speed: WindSpeed | null = useWindSpeed();
+    const speed: WindSpeed | null = useWindSpeed(undefined);
 
     return (
         <div>
