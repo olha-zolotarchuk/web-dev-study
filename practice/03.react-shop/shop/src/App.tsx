@@ -9,6 +9,8 @@ import { Category } from "./pages/Category";
 import { Users } from "./pages/Users";
 import { Weathers } from "./pages/Weather";
 import { Speed } from "./pages/Speed";
+import { Jokes } from "./pages/Jokes";
+import { Books } from "./pages/Books";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -39,6 +41,15 @@ function App() {
               <div>
               <Link to="/wind-speed">Speed</Link>
               </div>
+              <div>
+              <Link to="/wind-speed">Speed</Link>
+              </div>
+              <div>
+              <Link to="/jokes">Jokes</Link>
+              </div>
+              <div>
+              <Link to="/books">Books</Link>
+              </div>
           </ul>
         </nav>
 
@@ -56,6 +67,9 @@ function App() {
 
           <Route path="/wind-speed" element={<Speed/>} />
 
+          <Route path="/jokes" element={<Jokes/>} />
+
+          <Route path="/books" element={<Books/>} />
         </Routes>
       </div>
     </Router>
