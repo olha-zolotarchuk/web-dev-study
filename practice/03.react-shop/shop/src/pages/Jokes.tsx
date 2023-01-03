@@ -11,6 +11,7 @@ export const Jokes : React.VFC = ({}) => {
     return(
     <div>
         {jokes[5].setup}
+        {jokes[5].punchline}
     </div>
     );
 } 
