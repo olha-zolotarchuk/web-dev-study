@@ -120,7 +120,9 @@
 }
  
 body{
-  padding-top: 60px;
+  padding-top: 90px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .pages {
   display: grid;
@@ -133,6 +135,8 @@ body{
   top: 0;
   width: 100%;
   overflow: hidden;
+  height: 70px;
+
 
   a {
     text-decoration: none;
@@ -140,4 +144,19 @@ body{
   }
   .page-home {
   }
+}
+
+.search-input{
+  height: 30px;
+  width: 300px;
+}
+.search-btn{
+  height: 30px;
+  margin-left: 5px;
+}
+.book-cart{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+
 }

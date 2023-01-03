@@ -8,22 +8,22 @@ export type Book = {
     price:string;
 }
 
-export const useBooks = (): Book[] | null => {
+export const useBooks = (searchQuery: string): Book[] | null => {
 
     const[books, setBooks] = useState
      <Book[] | null>(null);
 
-console.log(books)
+// console.log(books)
 
     useEffect (() => {
-        fetch('https://api.itbook.store/1.0/search/css').
+        fetch('https://api.itbook.store/1.0/search/' + searchQuery).
         then(async(r)  => {
             const response = await r.json(); 
             setBooks(response.books);
 
         });
 
-    }, [] );
+    }, [searchQuery] );
 
     return (books)
 };
