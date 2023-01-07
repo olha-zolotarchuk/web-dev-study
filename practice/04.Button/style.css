@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 500px
+}
+
+.box {
+  background-color: black;
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.circle {
+  background-color: yellow;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.circle:hover{
+    cursor: pointer;
+    margin-right: 40px;
+    background-color: aqua;
+}
+
