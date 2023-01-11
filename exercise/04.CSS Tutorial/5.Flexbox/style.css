@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+  display: flex;
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
+  gap: 1rem;
+  /* align-items: center; */
+  align-items: flex-end;
+  /* flex-direction: column; */
+  /* flex-direction: row;
+  flex-wrap: wrap ; */
+  flex-flow: row wrap;
+
+/* for shrink */
+  /* flex-flow: row nowrap; */
+
+  /* align-content: space-around; */
+  /* align-content: space-between;  */
+  align-content: center;
+}
+
+.box {
+  min-width: 100px;
+  /* min-height: 100px; */
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+/*  залишив для цього тільки 2 div */
+  /* flex-grow: 1;
+  flex-basis: 100px; */
+
+  flex-shrink: 1;
+  flex-basis: 250 px
+
+}
+
+/* вибираємо 2 і це означає що друга колонка буде рости більше */
+/* .box:nth-child(2){
+    flex-grow: 2;
+} */
+
+.box:nth-child(2){
+    flex-shrink: 2;
+    order: 4;
+}
+
