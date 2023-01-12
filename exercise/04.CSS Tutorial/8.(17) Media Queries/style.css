@@ -18,16 +18,20 @@ body {
   flex-direction: column;
 }
 
-header, nav, main, footer {
+header,
+nav,
+main,
+footer {
   display: grid;
   place-content: center;
   grid-template-columns: 100%;
   text-align: center;
 }
 
-header, footer {
+header,
+footer {
   position: sticky;
-  background-color: #1E293B;
+  background-color: #1e293b;
   color: whitesmoke;
 }
 
@@ -46,7 +50,7 @@ main {
   flex-grow: 1;
 }
 
-footer { 
+footer {
   bottom: 0;
 }
 
@@ -54,7 +58,7 @@ footer {
 @media screen and (min-width: 576px) {
   body {
     background-color: green;
-    background-image: radial-gradient(whitesmoke, green)
+    background-image: radial-gradient(whitesmoke, green);
   }
   nav {
     display: none;
@@ -65,7 +69,7 @@ footer {
 @media screen and (min-width: 768px) {
   body {
     background-color: gold;
-    background-image: radial-gradient(whitesmoke, gold)
+    background-image: radial-gradient(whitesmoke, gold);
   }
 }
 
@@ -73,7 +77,7 @@ footer {
 @media screen and (min-width: 992px) {
   body {
     background-color: firebrick;
-    background-image: radial-gradient(whitesmoke, firebrick)
+    background-image: radial-gradient(whitesmoke, firebrick);
   }
 }
 
@@ -81,7 +85,7 @@ footer {
 @media screen and (min-width: 1200px) {
   body {
     background-color: rebeccapurple;
-    background-image: radial-gradient(whitesmoke, rebeccapurple)
+    background-image: radial-gradient(whitesmoke, rebeccapurple);
   }
 }
 
@@ -89,13 +93,15 @@ footer {
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
   body {
     background-color: dodgerblue;
-    background-image: radial-gradient(whitesmoke, dodgerblue)
+    background-image: radial-gradient(whitesmoke, dodgerblue);
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 1.5rem;
   }
 
-  nav { display: none }
+  nav {
+    display: none;
+  }
 }
-
