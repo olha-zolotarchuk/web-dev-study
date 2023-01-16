@@ -45,10 +45,10 @@ body {
 .header {
   background-color: var(--HEADER-BGCOLOR);
   color: var(--HEADER-COLOR);
-  padding: 1rem 1rem 0.5rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  padding: 1rem 1rem 0.5rem;
 }
 
 .btn {
