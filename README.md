@@ -8,6 +8,10 @@
 
 ### 3. [Programming with JavaScript / Meta / Coursera (~42h)](https://www.coursera.org/learn/programming-with-javascript)
 
+### 4. [HTML Full Course for Beginners | 4 Hours)](https://www.youtube.com/watch?v=mJgBOIoGihA&list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu&index=14&t=30s&ab_channel=DaveGray)
+
+### 5. [CSS Tutorial – Full Course for Beginners | 11 Hours)](https://www.youtube.com/watch?v=OXGznpKZ_sA&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&t=31962s&ab_channel=freeCodeCamp.org)
+
 
 
 # [Portfolio Web-Site](https://olha-zolotarchuk.github.io/web-dev-study/public)
