@@ -30,21 +30,22 @@ textarea {
   --FS: clamp(1rem, 2.2vh, 1.5rem);
 
   /* COLORS */
-  --BGCOLOR: orange;
   --BGCOLOR-FADE: gb(252, 220, 160);
+  --BGCOLOR: orange;
   --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
   --BODY-BGCOLOR: #fff;
-  --FONT-COLOR: #000;
   --BORDER-COLOR: #333;
+  --BUTTON-COLOR: #fff;
+  --FONT-COLOR: #000;
+  --HEADER-BGCOLOR: #000;
+  --HEADER-COLOR: #fff;
+  --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
+  --HERO-COLOR: #fff;
   --HIGHLIGHT-COLOR: rgb(51, 178, 51);
   --LINK-ACTIVE: orange;
   --LINK-COLOR: #000;
   --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
-  --HEADER-BGCOLOR: #000;
-  --HEADER-COLOR: #fff;
   --NAV-BGCOLOR: #fff;
-  --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
-  --HERO-COLOR: #fff;
 
   /* BORDERS */
   --BORDERS: 1px solid var(--BORDER-COLOR);
@@ -56,6 +57,24 @@ textarea {
 
   /* STANDARD MARGING */
   --MARGIN: clamp(1rem, 2.5vh, 1.5rem) 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR-FADE: gray;
+    --BGCOLOR: #000;
+    --BODY-BGCOLOR: #333;
+    --BORDER-COLOR: whitesmoke;
+    --BUTTON-COLOR: #000;
+    --FONT-COLOR: whitesmoke;
+    --HEADER-COLOR: whitesmoke;
+    --HERO-COLOR: #333;
+    --HIGHLIGHT-COLOR: whitesmoke;
+    --LINK-ACTIVE: rgb(252, 200, 103);
+    --LINK-COLOR: whitesmoke;
+    --LINK-HOVER: orange;
+    --NAV-BGCOLOR: rgb(20, 20, 20);
+  }
 }
 
 /* || UTILITY CLASSES */
@@ -247,14 +266,106 @@ a:active {
 .contact__input,
 .contact__textarea {
   padding: 0.5rem;
-  border-radius: 15px;
+  border-radius: var(--BORDER-RADIUS);
   border-width: 2px;
   width: 100%;
 }
 
 .contact__btn {
   padding: 0.5rem;
-  border-radius: 15px;
+  border-radius: var(--BORDER-RADIUS);
   background-color: var(--HIGHLIGHT-COLOR);
-  color: var(--HEADER-COLOR);
+  color: var(--BUTTON-COLOR);
+  font-weight: bold;
+}
+
+/* || MENU */
+
+thead,
+tbody,
+tfoot,
+tr {
+  display: contents;
+}
+
+.menu__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "hd1 hd2 hd3"
+    "cr cr1 cr1p"
+    "cr cr2 cr2p"
+    "cr cr3 cr3p"
+    "sf sf1 sf1p"
+    "sf sf2 sf2p"
+    "sf sf3 sf3p"
+    "cs cs cs";
+  gap: 0.1em;
+  margin-bottom: 1em;
+}
+
+.menu__cr {
+  grid-area: cr;
+}
+
+.menu__sf {
+  grid-area: sf;
+}
+
+.menu__cs {
+  grid-area: cs;
+  color: var(--HIGHLIGHT-COLOR);
+  font-weight: bold;
+}
+
+.menu__cr,
+.menu__sf,
+.menu__cs,
+.menu__header {
+  color: var(--HIGHLIGHT-COLOR);
+  font-weight: bold;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.menu__header,
+.menu__item {
+  width: 100%;
+  padding: 1em;
+  border: medium ridge var(--BORDER-COLOR);
+}
+
+.menu__item {
+  display: grid;
+  place-content: center;
+}
+
+thead th:first-child {
+  border-top-left-radius: var(--BORDER-RADIUS);
+}
+
+thead th:last-child {
+  border-top-right-radius: var(--BORDER-RADIUS);
+}
+
+tfoot td {
+  border-bottom-left-radius: var(--BORDER-RADIUS);
+  border-bottom-right-radius: var(--BORDER-RADIUS);
+}
+
+@media screen and (min-width: 576px) {
+  .header__h1::before {
+    content: "🌮 ";
+  }
+  .header__h1::after {
+    content: " 🌮 ";
+  }
+
+  .menu__header,
+  .menu__cr,
+  .menu__sf,
+  .menu__cs {
+    font-size: 125%;
+  }
 }

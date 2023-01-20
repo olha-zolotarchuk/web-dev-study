@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
 
   <body>
@@ -45,6 +46,8 @@
         </address>
       </article>
 
+      <hr />
+
       <article class="main__article contact">
         <h2 class="contact__h2">Our Contact Form</h2>
 
@@ -53,7 +56,8 @@
             <legend class="offscreen">Send Us A Message</legend>
             <p class="contact__p">
               <label class="contact__label" for="Name"> Name:</label>
-              <input class="contact__input"
+              <input
+                class="contact__input"
                 type="text"
                 placeholder="your name"
                 autofocus
@@ -63,7 +67,8 @@
             </p>
             <p class="contact__p">
               <label class="contact__label" for="Email"> Email: </label>
-              <input class="contact__input"
+              <input
+                class="contact__input"
                 type="email"
                 placeholder="your email"
                 autocomplete="on"
@@ -72,8 +77,10 @@
             </p>
 
             <p class="contact__p">
-              <label class="contact__label" for="message">Your Message: </label><br />
-              <textarea class="contact__textarea"
+              <label class="contact__label" for="message">Your Message: </label
+              ><br />
+              <textarea
+                class="contact__textarea"
                 name="message"
                 id="message"
                 cols="30"
@@ -83,14 +90,15 @@
             </p>
           </fieldset>
 
-          <button class="contact__btn"
+          <button
+            class="contact__btn"
             type="submit"
             formaction="https://httpbin.org/post"
             formmethod="post"
           >
             Send
           </button>
-          
+
           <button class="contact__btn" type="reset">Reset</button>
         </form>
       </article>
@@ -98,7 +106,7 @@
 
     <footer class="footer">
       <p>
-        <span class="nowrap">Copyright &copy</span>
+        <span class="nowrap">Copyright &copy; <time id="year"></time> </span>
         <span class="nowrap">Little Taco Shop</span>
       </p>
     </footer>
