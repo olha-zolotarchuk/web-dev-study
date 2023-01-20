@@ -8,10 +8,15 @@
 
 ### 3. [Programming with JavaScript / Meta / Coursera (~42h)](https://www.coursera.org/learn/programming-with-javascript)
 
-### 4. [HTML Full Course for Beginners | 4 Hours)](https://www.youtube.com/watch?v=mJgBOIoGihA&list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu&index=14&t=30s&ab_channel=DaveGray)
+### 4. [HTML Full Course for Beginners | 4 Hours)](https://www.youtube.com/watch?v=mJgBOIoGihA&list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu&index=14&t=30s&ab_channel=DaveGray) 16.01.2023-18.01.2023
 
-### 5. [CSS Tutorial – Full Course for Beginners | 11 Hours)](https://www.youtube.com/watch?v=OXGznpKZ_sA&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&t=31962s&ab_channel=freeCodeCamp.org)
+### 5. [CSS Tutorial – Full Course for Beginners | 11 Hours)](https://www.youtube.com/watch?v=OXGznpKZ_sA&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&t=31962s&ab_channel=freeCodeCamp.org) 04.01.2023-19.01.2023
 
+### 6. [JavaScript Full Course for Beginners | 8 Hours)](https://www.youtube.com/watch?v=EfAl9bwzVZk&t=5s&ab_channel=DaveGray) 20.01.2023-
+
+### 7. [React JS Full Course for Beginners | 9 Hours)](https://www.youtube.com/watch?v=RVFAyFWO4go&t=3s&ab_channel=DaveGray) 
+
+### 8. [Tailwind CSS Full Course for Beginners | 3 Hours)](https://www.youtube.com/watch?v=lCxcTsOHrjo&ab_channel=DaveGray)
 
 
 # [Portfolio Web-Site](https://olha-zolotarchuk.github.io/web-dev-study/public)
