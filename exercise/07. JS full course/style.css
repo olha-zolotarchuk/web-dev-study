@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body{
+    width: 100%;
+    font-size: 16px;
+    background-color: hsla(180, 50%, 80%, 0.591);
+    color: rgb(95, 95, 182);
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font: 250%;
+}
