@@ -121,3 +121,53 @@ console.log(sportStore);
 
 console.log(sportStore[0][0][1]);
 console.log(sportStore[1][1][0]);
+
+// i love you!
+
+for (let i = 0; i != 7; i = Math.round(Math.random() * 10)) {
+  console.log(i);
+}
+
+const arr = [];
+for (let i = 0; i <= 20; i += 2) {
+  arr.unshift(i);
+}
+console.log(arr);
+
+// 1 2 3 4
+// 5 6 7 8
+// 9 10 11 12
+// 13 14 15 16
+
+const a = [[], [], [], []];
+for (let j = 0; j < 4; j++) {
+  for (let i = 0; i < 4; i++) {
+    a[j].push(i + j * 4 + 1);
+  }
+
+  // for (let i = 5; i <= 8; i++) {
+  //   a[1].push(i);
+  // }
+
+  // for (let i = 9; i <= 12; i++) {
+  //   a[2].push(i);
+  // }
+
+  // for (let i = 13; i <= 16; i++) {
+  //   a[3].push(i);
+  // }
+}
+console.log(a);
+
+const b = [[], [], [], []];
+
+for (let i = 1; i <= 16; i++) {
+  b[Math.ceil(i / 4) - 1].push(i);
+}
+console.log(b);
+
+for (let j = 3; j >= 0; j--) {
+  for (let i = 3; i >= 0; i--) {
+    console.log(b[j][i]);
+  }
+}
