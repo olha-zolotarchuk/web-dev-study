@@ -9,7 +9,7 @@ export const ProductCard: React.FC<ProductProps> = ({ product }) => {
   if (product == null) return null;
   console.log(ProductCard)
 
-  return (
+  return (  
     <div className="product-cart">
       <a href={"/product/" + product.id}>
         <div className="thumbnail">
