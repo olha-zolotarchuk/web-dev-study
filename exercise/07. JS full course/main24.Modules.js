@@ -22,8 +22,19 @@ import * as Guitars from "./main24.guitars.js";
 // console.log(Guitars.playGuitar());
 console.log(Guitars.default());
 console.log(Guitars.shredding());
-console.log(Guitars.pluckingpluck());
+console.log(Guitars.plucking());
 
 // So you don't want to have a default unless you're ready to just name the default.  in export
 // export default function playGuitar () {
 // use    export function playGuitar () {
+
+
+import User from "./main24.user.js";
+const me = new User("email@email.com", "Olha");
+console.log(me);
+console.log(me.greeting());
+
+// Okay, so usually modules would be used in a project with a tool called
+// Babbel that can transfer JavaScript. Like the newer code, the newer modern JavaScript can, uh, essentially translate that over or transpile that into older JavaScript. Syntax that will work in older browsers.
+// And this is often time used along with a bundler like Webpack or parcel.
+// And those things bundle your code and can use babble along the way to make it into older JavaScript that older browsers can read and will bundle it all into one file. So they'll read all of your modules and package it all together in a big bundle.
