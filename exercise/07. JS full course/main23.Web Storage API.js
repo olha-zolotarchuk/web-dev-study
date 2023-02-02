@@ -80,3 +80,8 @@ console.log(key1);
 // Actually, we set the item first and then we retrieve the item with GI item. We could remove the item, we could clear all items, we can specify the key to get the, or we can specify the index position in local storage to get the key return.
 // And we can also use the length property to find out how many different keys are in the local storage for that particular site or web app.
 // And I keep saying local storage. It's either local storage or session storage.
+
+
+// . But under local storage, we still have the local store, we still have the data even after I closed the browser and reopened it.
+// Even after we have left a website and maybe we don't revisit it for a few days, we come back and there the data is, again, this might work in a web application for to-do list or a high score in a game, and of course many other options.
+// But these are some projects we might want to consider as beginners and we move forward with our local and session storage.
