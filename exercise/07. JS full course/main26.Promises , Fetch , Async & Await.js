@@ -212,12 +212,63 @@ const postData = async (jokeObj) => {
 };
 postData(jokeObject);
 
-// 
+//
 const requestJoke = async (firstName, lastName) => {
-  const response = await fetch(`https://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`);
+  const response = await fetch(
+    `https://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}&limitTo=[nerdy]`
+  );
 
   const jsonResponse = await response.json();
 
   console.log(jsonResponse.value.joke);
 };
-requestJoke("Bruce","Lee");
+requestJoke("Bruce", "Lee");
+
+
+// abstract into functions
+
+// maybe from a from
+// 7:10:22 We would write individual functions for each of these things and abstracting, this of course lets us build a different request URL if we need to by getting different data. And of course we wouldn't always assign Bruce Lee as the name possibly.
+
+
+const getDataFromFrom = () => {
+  const requestObj = {
+    firstName: "Bruce",
+    lastName: "Lee",
+    categories: ["nerdy"],
+  };
+  return requestObj;
+};
+// There's something else built into our program that would let us assign different names or pick different categories.
+
+const buildRequestUrl = (requestData) => {
+  return `https://api.icndb.com/jokes/random?firstName=${requestData.firstName}&lastName=${requestData.lastName}&limitTo=${requestData.categories}`;
+};
+
+const requestJoke1 = async (url) => {
+    const response = await fetch(url);
+    const jsonResponse = await response.json();
+    const joke = jsonResponse.value.joke;
+    postJokeToPage(joke);
+}
+
+// And then we end up requesting the joke. And here is where we might work with the dom to actually post the joke to the page and instead we're just logging it to the console.
+
+
+const postJokeToPage = (joke) => {
+    console.log(joke);
+}
+
+// Procedural "workflow" function
+//  And this procedural workflow function pulls it all together.
+const processJokeRequest = async () => {
+    const requestData = getDataFromFrom();
+    const requestUrl = buildRequestUrl(requestData);
+    await requestJoke1(requestUrl);
+    console.log("finisshed");
+}
+
+processJokeRequest();
+
+// And you can see that I just called the function right here instead of actually setting it up with some button in the dom to do so.
+// But you need to remember, this function needs to be async because we're using a weight when we call the request joke function, and that request joke function is async, which is why we can use a weight with it and it's sane.
