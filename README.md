@@ -12,7 +12,7 @@
 
 ### 5. [CSS Tutorial – Full Course for Beginners | 11 Hours)](https://www.youtube.com/watch?v=OXGznpKZ_sA&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&t=31962s&ab_channel=freeCodeCamp.org) 04.01.2023-19.01.2023
 
-### 6. [JavaScript Full Course for Beginners | 8 Hours)](https://www.youtube.com/watch?v=EfAl9bwzVZk&t=5s&ab_channel=DaveGray) 20.01.2023-
+### 6. [JavaScript Full Course for Beginners | 8 Hours)](https://www.youtube.com/watch?v=EfAl9bwzVZk&t=5s&ab_channel=DaveGray) 20.01.2023-02.02.2023
 
 ### 7. [React JS Full Course for Beginners | 9 Hours)](https://www.youtube.com/watch?v=RVFAyFWO4go&t=3s&ab_channel=DaveGray) 
 
