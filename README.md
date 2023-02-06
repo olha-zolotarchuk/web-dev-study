@@ -14,9 +14,10 @@
 
 ### 6. [JavaScript Full Course for Beginners | 8 Hours)](https://www.youtube.com/watch?v=EfAl9bwzVZk&t=5s&ab_channel=DaveGray) 20.01.2023-02.02.2023
 
-### 7. [React JS Full Course for Beginners | 9 Hours)](https://www.youtube.com/watch?v=RVFAyFWO4go&t=3s&ab_channel=DaveGray) 
+### 7. [React JS Full Course for Beginners | 9 Hours)](https://www.youtube.com/watch?v=RVFAyFWO4go&t=3s&ab_channel=DaveGray) 06.02.2023 - 
 
 ### 8. [Tailwind CSS Full Course for Beginners | 3 Hours)](https://www.youtube.com/watch?v=lCxcTsOHrjo&ab_channel=DaveGray)
 
+### 9. (https://www.youtube.com/watch?v=NqzdVN2tyvQ&t=1s&ab_channel=DaveGray)
 
 # [Portfolio Web-Site](https://olha-zolotarchuk.github.io/web-dev-study/public)
