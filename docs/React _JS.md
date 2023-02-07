@@ -81,3 +81,32 @@ state for more than one thing inside of a component you just have to define thes
 started out with the default state of dave and then we were able to call
 1:02:54
 handle name change and set a new name as the state and that is why clicking our change name button
+
+                Chapter 7: Lists & Keys
+
+expression and the way to display a list in jsx is to work through the list using map so we can say items dot map which is a higher order function
+
+in react needs a key so we're going to set an attribute called key equal to an expression key={item.id}
+
+this helps react identify which items have changed which items have been added or which items have been removed because react reacts or responds to changes in state and it re-renders the jsx so react does need to keep track of those things and that is why a list item needs to have a key attribute in react
+
+now it's important to note that this is not changing the default state of the app and we still have or the default state of the component pardon me that we still have here in our code so if i reload the application it's going to come back to being true false false
+
+                    Chapter 8: Props & Prop Drilling
+props as you might expect is short for properties and properties hold data and prop drilling allows us to pass that data down from parent components to child components
+
+as the props hold all the different properties from the parent component that have been passed to the child component
+const Header = (props) => {
+<h1>{props.title}</h1>
+
+destructuring in javascript this will be easier to understand because instead of the as they are passed into the functional component so then we can just say title and then we can get rid of the props dot and this will still work in the same way
+const Header = ({title}) => {
+<h1>{title}</h1>
+
+1:39:24 default props allow us to set values for the props expected in the component and if those are not provided then the default values will take over instead of receiving an error and this is great to do when you're speccing a component in other words when you're first designing the component and maybe you're not receiving the data from an api or even a local storage list like we have right now we're using some spec data already 
+
+we get default title here the component expects a prop and when it doesn't receive it it uses the default prop
+
+1:54:50 reusable line item component
+ and think about the tree or the component tree as we drill down we started with the app component which is apparent and then we move down to the content component so rom app.js to content.js and then to item list js we're going to go one more level as we create a line item js
+
