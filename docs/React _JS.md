@@ -1,3 +1,5 @@
+https://www.npmjs.com/package/react-icons
+
                 Chapter 2: App & JSX
 
 the JSX is javascript and it stands for javascript in xml it resembles html very much but it's not quite the same
@@ -93,20 +95,38 @@ this helps react identify which items have changed which items have been added o
 now it's important to note that this is not changing the default state of the app and we still have or the default state of the component pardon me that we still have here in our code so if i reload the application it's going to come back to being true false false
 
                     Chapter 8: Props & Prop Drilling
+
 props as you might expect is short for properties and properties hold data and prop drilling allows us to pass that data down from parent components to child components
 
 as the props hold all the different properties from the parent component that have been passed to the child component
 const Header = (props) => {
+
 <h1>{props.title}</h1>
 
 destructuring in javascript this will be easier to understand because instead of the as they are passed into the functional component so then we can just say title and then we can get rid of the props dot and this will still work in the same way
 const Header = ({title}) => {
+
 <h1>{title}</h1>
 
-1:39:24 default props allow us to set values for the props expected in the component and if those are not provided then the default values will take over instead of receiving an error and this is great to do when you're speccing a component in other words when you're first designing the component and maybe you're not receiving the data from an api or even a local storage list like we have right now we're using some spec data already 
+1:39:24 default props allow us to set values for the props expected in the component and if those are not provided then the default values will take over instead of receiving an error and this is great to do when you're speccing a component in other words when you're first designing the component and maybe you're not receiving the data from an api or even a local storage list like we have right now we're using some spec data already
 
 we get default title here the component expects a prop and when it doesn't receive it it uses the default prop
 
 1:54:50 reusable line item component
- and think about the tree or the component tree as we drill down we started with the app component which is apparent and then we move down to the content component so rom app.js to content.js and then to item list js we're going to go one more level as we create a line item js
+and think about the tree or the component tree as we drill down we started with the app component which is apparent and then we move down to the content component so rom app.js to content.js and then to item list js we're going to go one more level as we create a line item js
 
+               Chapter 9: Controlled Component Inputs
+2:01:33 controlled components refer to inputs in react forms forms in reactor handled just a little differently and the inputs are controlled we try to use one source of truth for the state
+
+2:10:33 well now to make this a controlled input we need to tie it to state we want to have one source of truth for the input and we want to change the state as the input changes as well so back in the app.js i'll scroll up here and we have our default state here for items and set items so just underneath that
+
+2:35:03 so just a quick recap on what we've done for our two controlled components today add item
+has the value equal to the state and then on change we set the state with
+e.target.value and then it's very much the same with search item we set the value equal to
+the state and then on change we once again set the new state to e.target.value
+and that gives one source of truth for the input and that is the state and that's how you want to handle inputs in
+a form in react
+
+
+
+Chapter 10: Project Challenge
