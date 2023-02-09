@@ -2,4 +2,24 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+section {
+  width: 200px;
+  height: 200px;
+  border: 0.5px solid #000;
+  box-shadow: 1px 1px 6px #000;
+  text-align: center;
 }
