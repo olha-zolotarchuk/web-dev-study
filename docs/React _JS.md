@@ -116,6 +116,7 @@ we get default title here the component expects a prop and when it doesn't recei
 and think about the tree or the component tree as we drill down we started with the app component which is apparent and then we move down to the content component so rom app.js to content.js and then to item list js we're going to go one more level as we create a line item js
 
                Chapter 9: Controlled Component Inputs
+
 2:01:33 controlled components refer to inputs in react forms forms in reactor handled just a little differently and the inputs are controlled we try to use one source of truth for the state
 
 2:10:33 well now to make this a controlled input we need to tie it to state we want to have one source of truth for the input and we want to change the state as the input changes as well so back in the app.js i'll scroll up here and we have our default state here for items and set items so just underneath that
@@ -127,6 +128,28 @@ the state and then on change we once again set the new state to e.target.value
 and that gives one source of truth for the input and that is the state and that's how you want to handle inputs in
 a form in react
 
-
-
 Chapter 10: Project Challenge
+
+          Chapter 11: useEffect Hook
+
+useEffect(() => {
+console.log("load");
+}, []);
+
+3:06:00
+so now we've seen examples of it running all the time for every render and we've seen an example of it running only at the app load time just the one time because this array never changes and this is a dependency and so what use effect does is it looks to its dependency and if the dependency changes then it will run this anonymous function again
+
+useEffect(() => {
+console.log("apdating");
+}, [items]);
+
+what we expect now and that is updating item state you get it once immediately when it loads so use effect does run and item state is set when the app loads so that is accurate but then any time we delete an item like removing pizza now we get another one here updating item state or if we add cookies we've updated the item state again so now use effect is only looking at its dependency and it's only running this function when the dependency changes
+
+we get before use effect and then we get after use effect and then finally we get inside use effect so let's discuss this as you might expect we got the before one first but you didn't expect to see the after one second probably you probably thought this would just go in order but this is not synchronous use effect is asynchronous in that regard and it actually runs the code in here after everything has rendered down here as well so if there was any change if there was a need to re-render such as me typing a letter into the search box now we got before and after again that re-rendered but use effect was not called in the action because we didn't change the state of the items at all so we'll only see this inside use effect when we change the state of the items but for every letter i type here every render we get another before and after now that we have a very clear idea of when use effect is called into action
+
+(3:15:08) Chapter 12: JSON Server
+(3:21:23) Chapter 13: Fetch API Data
+(3:44:37) Chapter 14: CRUD Operations
+
+(4:04:33) Chapter 15: Fetch Data Challenge
+(4:43:10) Chapter 16: React Router
