@@ -1,13 +1,13 @@
 {
-  "name": "react_pr",
+  "name": "03.react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "colornames": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "0.9.5"
   },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

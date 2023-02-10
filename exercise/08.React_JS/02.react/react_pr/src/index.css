@@ -14,6 +14,8 @@ input {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  width: 100%;
+  min-height: 30px;
 }
 
 section {
@@ -22,4 +24,13 @@ section {
   border: 0.5px solid #000;
   box-shadow: 1px 1px 6px #000;
   text-align: center;
+  display: grid;
+  place-content: center;
+}
+
+button {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 5px #000;
 }

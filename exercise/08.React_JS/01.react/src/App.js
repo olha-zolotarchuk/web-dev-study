@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import SearchItem from "./SearchItem";
 import AddItem from "./AddItem";
@@ -8,22 +8,34 @@ import { useState } from "react";
 
 function App() {
   const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("shoppinglist"))
+    JSON.parse(localStorage.getItem("shoppinglist")) || []
   );
-
   const [newItem, setNewItem] = useState("");
   const [search, setSearch] = useState("");
 
-  const setAndSaveItems = (newItems) => {
-    setItems(newItems);
-    localStorage.setItem("shoppinglist", JSON.stringify(newItems));
-  };
+  const [a, setA] = useState("");
+  const [c, setC] = useState("");
+  const [b, setB] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("shoppinglist", JSON.stringify(items));
+  }, [items]);
+
+  useEffect(() => {
+    console.log("rerender");
+    console.log(a, b, c);
+  });
+
+  useEffect(() => {
+    console.log("c");
+    console.log(a, b, c);
+  }, [c]);
 
   const addItem = (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = { id, checked: false, item };
     const listItems = [...items, myNewItem];
-    setAndSaveItems(listItems);
+    setItems(listItems);
   };
 
   const handleCheck = (id) => {
@@ -31,13 +43,13 @@ function App() {
     const listItems = items.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
     );
-    setAndSaveItems(listItems);
+    setItems(listItems);
   };
 
   const handleDelete = (id) => {
     // console.log(id);
     const listItems = items.filter((item) => item.id !== id);
-    setAndSaveItems(listItems);
+    setItems(listItems);
   };
 
   const handleSubmit = (e) => {
@@ -68,6 +80,27 @@ function App() {
       />
       <Footer length={items.length} />
 
+      <button
+        onClick={() => {
+          setA("1");
+        }}
+      >
+        A
+      </button>
+      <button
+        onClick={() => {
+          setB("1");
+        }}
+      >
+        B
+      </button>
+      <button
+        onClick={() => {
+          setC(Math.random());
+        }}
+      >
+        C
+      </button>
       {/* <p className="App-intro">Hello {handleNameChange()}!</p> */}
       {/* <p> {name}</p> */}
     </div>
