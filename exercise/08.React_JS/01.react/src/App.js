@@ -13,23 +13,23 @@ function App() {
   const [newItem, setNewItem] = useState("");
   const [search, setSearch] = useState("");
 
-  const [a, setA] = useState("");
-  const [c, setC] = useState("");
-  const [b, setB] = useState("");
+  // const [a, setA] = useState("");
+  // const [c, setC] = useState("");
+  // const [b, setB] = useState("");
 
   useEffect(() => {
     localStorage.setItem("shoppinglist", JSON.stringify(items));
   }, [items]);
 
-  useEffect(() => {
-    console.log("rerender");
-    console.log(a, b, c);
-  });
+  // useEffect(() => {
+  //   console.log("rerender");
+  //   console.log(a, b, c);
+  // });
 
-  useEffect(() => {
-    console.log("c");
-    console.log(a, b, c);
-  }, [c]);
+  // useEffect(() => {
+  //   console.log("c");
+  //   console.log(a, b, c);
+  // }, [c]);
 
   const addItem = (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
@@ -80,6 +80,8 @@ function App() {
       />
       <Footer length={items.length} />
 
+
+{/* 
       <button
         onClick={() => {
           setA("1");
@@ -100,7 +102,10 @@ function App() {
         }}
       >
         C
-      </button>
+      </button> */}
+
+
+      
       {/* <p className="App-intro">Hello {handleNameChange()}!</p> */}
       {/* <p> {name}</p> */}
     </div>
