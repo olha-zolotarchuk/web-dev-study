@@ -147,9 +147,19 @@ what we expect now and that is updating item state you get it once immediately w
 
 we get before use effect and then we get after use effect and then finally we get inside use effect so let's discuss this as you might expect we got the before one first but you didn't expect to see the after one second probably you probably thought this would just go in order but this is not synchronous use effect is asynchronous in that regard and it actually runs the code in here after everything has rendered down here as well so if there was any change if there was a need to re-render such as me typing a letter into the search box now we got before and after again that re-rendered but use effect was not called in the action because we didn't change the state of the items at all so we'll only see this inside use effect when we change the state of the items but for every letter i type here every render we get another before and after now that we have a very clear idea of when use effect is called into action
 
-(3:15:08) Chapter 12: JSON Server
-(3:21:23) Chapter 13: Fetch API Data
-(3:44:37) Chapter 14: CRUD Operations
+Chapter 12: JSON Server
+Chapter 13: Fetch API Data
+
+Chapter 14: CRUD Operations
+In computer programming, create, read, update, and delete (often referred to via the acronym CRUD) are the four basic operations of persistent storage.[1] CRUD is also sometimes used to describe user interface conventions that facilitate viewing, searching, and changing information using computer-based forms and reports. The term was likely first popularized by James Martin in his 1983 book Managing the Data-base environment.
+
+crud operations and those would be this is
+read as far as crud goes we're reading the data but these other operations
+would be create for creating a list item update for updating a list item and delete for deleting a list item 
+3:50:09
+responses back is because we're updating the state with our set items and other set functions that we would call from our state however that does not update the api and we want to keep the state of our application and the api in sync but we can update the state and see that faster than we may get a response from the api so we don't want to wait for that response we'll just instantly show the new state in the application but then if we get an error message we'll know we're out of sync with the api and then we'll show the please reload the app message here or whatever other error might actually occur that would be caught by the catch block here we can show that message as well so this is our function that's really all there is to it and the difference between the requests will be the create update or delete that is held in the options object and we'll define those in the separate handlers so let's save this api request now let's go back to the app component now in the app component let's go ahead and import this function will import api request from api request and now let's put this api request function to work and the first place we could use it is in the add item function we've already got everything we need here to update   our state and we do it right here with the set items but besides that we want to go ahead and
+
+
 
 (4:04:33) Chapter 15: Fetch Data Challenge
 (4:43:10) Chapter 16: React Router
