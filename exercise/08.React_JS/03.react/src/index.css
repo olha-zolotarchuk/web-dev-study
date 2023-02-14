@@ -2,4 +2,29 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+   min-height: 100vh;
+}
+
+form {
+  width: 100%;
+  position: fixed;
+}
+
+button {
+  width: 33.33%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button.selected {
+  background-color: #000;
+  color: #fff;
+}
+
+ul {
+  padding: 3rem 2rem 1rem;
+}
+
+li {
+  margin-bottom: 1rem;
 }
