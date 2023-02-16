@@ -155,11 +155,21 @@ In computer programming, create, read, update, and delete (often referred to via
 
 crud operations and those would be this is
 read as far as crud goes we're reading the data but these other operations
-would be create for creating a list item update for updating a list item and delete for deleting a list item 
+would be create for creating a list item update for updating a list item and delete for deleting a list item
 3:50:09
-responses back is because we're updating the state with our set items and other set functions that we would call from our state however that does not update the api and we want to keep the state of our application and the api in sync but we can update the state and see that faster than we may get a response from the api so we don't want to wait for that response we'll just instantly show the new state in the application but then if we get an error message we'll know we're out of sync with the api and then we'll show the please reload the app message here or whatever other error might actually occur that would be caught by the catch block here we can show that message as well so this is our function that's really all there is to it and the difference between the requests will be the create update or delete that is held in the options object and we'll define those in the separate handlers so let's save this api request now let's go back to the app component now in the app component let's go ahead and import this function will import api request from api request and now let's put this api request function to work and the first place we could use it is in the add item function we've already got everything we need here to update   our state and we do it right here with the set items but besides that we want to go ahead and
+responses back is because we're updating the state with our set items and other set functions that we would call from our state however that does not update the api and we want to keep the state of our application and the api in sync but we can update the state and see that faster than we may get a response from the api so we don't want to wait for that response we'll just instantly show the new state in the application but then if we get an error message we'll know we're out of sync with the api and then we'll show the please reload the app message here or whatever other error might actually occur that would be caught by the catch block here we can show that message as well so this is our function that's really all there is to it and the difference between the requests will be the create update or delete that is held in the options object and we'll define those in the separate handlers so let's save this api request now let's go back to the app component now in the app component let's go ahead and import this function will import api request from api request and now let's put this api request function to work and the first place we could use it is in the add item function we've already got everything we need here to update our state and we do it right here with the set items but besides that we want to go ahead and
 
+Chapter 15: Fetch Data Challenge
 
-
-(4:04:33) Chapter 15: Fetch Data Challenge
 (4:43:10) Chapter 16: React Router
+and how react router works is it routes components sometimes we'll always want a component to stay on the page like a header or a nav bar or maybe a footer but then other times we'll want the main area of the page to change and react router can route those components based on url file paths
+і як працює маршрутизатор React – він маршрутизує компоненти, іноді ми завжди хочемо, щоб компонент залишався на сторінці, як-от заголовок, панель навігації чи, можливо, нижній колонтитул, але іноді ми хочемо, щоб основна частина сторінки змінилася та маршрутизатор react може маршрутизувати ці компоненти на основі шляхів URL-файлів
+
+we want route we want switch as we'll switch between
+the routes and then we want a hook that comes with react router and that's use history react router has several custom hooks and this one will allow us to access the browser history but react router does not make requests from the server again it just routes within the app and of course that responds faster so it improves the user experience as well this needs to be from react router dom
+ми хочемо маршрут, ми хочемо перемикатися, коли ми будемо перемикатися між ними
+маршрути, а потім нам потрібен хук, який постачається з маршрутизатором react, і це використання історії. Маршрутизатор react має кілька користувальницьких хуків, і цей дозволить нам отримати доступ до історії браузера, але маршрутизатор react знову не надсилає запити від сервера, він просто маршрутизує в межах додаток і, звичайно, реагує швидше, тому покращує взаємодію з користувачем, а також це має бути від react router dom
+
+
+Chapter 17: Router Hooks & Links
+
