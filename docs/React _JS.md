@@ -173,3 +173,98 @@ the routes and then we want a hook that comes with react router and that's use h
 
 Chapter 17: Router Hooks & Links
 
+NAV 05;09;17
+unordered list and now each list item can be a navigation link but we haven't imported the link from react router yet so let's do that at the top and that's import link from react router dom there we go and we can save that now we can use the link as we import it and links render to anchor tags just like we would see in html with like an a with an href however this tells react router don't request this link from the server just route to the proper component and so now instead of an href we have a two and we'll set this equal to a slash for our home page and so there's the link to home and now i'm going to use shift alt and the down arrow to make a couple of more links and now we'll link these to other pages so we'll have a link to post and a link to about and of course we can change the wording here to match post and about
+невпорядкований список, і тепер кожен елемент списку може бути навігаційним посиланням, але ми ще не імпортували посилання з маршрутизатора React, тому давайте зробимо це вгорі, і це посилання для імпорту з маршрутизатора React. Ось і ми можемо зберегти це зараз використовуйте посилання, коли ми його імпортуємо, а посилання відображаються у прив’язних тегах, як ми бачили б у html, наприклад a з href, однак це повідомляє реагувати маршрутизатору не запитувати це посилання на сервері, просто направляти до відповідного компонента, і тому тепер замість href ми маємо двійку, і ми встановимо це рівним скісній рискі для нашої домашньої сторінки, тож є посилання на домашню сторінку, а тепер я використаю shift alt і стрілку вниз, щоб створити ще кілька посилань і тепер ми зв’яжемо їх з іншими сторінками, щоб у нас було посилання на публікацію та посилання на про, і, звичайно, ми можемо змінити формулювання тут, щоб відповідати публікації та про
+
+
+Posts
+5:19:42
+we'll slice the first 25 characters and after that we'll put an ellipses like three dots at the end and that way we're only showing a snippet of the full body because we don't want any more than 25 characters in the initial feed and then you can click on the full link above here and see the full post so let's save that and now we can see our feed with each post and of course i've used lorem epson in each one of them and so they're all the same right now but we see they go the first 25 characters and then we get that
+
+ми розріжемо перші 25 символів, а потім розмістимо три крапки в кінці, і таким чином ми покажемо лише фрагмент повного тексту, тому що ми не хочемо мати більше 25 символів у початковий канал, а потім ви можете натиснути повне посилання вище тут і переглянути повний допис, тож давайте збережемо це, і тепер ми зможемо бачити наш канал з кожним дописом, і, звичайно, я використовував lorem epson у кожному з них, тому вони зараз усе те саме, але ми бачимо, що вони вводять перші 25 символів, а потім отримуємо це
+
+
+PostPage
+5:21:30
+page and now let's go ahead and define the id inside the function and this is going to be equal to use params and we said id here because that's what we called it in our route back in app.js when we defined the parameter for post page so that's what you need to do if you named it something different you need to also have this named differently so that's what's defined in the route and then once we have the posts here we need to get the individual post we want to display so let's say post equals post dot find and now we get the post and here we'll take the post dot id and then we'll set it to a string because it is really numeric so if we didn't set it to a string we would only be able to use two equals which you could also do if that's your preference i prefer to use strict equals when i can but in order for me to do that here i need to set that to a string to match the id that is also going to be a string coming from the parameter so once again if you don't set this to a string you'll need to go to non-strict equals just the two equal signs so it's up to you whichever you do this is the way i'm doing it and we've defined the specific post that we want
+
+сторінки, а тепер давайте визначимо ідентифікатор у функції, і це буде дорівнювати використанню параметрів, і ми сказали тут ідентифікатор, тому що саме так ми його називали в нашому маршруті в app.js, коли визначали параметр для сторінки публікації тож це те, що вам потрібно зробити, якщо ви назвали це якось інакше, вам також потрібно мати іншу назву, щоб це було визначено в маршруті, а потім, коли ми маємо публікації тут, нам потрібно отримати окрему публікацію, яку ми хочемо відобразити, тож, скажімо, post дорівнює post dot find, і тепер ми отримуємо публікацію, і тут ми візьмемо ідентифікатор публікації з крапкою, а потім ми встановимо його як рядок, тому що це дійсно число, тому, якби ми не встановили його як рядок, ми б лише мати можливість використовувати два дорівнюють, що ви також можете зробити, якщо це ваші переваги. Я віддаю перевагу використовувати суворі дорівнює, коли можу, але для того, щоб зробити це тут, мені потрібно встановити це на рядок, щоб відповідати ідентифікатору, який також збирається бути рядком, що надходить із параметра, тому ще раз, якщо ви не встановите це як рядок, ви будете потрібно перейти до нестрогих дорівнює лише два знаки рівності, тож ви вирішуєте, що робити
+
+
+App useHistory
+
+5:28:29
+and now we want to use our browser history we click the delete button but we're on the individual post page so we can do that with the use history hook that we are importing up here now underneath where we set the use state let's go ahead and hit return and we'll just say history is equal to use history and after we've defined that we can use it inside of our handle delete function so we'll say history dot push and we'll just push in the route to the home page and this will take us back to the home page once this is completed so as part of the function we're accessing the browser history with react router and then we're serving the component instead of requesting anything from the server we're serving the component that is routed to that home directory listing with this saved let's go ahead we've got our posts over here on the right in chrome i'll click my third post here's my third post i'll click delete post it deletes the post and takes us back to the home page instantly and notice there's no third post now because we have hard coded our posts in our state when i reload the application completely 
+
+NewPost
+ <form className="newPOstForm" onSubmit={handleSubmit}>
+ 5:32:59
+let's give this an on submit but it might be different than you expect instead of a prevent default here we're just going to reference handle submit now the interesting thing about this is it still receives the event we don't have to have an anonymous function and specify e inside if we just give a reference to a function like this it will still receive the event and we can refer to that inside the function 
+
+Давайте дамо це під час надсилання, але воно може відрізнятися від того, що ви очікуєте, замість запобігання за замовчуванням тут ми просто збираємося посилатися на дескриптор надсилання, що цікаво в цьому: воно все ще отримує подію, нам не потрібно мати анонімний і вкажіть e всередині, якщо ми просто дамо посилання на таку функцію, як ця, вона все одно отримає подію, і ми зможемо посилатися на неї всередині функції
+
+ const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
+  5:36:32
+handle submit function as i've mentioned the handle submit reference still receives the event even without the anonymous function specifying it back in the new post component so here i just put the e for the event in the parameters and we'll reference that here and just call prevent default at the very beginning of the function after that we need to define the id for the new post so let's set the id equal to and let's check to see if the posts array has a length and if it does that mean posts already exist it's not empty then we need to get the last post and we do that with posts and now to reference the last post we'll say posts dot length minus one because it should start counting at zero so if you get the length you've got the count of all the posts you need to subtract one to actually get the last post and after that we'll reference the id property of that last post and then we'll add one to it but if posts do not have link that means the array is empty and we need to just give this post an id of one now that we've defined the id
+
+setPostTitle("");
+5:40:43
+can go ahead and set the posts as our new state and then we'll set the post title in the controlled input back to empty so after we've submitted the new post we won't have to delete what we've submitted to create another one we'll just set that to empty we'll do the same thing for post body we'll set it back to an empty string and then finally we once again need to access the history and push and let's go back to the home page after we've created a new post so we're not just setting on the new post page again so now that we save all of that we
+
+
+5:42:40
+effect runs again well we'll put that with posts and we'll also set that to work with search and so now as our search input provides new data we could go ahead and provide new data here for the searches we can essentially filter the posts that we have down to what matches our search and so that's why those are both dependencies we're going to define something here called filtered results and we'll set this equal to the posts dot filter and now we can just say for each post and inside of this we'll need
+
+ефект працює знову добре, ми додамо це до дописів, а також налаштуємо це для роботи з пошуком, тож тепер, коли наші вхідні дані для пошуку надають нові дані, ми можемо продовжити та надати нові дані тут для пошуку, ми можемо фактично відфільтрувати дописи що ми маємо до того, що відповідає нашому пошуку, і тому це обидві залежності, ми збираємося визначити тут щось, що називається відфільтрованими результатами, і ми встановимо це рівним точковому фільтру публікацій, і тепер ми можемо просто сказати для кожної публікації та всередині цього нам знадобиться
+
+     post.body.toLowerCase().includes(search.toLowerCase()) ||
+
+     5:43:31
+inside the parentheses another set of parentheses to specify the post body and
+5:43:36
+we need that because then we're going to add a dot to lowercase
+5:43:42
+and this will set everything in the post body to lower case and now we've got the outer parentheses
+5:43:49
+and then we can put dot includes so we're checking to see if the the post body includes and by setting
+5:43:56
+everything to lower case we're not being specific about whether it's capitalized
+5:44:01
+or not our search will work either way and then we can use our search value
+5:44:06
+and also set it to lower case so it could possibly match and there we've got our full
+5:44:13
+filter for the post body so we set the post body to lower case we also set the search to lower case and we're checking
+5:44:19
+to see if the body includes what we're searching for now after that this of course this
+5:44:25
+yellow one here or gold if you will highlights our entire filter function so
+5:44:31
+i could put this on a separate line or even underneath after that we need to use
+5:44:36
+
+
+
+
+                Chapter 18: Flexbox Components
+
+5:51:26
+ today we're talking about setting the height and width of your react application i prefer to use flexbox for this however i'm sure there are other methods today i will show you mine a react application provides a few differences from just building html and css from scratch we have to consider how
+ 
+ сьогодні ми говоримо про встановлення висоти та ширини вашої програми React, я віддаю перевагу використанню flexbox для цього, однак я впевнений, що є й інші методи, сьогодні я покажу вам, що моя програма React надає кілька відмінностей від простого створення html і css з нуля ми повинні розглянути, як
+
+index.js
+document.getElementById("root")
+
+ attached to a div that has an id of root so even though we have a component with an app class our app component it is still being inserted into this other div so we have another container to consider and that is why we are not seeing a consistent width here we haven't set the width or done anything with that container with the id of root so let's go back to the css 
+
+ приєднаний до div, який має ідентифікатор root, тому, навіть якщо у нас є компонент із класом додатка, наш компонент додатка все ще вставляється в цей інший div, тож у нас є ще один контейнер для розгляду, і тому ми не бачимо узгодженого width тут ми не встановили ширину або нічого не зробили з цим контейнером з ідентифікатором root, тому повернемося до css
+
+#root {
+  flex-grow: 1;
+ 5:55:20
+and we'll give this root id not only a display of flex that justifies everything in the center with
+the content and a line items but we also know that the root div is a flex item
+because it's inside the body and we can set it to grow so it will expand
+up to the available width which would expand it for the full page
