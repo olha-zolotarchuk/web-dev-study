@@ -1,12 +1,18 @@
 import React from "react";
+import Feed from "./Feed";
 
-const Home = () => {
+const Home = ({ posts }) => {
   return (
-    <React.Fragment>
-      <main>
-        <h1>Home</h1>
-      </main>
-    </React.Fragment>
+    <main className="Home">
+      {
+        // posts !== undefined &&
+        posts.length ? (
+          <Feed posts={posts} />
+        ) : (
+          <p style={{ marginTop: "2rem" }}>No posts to display.</p>
+        )
+      }
+    </main>
   );
 };
 
