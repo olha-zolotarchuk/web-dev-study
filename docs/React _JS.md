@@ -268,3 +268,27 @@ and we'll give this root id not only a display of flex that justifies everything
 the content and a line items but we also know that the root div is a flex item
 because it's inside the body and we can set it to grow so it will expand
 up to the available width which would expand it for the full page
+
+
+
+              Chapter 19: Axios API Requests
+
+6:02:47
+set up with json server axios actually makes requesting data easier than using the fetch api 
+налаштування за допомогою axios сервера json фактично спрощує запит даних, ніж використання fetch api
+
+6:10:21
+and now we need to simply define how to use axios and we'll define a response just like we would with fetch and we'll set this equal to a weight api remember that is the axios instance we're importing and then we can use get and this is where axios becomes very easy to understand we actually use the verbiage the words that we would in a crud operation possibly in api usage so like http uses get post put delete there's patch and a few others but we're only going to use the basic crud operations so get would be our read operation in crud and so now we just need to say what endpoint we want with that base url and of course we only have one endpoint with this application and its posts so we'll go ahead and define that now this replaces fetch and then what's so nice about using axios instead of fetch is axios automatically creates that json we don't have that second step here where we have to define data and set it equal to response.json another thing that is nice about axios is it will automatically catch the errors when they are not in the 200 range of http responses
+
+і тепер нам потрібно просто визначити, як використовувати axios, і ми визначимо відповідь так само, як і з fetch, і ми встановимо це рівним вазі api. Пам’ятайте, що це екземпляр axios, який ми імпортуємо, і тоді ми можемо використовувати отримати, і тут axios стає дуже легко зрозуміти, ми насправді використовуємо словосполучення слова, які ми б використовували в грубій операції, можливо, у використанні api, отже, наприклад, http використовує get post put put delete там є патч і кілька інших, але ми збираємося лише використовуйте базові операції crud, тому get буде нашою операцією читання в crud, і тому тепер нам просто потрібно сказати, яку кінцеву точку ми хочемо мати з цією базовою URL-адресою, і, звичайно, у нас є лише одна кінцева точка з цією програмою та її публікаціями, тому ми продовжимо і визначте, що тепер це замінює fetch, і що такого приємного у використанні axios замість fetch, це те, що axios автоматично створює той json, у нас немає другого кроку, де ми повинні визначити дані та встановити їх рівними response.json ще одна річ, яка приємно про axios, це буде авт omaticly виловлювати помилки, коли вони не знаходяться в діапазоні 200 http-відповідей
+
+
+           Chapter 20: Custom Hooks
+Rules of Hooks
+https://reactjs.org/docs/hooks-rules.html
+
+useWindowSize
+useAxiosFeth
+
+so a custom hook is much like a utility function
+тому спеціальний хук дуже схожий на службову функцію
