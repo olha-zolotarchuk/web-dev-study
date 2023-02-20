@@ -292,3 +292,40 @@ useAxiosFeth
 
 so a custom hook is much like a utility function
 тому спеціальний хук дуже схожий на службову функцію
+
+https://nikgraf.github.io/react-hooks/
+
+            Chapter 21: Context API & useContext Hook
+
+7:17:06
+okay today we're talking about use context in the context api we're not adding any new functionality to our blog application we're just going to refactor to use context instead of drilling props down because that can become unwieldy and we can see really that our app.js is full of code we've put in all of our logic as well and so we've just been passing it all down this once again might not be the most efficient but it certainly helped you learn how to pass props down to components and we've been drilling those props as the statement goes however we're going to eliminate all of that today by refactoring and we'll have a much neater app.js file and we'll be able to subscribe to context and use the use context hook to pull that information in
+
+гаразд, сьогодні ми говоримо про використання контексту в API контексту, ми не додаємо жодних нових функціональних можливостей до нашого додатка для блогу, ми просто збираємося рефакторингувати використання контексту замість того, щоб деталізувати опори, тому що це може стати громіздким, і ми можемо бачити справді що наш app.js наповнений кодом, який ми також додали до нашої логіки, тому ми просто передаємо все це знову, можливо, це не найефективніше, але це, звичайно, допомогло вам навчитися передавати атрибути аж до компонентів, і ми вивчали ці елементи, як ідеться в заяві, однак ми збираємося усунути все це сьогодні шляхом рефакторингу, і ми матимемо набагато акуратніший файл app.js, і ми зможемо підписатися на контекст і використовуйте хук контексту use, щоб отримати цю інформацію
+
+
+
+:~/study/web-dev-study/exercise/08.React_JS/04.react$
+ npx json-server -p 3500 -w data/db.json
+
+
+
+7:33:49
+just checking submit and yes we have post 5 just checking so if you get that error just like i did you'll know what is happening you need to make sure you're sending those same pieces of state and maybe even like the handle submit function so maybe even some logic being sent through the data provider if that is how you are providing it to the component let's minimize chrome and we're back here at the data provider now let's go back to app and we'll clean up the next one which is edit post you can see it's receiving probably more than any other component was
+edit post you can see it's receiving probably more than any other component was and so we'll need to make sure we're sending all those same props through the data provider let's go ahead and change
+просто перевіряю надсилання, і так, у нас є пост 5, просто перевіряється, тож якщо ви отримаєте цю помилку, як і я, ви знатимете, що відбувається, вам потрібно переконатися, що ви надсилаєте ті самі фрагменти стану, і, можливо, навіть подобається функція надсилання ручки тому, можливо, навіть якась логіка надсилається через постачальника даних, якщо це те, як ви надаєте його компоненту, давайте мінімізуємо chrome, і ми знову тут, у постачальника даних, тепер давайте повернемося до програми та очистимо наступну це повідомлення редагування, ви бачите, що воно отримує, ймовірно, більше, ніж будь-який інший компонент
+редагувати допис, ви бачите, що він отримує більше, ніж будь-який інший компонент, тому нам потрібно переконатися, що ми надсилаємо всі ті самі реквізити через постачальника даних, давайте продовжимо і змінимо
+
+7:39:59
+ and our context here has everything that we previously had in that parent component and of course when a parent component renders then so do the children of the components so it was causing lots of re-renders but this still could cause quite a few because everything that subscribes to the context when the context gets updated so would the component 
+ і наш контекст тут містить усе, що ми мали раніше в тому батьківському компоненті, і, звичайно, коли батьківський компонент рендериться, то рендеряться і дочірні компоненти, тому це спричиняє багато повторних рендерингів, але це все одно може спричинити досить багато, тому що все, що підписується на контекст, коли контекст оновлюється, як і компонент
+
+
+
+                      Chapter 22: Easy Peasy Redux
+  
+7:56:13
+react.js blog application that we've already created in this series and this refactor will remove the state management from the context api that we did in the last tutorial and we'll move it to easy peasy which is a package thatbwe can install that is built on top of redux it makes using redux easy peasy and so that's a great introduction to using redux and i would actually say using a package like easy peasy or some of the alternatives that they list here on the site instead of using redux directly is really a great choice until you have to use redux directly for possibly an enterprise size application so small to medium applications can certainly use one of these other choices and they list several alternatives here as well as easy peasy and you can see one of the. alternatives they list is the context api with hooks in react and that's what we did in the previous tutorial so if you haven't checked that out again refer to that playlist link in the description now let's go ahead and get started with easy peasy 
+
+Додаток для блогу react.js, який ми вже створили в цій серії, і цей рефактор видалить керування станом із контекстного API, що ми робили в минулому підручнику, і ми перемістимо його в easy peasy, який є пакетом, який ми можемо встановити створено на основі redux, це робить використання redux легким peasy, і тому це чудовий вступ до використання redux, і я б насправді сказав, що використання пакета типу easy peasy або деяких альтернатив, які вони перераховують тут на сайті, замість безпосереднього використання redux є справді чудовий вибір, поки вам не доведеться використовувати redux безпосередньо для, можливо, програми розміру підприємства, тому малі та середні програми, безумовно, можуть використовувати один із цих інших варіантів, і вони перераховують кілька альтернатив тут, а також легкий peasy, і ви можете побачити один із них. Альтернативи, які вони перераховують, — це контекстний API із хуками в React, і це те, що ми робили в попередньому підручнику, тому, якщо ви ще не перевірили це ще раз, зверніться до цього посилання списку відтворення в описі, а тепер давайте почнемо з easy peasy
+
+https://easy-peasy.vercel.app/docs/introduction/alternatives.html
