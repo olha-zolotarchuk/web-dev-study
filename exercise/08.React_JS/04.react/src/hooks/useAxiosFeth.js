@@ -2,6 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+function delay(time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 const useAxiosFetch = (dataUrl) => {
   const [data, setData] = useState([]);
   const [fetchError, setFetchError] = useState(null);
@@ -24,6 +28,7 @@ const useAxiosFetch = (dataUrl) => {
           //   7:01:42 вперед і застосувати наш маркер скасування, і це дозволить нам скасувати запит, якщо ми відключимо компонент, і, звичайно, ми зможемо впоратися з цим під час очищення, але нам потрібно встановити маркер скасування тут, тому ось надісланий маркер скасування з проханням
         });
         if (isMounted) {
+          //await delay(3000)
           setData(response.data);
           setFetchError(null);
         }

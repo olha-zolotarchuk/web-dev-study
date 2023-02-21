@@ -1,0 +1,8 @@
+posts:
+  - id: 1
+    title: 1st post
+  # second post
+  - id: 2
+    title:
+      color: red
+      text: 2st post

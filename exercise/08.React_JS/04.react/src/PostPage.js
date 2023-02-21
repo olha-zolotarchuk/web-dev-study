@@ -1,25 +1,32 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { useContext } from "react";
-import api from "./api/posts";
-import DataContext from "./context/DataContext";
+// import { useContext } from "react";
+// import api from "./api/posts";
+// import DataContext from "./context/DataContext";
 import { useHistory } from "react-router-dom";
+import { useStoreState, useStoreActions } from "easy-peasy";
+import Missing from "./Missing";
 
 const PostPage = () => {
-  const { posts, setPosts } = useContext(DataContext);
+  // const { posts, setPosts } = useContext(DataContext);
   const { id } = useParams();
   const history = useHistory();
-  const post = posts.find((post) => post.id.toString() === id);
+  const deletePost = useStoreActions((actions) => actions.deletePost);
+  const getPostById = useStoreState((state) => state.getPostById);
+  // const post = posts.find((post) => post.id.toString() === id);
+  const post = getPostById(id);
 
   const handleDelete = async (id) => {
-    try {
-      await api.delete(`/posts/${id}`);
-      const postsList = posts.filter((post) => post.id !== id);
-      setPosts(postsList);
-      history.push("/");
-    } catch (err) {
-      console.log(`Error: ${err.message}`);
-    }
+    deletePost(id);
+    history.push("/");
+    // try {
+    //   await api.delete(`/posts/${id}`);
+    //   const postsList = posts.filter((post) => post.id !== id);
+    //   setPosts(postsList);
+    //   history.push("/");
+    // } catch (err) {
+    //   console.log(`Error: ${err.message}`);
+    // }
   };
 
   return (
@@ -42,15 +49,7 @@ const PostPage = () => {
               </button>
             </>
           )}
-          {!post && (
-            <>
-              <h2>Post Not Found</h2>
-              <p>Well, that's disappointing.</p>
-              <p>
-                <Link to="/">Visit Our Homepage</Link>
-              </p>
-            </>
-          )}
+          {!post && <Missing title="Post Not Found" />}
         </article>
       </main>
     </React.Fragment>
