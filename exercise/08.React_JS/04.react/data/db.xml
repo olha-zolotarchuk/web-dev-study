@@ -1,0 +1,17 @@
+<db>
+  <posts>
+    <post>
+      <id>1</id>
+      <title>1st post</title>      
+    </post>
+    <post>
+      <!-- my comments-->
+      <id>2</id>
+      <title>2st post</title>      
+    </post>
+    <post>
+      <id>3</id>
+      <title>3st post</title>      
+    </post>
+  </posts>
+</db>

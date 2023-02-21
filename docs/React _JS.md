@@ -295,6 +295,8 @@ so a custom hook is much like a utility function
 
 https://nikgraf.github.io/react-hooks/
 
+
+
             Chapter 21: Context API & useContext Hook
 
 7:17:06
@@ -329,3 +331,32 @@ react.js blog application that we've already created in this series and this ref
 Додаток для блогу react.js, який ми вже створили в цій серії, і цей рефактор видалить керування станом із контекстного API, що ми робили в минулому підручнику, і ми перемістимо його в easy peasy, який є пакетом, який ми можемо встановити створено на основі redux, це робить використання redux легким peasy, і тому це чудовий вступ до використання redux, і я б насправді сказав, що використання пакета типу easy peasy або деяких альтернатив, які вони перераховують тут на сайті, замість безпосереднього використання redux є справді чудовий вибір, поки вам не доведеться використовувати redux безпосередньо для, можливо, програми розміру підприємства, тому малі та середні програми, безумовно, можуть використовувати один із цих інших варіантів, і вони перераховують кілька альтернатив тут, а також легкий peasy, і ви можете побачити один із них. Альтернативи, які вони перераховують, — це контекстний API із хуками в React, і це те, що ми робили в попередньому підручнику, тому, якщо ви ще не перевірили це ще раз, зверніться до цього посилання списку відтворення в описі, а тепер давайте почнемо з easy peasy
 
 https://easy-peasy.vercel.app/docs/introduction/alternatives.html
+
+
+8:09:49
+and now the store will provide all of our state that we have in the store or the store provider will provide the store state for our entire application so we can save the index.js
+і тепер магазин надасть весь наш стан, який ми маємо в магазині, або постачальник магазину надасть стан магазину для всієї нашої програми, щоб ми могли зберегти index.js
+
+8:33:11
+ and that is managing state with easy peasy and i really recommend you check it out it is a great package that makes using redux so much easier and it really cleans up your application and puts the actions and async actions and even computed values of state in your application in a very easy to manage way
+
+ і це керування станом за допомогою легкого peasy, і я справді рекомендую вам перевірити його. Це чудовий пакет, який значно полегшує використання redux, він справді очищає вашу програму та розміщує дії та асинхронні дії та навіть обчислені значення стану у вашому програму в дуже простий спосіб керування
+
+
+       Chapter 23: Build & Deploy Your React Apps
+
+npm uninstall  і додати назви всїх пакетів які не використовуєм
+
+8:33:40
+okay today we're going to deploy an app to netlify and then we will deploy the same app to github pages so you'll know at least two different places you can host your react development projects we'll start with netlify first and what we have is the package.json file 
+
+and you can see i've got the 11 tut here this is the tutorial in the series that covered use effect and it was the last tutorial to use local storage instead of json server you wouldn't want to try to deploy json server that is just used as a dev environment rest api you would want to create a real rest api say using the rest of the mern stack for example which would be node and express to go along with react and you could create the back end for those applications like we did the blog
+8:33:40
+Гаразд, сьогодні ми збираємося розгорнути програму для netlify, а потім ми розгорнемо ту саму програму на сторінках github, щоб ви знали принаймні два різних місця, де ви можете розмістити свої проекти розробки React. Спочатку ми почнемо з netlify і що ми є файл package.json
+
+і ви бачите, що у мене є 11 тут, це підручник із серії, який охоплює ефект використання, і це був останній підручник із використання локального сховища замість сервера json, який ви не хотіли б намагатися розгорнути сервер json, який є просто використовувався як rest api середовища розробника, ви хотіли б створити справжній api rest, скажімо, використовуючи решту стека mern, наприклад, який буде node і express, щоб узгоджуватися з react, і ви можете створити бек-енд для таких програм, як ми зробив блог
+
+8:36:02
+so to initialize a repository we type git init and after the repository is initialized we want to add all of the files so we'll type git add and a period which will add all of the files unless it's listed in the git ignore file of course and after we do that we need to commit the files so i'll type git commit dash m and here i'm just going to type first commit as the message with that complete we need to go to github and create a new repository so we can push our code to the repository on github 
+8:36:02
+тому, щоб ініціалізувати сховище, ми вводимо git init, і після ініціалізації сховища ми хочемо додати всі файли, тому ми введемо git add і крапку, яка додасть усі файли, якщо вони не вказані у файлі git ignore, звичайно. і після того, як ми це зробимо, нам потрібно зафіксувати файли, тому я введу git commit dash m, а тут я просто введу first commit як повідомлення з завершенням, нам потрібно перейти на github і створити нове сховище, щоб ми може відправити наш код у репозиторій на github

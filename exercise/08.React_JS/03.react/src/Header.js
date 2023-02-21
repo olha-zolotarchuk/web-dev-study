@@ -1,21 +1,11 @@
-import React from 'react'
+import React from "react";
 
+const Header = ({ head }) => {
+  return (
+    <tr>
+      <td>{JSON.stringify(item)}</td>;
+    </tr>
+  );
+};
 
-const Header = () => {
-    return (
-        <div>
-            useEffect = {}
-  fetch('https://jsonplaceholder.typicode.com/posts')
-  .then( res => {
-    const headers = res.headers.raw())
-    return new Promise((resolve, reject) => {
-      res.json().then( json => resolve({headers, json}) )
-    })
-  })
-            .then( ({headers, json}) => doSomething(headers, json) )
-            }
-        </div>
-    )
-}
-
-export default Header
+export default Header;
