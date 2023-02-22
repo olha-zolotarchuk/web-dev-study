@@ -360,3 +360,7 @@ and you can see i've got the 11 tut here this is the tutorial in the series that
 so to initialize a repository we type git init and after the repository is initialized we want to add all of the files so we'll type git add and a period which will add all of the files unless it's listed in the git ignore file of course and after we do that we need to commit the files so i'll type git commit dash m and here i'm just going to type first commit as the message with that complete we need to go to github and create a new repository so we can push our code to the repository on github 
 8:36:02
 тому, щоб ініціалізувати сховище, ми вводимо git init, і після ініціалізації сховища ми хочемо додати всі файли, тому ми введемо git add і крапку, яка додасть усі файли, якщо вони не вказані у файлі git ignore, звичайно. і після того, як ми це зробимо, нам потрібно зафіксувати файли, тому я введу git commit dash m, а тут я просто введу first commit як повідомлення з завершенням, нам потрібно перейти на github і створити нове сховище, щоб ми може відправити наш код у репозиторій на github
+
+
+
+npx create-react-app 05.react-ShoppingСart
