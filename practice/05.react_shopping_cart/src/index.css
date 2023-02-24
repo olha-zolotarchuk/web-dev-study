@@ -67,3 +67,20 @@ footer {
 
   cursor: pointer;
 }
+
+.product {
+  display: grid;
+  grid-template-columns: max-content;
+}
+
+.product__img {
+}
+
+.products__page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: stretch;
+  gap: 4rem;
+  
+}

@@ -3,6 +3,10 @@
     {
       "productId": 1,
       "amount": 2
+    },
+    {
+      "productId": 13,
+      "amount": 2
     }
   ]
 }
