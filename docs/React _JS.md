@@ -364,3 +364,5 @@ so to initialize a repository we type git init and after the repository is initi
 
 
 npx create-react-app 05.react-ShoppingСart
+
+npm i react-router-dom -S

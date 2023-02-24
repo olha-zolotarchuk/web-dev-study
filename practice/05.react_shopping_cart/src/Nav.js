@@ -1,11 +1,17 @@
 import React from "react";
+import Cart from "./Cart";
+import Product from "./Product/Product";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <React.Fragment>
       <nav className="Nav">
         <h1>OlyaShop</h1>
-        <button>
+        <Link to="/">Product</Link>
+        <Link to="cart">Cart</Link>
+
+        {/* <button>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path
               className="basket__svg"
@@ -13,7 +19,7 @@ const Nav = () => {
               fill="white"
             ></path>
           </svg>
-        </button>
+        </button> */}
       </nav>
     </React.Fragment>
   );
