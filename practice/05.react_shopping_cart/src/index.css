@@ -84,3 +84,11 @@ footer {
   gap: 4rem;
   
 }
+
+.CartProduct{
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: stretch;
+  gap: 4rem;
+}

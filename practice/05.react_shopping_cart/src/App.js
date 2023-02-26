@@ -1,58 +1,46 @@
 import React from "react";
 import { useState, useEffect } from "react";
-// import Nav from "./Nav";
-// import Footer from "./Footer";
-// import Cart from "./Cart";
 import ProductPage from "./Product/ProductsPage";
 import { Route, Routes } from "react-router-dom";
-import Cart from "./Cart";
-
+import CartPage from "./CartPage";
 import Layout from "./Layout";
+import { useProducts } from "./services/useProducts";
+
 
 function App() {
-  const API_URL = "https://dummyjson.com/products";
-  const [products, setProducts] = useState([]);
-  // const [cart, setCart] = useState([]);
+  const products = useProducts();
+
+  const API_URL_CART = "http://localhost:3600/cart";
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    const fetchItems = async () => {
+    const fetchCart = async () => {
       try {
-        const response = await fetch(API_URL);
-        const data = await response.json();
-        // console.log(data)
-        // console.log(data.products);
-        setProducts(data.products);
+        const response = await fetch(API_URL_CART);
+        const dataCart = await response.json();
+        // console.log(dataCart);
+        setCart(dataCart);
       } catch (err) {
         console.log(err);
       }
     };
 
-    fetchItems();
+    fetchCart();
   }, []);
 
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<ProductPage products={products} />} />
-        <Route path="cart" element={<Cart />} />
+        <Route
+          path="cart"
+          element={<CartPage
+            cart={cart}
+            />}
+        />
       </Route>
     </Routes>
   );
 }
 
 export default App;
-
-// <>
-//   <Nav />
-//   <Routes>
-//     <Route path="/" element={<ProductPage products={products} />}></Route>
-//     <Route path="/cart" element={<Cart />}></Route>
-//     <Route element={<Footer />}></Route>
-//     {/* <div className="App">
-//       <Nav />
-//       <ProductPage products={products} />
-//       {/* <Cart products={products} /> */}
-//     {/* <Footer /> */}
-//   </Routes>
-//   <Footer />
-// </>

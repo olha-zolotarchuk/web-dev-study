@@ -1,5 +1,5 @@
 import React from "react";
-import Cart from "./Cart";
+import Cart from "./CartPage";
 import Product from "./Product/Product";
 import { Link } from "react-router-dom";
 
