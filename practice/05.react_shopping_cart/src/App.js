@@ -12,6 +12,7 @@ function App() {
 
   const API_URL_CART = "http://localhost:3600/cart";
   const [cart, setCart] = useState([]);
+  
 
   useEffect(() => {
     const fetchCart = async () => {
@@ -27,6 +28,11 @@ function App() {
 
     fetchCart();
   }, []);
+
+
+
+    
+
 
   return (
     <Routes>

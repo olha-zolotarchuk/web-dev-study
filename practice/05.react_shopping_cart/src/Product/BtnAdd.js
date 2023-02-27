@@ -1,10 +1,54 @@
-import React from "react";
-// import Product from "./Product";
+import React, { useCallback } from "react";
 
-const BtnAdd = ({ setCart }) => {
+function generateUUID() {
+  // Public Domain/MIT
+  var d = new Date().getTime(); //Timestamp
+  var d2 =
+    (typeof performance !== "undefined" &&
+      performance.now &&
+      performance.now() * 1000) ||
+    0; //Time in microseconds since page-load or 0 if unsupported
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+    var r = Math.random() * 16; //random number between 0 and 16
+    if (d > 0) {
+      //Use timestamp until depleted
+      r = (d + r) % 16 | 0;
+      d = Math.floor(d / 16);
+    } else {
+      //Use microseconds since page-load if supported
+      r = (d2 + r) % 16 | 0;
+      d2 = Math.floor(d2 / 16);
+    }
+    return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
+  });
+}
+
+const BtnAdd = ({ productId }) => {
+  const addProduct = (productId) => {
+    fetch("http://localhost:3600/cart", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: generateUUID(),
+        productId,
+        amount: 1,
+      }),
+    });
+  };
+
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      addProduct(productId);
+    },
+    [productId]
+  );
+
   return (
     <div>
-      <button className="btn__add" type="button" onClick={setCart}>
+      <button className="btn__add" type="button" onClick={handleSubmit}>
         Add to Cart
       </button>
     </div>
