@@ -24,6 +24,7 @@ function generateUUID() {
 }
 
 const BtnAdd = ({ productId }) => {
+  
   const addProduct = (productId) => {
     fetch("http://localhost:3600/cart", {
       method: "POST",
