@@ -1,7 +1,7 @@
 import React from "react";
 import BtnAdd from "./BtnAdd";
 
-const Product = ({ product, handleSubmit, newProduct, setNewProduct }) => {
+const Product = ({ product  }) => {
   //  console.log(product);
 
   return (
@@ -20,7 +20,13 @@ const Product = ({ product, handleSubmit, newProduct, setNewProduct }) => {
         <span>$</span>
       </div>
       <div>{product.rating}</div>
-      <BtnAdd productId={product.id} />
+      <BtnAdd
+        productId={product.id}
+        // setCart={() => {
+        //   console.log(product.id);
+        //   console.log(product.price);
+        // }}
+      />
       {/* {JSON.stringify(product)} */}
     </div>
   );

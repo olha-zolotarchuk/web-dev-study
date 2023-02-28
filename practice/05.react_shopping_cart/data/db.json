@@ -1,47 +1,7 @@
 {
   "cart": [
     {
-      "id": "xxxsdsd",
-      "productId": 1,
-      "amount": 2
-    },
-    {
-      "id": "hiualla",
-      "productId": 13,
-      "amount": 2
-    },
-    {
-      "productId": 1,
-      "amount": 1,
-      "id": "04cc51d1-5144-4a40-a2e5-a63c56c1f873"
-    },
-    {
-      "productId": 3,
-      "amount": 1,
-      "id": "393bd99f-47c6-444b-aaaf-d9cd3c3c34b1"
-    },
-    {
-      "productId": 9,
-      "amount": 1,
-      "id": "73755921-49e2-4f82-a6a0-8fdc5b2b9d62"
-    },
-    {
-      "id": "eb8053bc-1340-429d-a36b-89b044ff57cf",
-      "productId": 2,
-      "amount": 1
-    },
-    {
-      "id": "bfb1605c-6773-4789-84df-e2576f9f0fe5",
-      "productId": 2,
-      "amount": 1
-    },
-    {
-      "id": "6c653dcb-6b38-42e1-adc7-f51873a94efd",
-      "productId": 2,
-      "amount": 1
-    },
-    {
-      "id": "3e49a7b0-4328-4f98-ab0b-f88789ac1f63",
+      "id": "e11c75b7-97e8-4bde-84ee-ced650c4c4ec",
       "productId": 2,
       "amount": 1
     }

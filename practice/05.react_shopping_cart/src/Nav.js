@@ -1,6 +1,4 @@
 import React from "react";
-import Cart from "./CartPage";
-import Product from "./Product/Product";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -11,7 +9,7 @@ const Nav = () => {
         <Link to="/">Product</Link>
         <Link to="cart">Cart</Link>
 
-        {/* <button>
+        <button>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path
               className="basket__svg"
@@ -19,7 +17,7 @@ const Nav = () => {
               fill="white"
             ></path>
           </svg>
-        </button> */}
+        </button>
       </nav>
     </React.Fragment>
   );

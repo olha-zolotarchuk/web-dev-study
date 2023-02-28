@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useProduct } from "./services/useProduct";
+import { deleteProduct } from "./services/delete";
 
 const CartProduct = ({ cartProduct }) => {
   const product = useProduct(cartProduct.productId);
@@ -19,6 +20,16 @@ const CartProduct = ({ cartProduct }) => {
       <div>{product.title}</div>
       <div>{cartProduct.amount}</div>
       <div>{product.price}</div>
+      <button
+        type="button"
+        onClick={() => {
+          deleteProduct(cartProduct.id).then(() =>
+            window.location.reload(false)
+          );
+        }}
+      >
+        Delete
+      </button>
       {/* {JSON.stringify(cart)} */}
     </div>
   );
