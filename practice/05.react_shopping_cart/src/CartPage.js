@@ -15,18 +15,22 @@ const CartPage = () => {
 
   return (
     <React.Fragment>
-      <div> YOUR BAG</div>
-      <button className="btn__cart" type="button" onClick={removeAllHandler}>
-        CLEAR CART
-      </button>
-
-      <div>
+      <div className="cart__header">
+        <h2> YOUR BAG</h2>
+        <button
+          className="cart__clear__btn"
+          type="button"
+          onClick={removeAllHandler}
+        >
+          CLEAR CART
+        </button>
+      </div>
+      <div className="cart__items">
         {cart.map((cartProduct, i) => (
           <CartProduct key={i} cartProduct={cartProduct} />
         ))}
-        <p>Total</p>
-        {/* 
-        <p>is currently empty</p> */}
+        {/* <div className="cart__total">Total</div>
+        <div className="cart__empty__message">Is currently empty...</div> */}
       </div>
     </React.Fragment>
   );
