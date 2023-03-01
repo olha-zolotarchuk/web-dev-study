@@ -51,22 +51,11 @@ footer {
   place-content: center;
 }
 
-.basket__svg {
+/* .basket__svg {
   /* height: 100%; */
-  display: flex;
+/* display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.btn__cart {
-  color: var(--Color-btn);
-}
-
-.btn__cart:hover {
-  background-color: var(--Color-btn-hover);
-
-  cursor: pointer;
-}
+  align-items: center; */
 
 .product {
   display: grid;
@@ -82,13 +71,100 @@ footer {
   justify-content: space-around;
   align-content: stretch;
   gap: 4rem;
-  
 }
 
-.CartProduct{
-   display: flex;
+/* Cart Product */
+
+.сart__product {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-content: stretch;
+  /* align-content: stretch; */
   gap: 4rem;
+  width: 800px;
+  border: 1px solid;
+
+  align-items: center;
+  margin-bottom: 20px;
+
+  padding: 10px;
+}
+
+.product__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart__product img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.сart__product__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.сart__product__amount {
+  /* font-size: 16px; */
+}
+
+.сart__product__price {
+  font-size: 20px;
+}
+
+.сart__product__btn__delete {
+  padding: 10px;
+  border: none;
+  border-radius: 18px;
+  background-color: #eb817a;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Cart Page */
+
+.cart__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  margin: 15px;
+}
+
+.cart__header h2 {
+  font-size: 2rem;
+}
+
+.cart__clear__btn {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  margin: 15px;
+}
+
+.cart__clear-btn:hover {
+  background-color: #d32f2f;
+}
+
+.cart__empty__message {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cart__items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
 }

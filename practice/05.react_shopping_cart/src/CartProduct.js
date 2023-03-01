@@ -10,17 +10,21 @@ const CartProduct = ({ cartProduct }) => {
   }
 
   return (
-    <div className="CartProduct">
+    <div className="сart__product">
       <img
         src={product.thumbnail}
         alt={product.title}
         height="200px"
         width="200px"
       />
-      <div>{product.title}</div>
-      <div>{cartProduct.amount}</div>
-      <div>{product.price}</div>
+      <div class="product__details">
+        <div className="сart__product__title">{product.title}</div>
+        <div className="cart__product__brand">{product.brand}</div>
+      </div>
+      <div className="сart__product__amount">{cartProduct.amount}</div>
+      <div className="сart__product__price">{product.price} &#36;</div>
       <button
+        className="сart__product__btn__delete"
         type="button"
         onClick={() => {
           deleteProduct(cartProduct.id).then(() =>
@@ -30,6 +34,7 @@ const CartProduct = ({ cartProduct }) => {
       >
         Delete
       </button>
+
       {/* {JSON.stringify(cart)} */}
     </div>
   );
