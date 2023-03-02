@@ -17,7 +17,7 @@ const CartProduct = ({ cartProduct }) => {
         height="200px"
         width="200px"
       />
-      <div class="product__details">
+      <div className="product__details">
         <div className="сart__product__title">{product.title}</div>
         <div className="cart__product__brand">{product.brand}</div>
       </div>
