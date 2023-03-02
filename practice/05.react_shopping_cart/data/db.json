@@ -1,13 +1,8 @@
 {
   "cart": [
     {
-      "id": "176879ea-03c5-4ca0-a617-81400f51d291",
+      "id": "f450a92e-f604-4d00-b580-9cffbeb61add",
       "productId": 2,
-      "amount": 1
-    },
-    {
-      "id": "50b84668-1c77-4e03-8c48-e4b7416c740c",
-      "productId": 12,
       "amount": 1
     }
   ]
