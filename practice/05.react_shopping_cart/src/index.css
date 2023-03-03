@@ -13,7 +13,7 @@ body {
 :root {
   /* Color */
   --Color-body: #f1f5f8;
-  --Color-nav: #2680c0;
+  --Color-nav: #0365ac;
   --Color-: #003e6b;
   --Color-: #85c6f4;
   --Color-: #102a42;
@@ -24,38 +24,17 @@ body {
 }
 
 .App {
-  /* display: flex; */
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  height: 100vh;
-  width: 100%;
-  /* max-width: 500px; */
-  /* border: 1px solid mediumblue; */
-  /* margin: auto; */
+  position: relative;
 }
 
-.Nav {
-  background-color: var(--Color-nav);
-  color: white;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  /* column-gap: normal; */
-}
-
-footer {
+/* footer {
   width: 100%;
   padding: 0.25em;
   display: grid;
   place-content: center;
-}
+} */
 
-/* .basket__svg {
-  /* height: 100%; */
-/* display: flex;
-  justify-content: center;
-  align-items: center; */
+/* Product */
 
 .product {
   display: grid;
@@ -64,6 +43,8 @@ footer {
 
 .product__img {
 }
+
+/* Product Page*/
 
 .products__page {
   display: flex;
@@ -96,9 +77,9 @@ footer {
 }
 
 .cart__product img {
-  width: 80px;
-  height: 80px;
-  margin-right: 20px;
+  /* width: 100%; */
+  /* height: 80px; */
+  /* margin-right: 20px; */
 }
 
 .сart__product__title {
@@ -131,7 +112,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+
   margin: 15px;
 }
 
@@ -167,4 +148,54 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 -1rem;
+}
+
+/* Nav */
+
+.nav {
+  background-color: var(--Color-nav);
+  color: white;
+  height: 14vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* position: sticky; */
+}
+
+.nav__title {
+  text-shadow: 3px -5px 10px rgba(255, 255, 255, 0.534);
+  font-size: 35px;
+  letter-spacing: 4px;
+  text-decoration-style: wavy;
+}
+
+.nav__title:hover {
+  cursor: pointer;
+  
+}
+
+.nav__title:hover::before {
+  transform: translate(-20px, 12px);
+}
+
+.nav__product {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__cart {
+  position: relative;
+}
+
+.nav__cart__svg {
+}
+
+.nav__counter {
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  top: -9px;
+  right: -9px;
 }
