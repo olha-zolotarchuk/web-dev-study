@@ -21,7 +21,7 @@ const CartPage = () => {
     <React.Fragment>
       <div className="cart__header">
         <h2> YOUR BAG</h2>
-        <p>
+        <p className="">
           {cart.length} {cart.length === 1 ? "product" : "products"}
         </p>
         <button
