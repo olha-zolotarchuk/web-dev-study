@@ -1,31 +1,10 @@
-import React, { useCallback } from "react";
-
-function generateUUID() {
-  // Public Domain/MIT
-  var d = new Date().getTime(); //Timestamp
-  var d2 =
-    (typeof performance !== "undefined" &&
-      performance.now &&
-      performance.now() * 1000) ||
-    0; //Time in microseconds since page-load or 0 if unsupported
-  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
-    var r = Math.random() * 16; //random number between 0 and 16
-    if (d > 0) {
-      //Use timestamp until depleted
-      r = (d + r) % 16 | 0;
-      d = Math.floor(d / 16);
-    } else {
-      //Use microseconds since page-load if supported
-      r = (d2 + r) % 16 | 0;
-      d2 = Math.floor(d2 / 16);
-    }
-    return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
-  });
-}
+import React, { useCallback, useState } from "react";
 
 const BtnAdd = ({ productId }) => {
-  
-  
+  // if (productId === null) {
+  //   return addProduct();
+  // }
+  const [count, seCount] = useState(1);
 
   const addProduct = (productId) => {
     fetch("http://localhost:3600/cart", {
@@ -34,9 +13,20 @@ const BtnAdd = ({ productId }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id: generateUUID(),
-        productId,
+        id: productId,
         amount: 1,
+      }),
+    });
+  };
+
+  const updateProduct = (id) => {
+    fetch(`http://localhost:3600/cart/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        amount: seCount(Number(count) + 1),
       }),
     });
   };
@@ -44,10 +34,22 @@ const BtnAdd = ({ productId }) => {
   const handleSubmit = useCallback(
     (e) => {
       e.preventDefault();
-      addProduct(productId);
+
+      if (productId === undefined) {
+        return addProduct(productId);
+      } else {
+        updateProduct(productId);
+      }
     },
     [productId]
   );
+  // const handleUpdate = useCallback(
+  //   (e) => {
+  //     e.preventDefault();
+  //     updateProduct(productId);
+  //   },
+  //   [productId]
+  // );
 
   return (
     <div>
@@ -59,3 +61,7 @@ const BtnAdd = ({ productId }) => {
 };
 
 export default BtnAdd;
+
+// {
+//   BtnAdd ? { handleSubmit } : { handleUpdate };
+// }

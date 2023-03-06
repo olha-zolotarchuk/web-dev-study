@@ -3,7 +3,7 @@ import { useProduct } from "./services/useProduct";
 import { deleteProduct } from "./services/delete";
 
 const CartProduct = ({ cartProduct }) => {
-  const product = useProduct(cartProduct.productId);
+  const product = useProduct(cartProduct.id);
 
   if (product === undefined) {
     return <p>Loading product data...</p>;
