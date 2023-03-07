@@ -15,7 +15,14 @@ body {
 }
 
 a {
+  position: relative;
+  color: var(--white);
+  font-size: clamp(1.5rem, 5vw, 4rem);
   text-decoration: none;
+
+  padding-bottom: 0.2em;
+  width: max-content;
+  line-height: 1;
 }
 
 section {
@@ -28,14 +35,22 @@ img {
   height: 300px;
 }
 
+/* HEADER  */
+
 .header {
   position: sticky;
   top: 0;
   z-index: 1;
+  /* width: 100vw;
+  height: 100vh; */
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  gap: clamp(1rem, 3vw, 2rem);
 }
 
 .nav {
-  background-color: rgb(0, 3, 3);
+  /* background-color: rgb(0, 3, 3); */
   padding: 50px;
   font-weight: bold;
   font-size: 1.5rem;
@@ -48,7 +63,15 @@ img {
   justify-content: flex-end;
   gap: 3rem;
   font-weight: 50px;
+
+  display: inline-block;
+  white-space: nowrap;
+  transition: all 350ms ease-out;
+  transform-origin: center center;
+  transform-style: preserve-3d;
 }
+
+/* HOME */
 
 .home {
   /* position: relative; */
