@@ -1,55 +1,46 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 
 const BtnAdd = ({ productId }) => {
-  // if (productId === null) {
-  //   return addProduct();
-  // }
-  const [count, seCount] = useState(1);
+  const addProduct = async (productId) => {
+    const response = await fetch("http://localhost:3600/cart/" + productId);
 
-  const addProduct = (productId) => {
-    fetch("http://localhost:3600/cart", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: productId,
-        amount: 1,
-      }),
-    });
-  };
+    if (response.status === 404) {
+      // @todo await fetch put ....
+      await fetch("http://localhost:3600/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: productId,
+          amount: 1,
+        }),
+      });
+    } else if (response.status === 200) {
+      const record = await response.json();
+      console.log(record.amount);
+      // todo
+      fetch(`http://localhost:3600/cart/${productId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          amount: record.amount + 1,
+        }),
+      });
+    }
 
-  const updateProduct = (id) => {
-    fetch(`http://localhost:3600/cart/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        amount: seCount(Number(count) + 1),
-      }),
-    });
+    console.log(response);
   };
 
   const handleSubmit = useCallback(
     (e) => {
       e.preventDefault();
-
-      if (productId === undefined) {
-        return addProduct(productId);
-      } else {
-        updateProduct(productId);
-      }
+      addProduct(productId);
     },
     [productId]
   );
-  // const handleUpdate = useCallback(
-  //   (e) => {
-  //     e.preventDefault();
-  //     updateProduct(productId);
-  //   },
-  //   [productId]
-  // );
 
   return (
     <div>
@@ -61,7 +52,3 @@ const BtnAdd = ({ productId }) => {
 };
 
 export default BtnAdd;
-
-// {
-//   BtnAdd ? { handleSubmit } : { handleUpdate };
-// }
