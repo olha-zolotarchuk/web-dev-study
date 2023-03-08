@@ -5,7 +5,6 @@ const BtnAdd = ({ productId }) => {
     const response = await fetch("http://localhost:3600/cart/" + productId);
 
     if (response.status === 404) {
-      // @todo await fetch put ....
       await fetch("http://localhost:3600/cart", {
         method: "POST",
         headers: {
@@ -18,8 +17,7 @@ const BtnAdd = ({ productId }) => {
       });
     } else if (response.status === 200) {
       const record = await response.json();
-      console.log(record.amount);
-      // todo
+      // console.log(record.amount);
       fetch(`http://localhost:3600/cart/${productId}`, {
         method: "PUT",
         headers: {
@@ -31,7 +29,7 @@ const BtnAdd = ({ productId }) => {
       });
     }
 
-    console.log(response);
+    // console.log(response);
   };
 
   const handleSubmit = useCallback(
