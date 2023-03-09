@@ -1,19 +1,24 @@
-$(document).ready(function () {
-  //create variable
-  var counts = 0;
-  $(".addtocart").click(function () {
+import React from "react";
+import { useState } from "react";
+
+export const counter = () => {
   
-    counts += +1;
-    $(".cart-counter").animate(
-      {
-        //show span with number
-        opacity: 1,
-      },
-      300,
-      function () {
-        //write number of counts into span
-        $(this).text(counts);
+    const [counter, setCounter] = useState(1);
+
+      const handleClick1 = () => {
+        setCounter(counter + 1);
       }
-    );
-  });
-});
+    
+   const handleClick2 = () => {
+     setCounter(counter - 1);
+   };
+    
+    return (
+        <React.Fragment>
+            <div className="counter">Counter</div>
+            <button className="btnMinus" onClick={handleClick2}>-</button>
+            {counter}
+            <button className="btnPlus" onClick={handleClick1}>+</button>
+        </React.Fragment>
+    )
+};

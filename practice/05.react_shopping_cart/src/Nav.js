@@ -5,24 +5,26 @@ const Nav = () => {
   return (
     <React.Fragment>
       <nav className="nav">
-        <h1 className="nav__title">
-          <span
-            style={{
-              color: "#85c6f4",
-            }}
-          >
-            O
-          </span>
-          lya
-          <span
-            style={{
-              color: "#85c6f4",
-            }}
-          >
-            S
-          </span>
-          hop
-        </h1>
+        <Link to="/">
+          <h1 className="nav__title">
+            <span
+              style={{
+                color: "#85c6f4",
+              }}
+            >
+              O
+            </span>
+            lya
+            <span
+              style={{
+                color: "#85c6f4",
+              }}
+            >
+              S
+            </span>
+            hop
+          </h1>
+        </Link>
         <Link className="nav__product" to="/">
           Product
         </Link>

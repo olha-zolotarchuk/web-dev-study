@@ -32,13 +32,13 @@ const CartPage = () => {
           CLEAR CART
         </button>
       </div>
-
       <div className="cart__items">
         {cart.map((cartProduct, i) => (
           <CartProduct key={i} cartProduct={cartProduct} />
         ))}
       </div>
-      {/* <div className="cart__total">Total</div> */}
+      <div className="cart__total">Total</div>
+      {cart.amount}
     </React.Fragment>
   );
 };
