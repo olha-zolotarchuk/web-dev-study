@@ -1,32 +1,16 @@
 {
   "cart": [
     {
-      "amount": 3,
-      "id": 3
-    },
-    {
-      "amount": 22,
+      "amount": 5,
       "id": 2
     },
     {
-      "amount": 4,
+      "amount": 2,
       "id": 11
     },
     {
-      "amount": 9,
-      "id": 23
-    },
-    {
-      "id": 22,
+      "id": 10,
       "amount": 1
-    },
-    {
-      "amount": 8,
-      "id": 1
-    },
-    {
-      "amount": 7,
-      "id": 19
     }
   ]
 }

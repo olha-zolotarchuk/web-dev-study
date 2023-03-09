@@ -15,6 +15,7 @@ function App() {
         <Route path="cart" element={<CartPage />}
         />
       </Route>
+
     </Routes>
   );
 }
