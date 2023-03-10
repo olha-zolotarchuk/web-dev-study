@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import CartProduct from "./CartProduct";
 import { useCart } from "./services/useCart";
 import { deleteProduct } from "./services/delete";
+import { CartTotal } from "./CartTotal";
 
 const CartPage = () => {
   const cart = useCart();
@@ -32,13 +33,21 @@ const CartPage = () => {
           CLEAR CART
         </button>
       </div>
-      <div className="cart__items">
-        {cart.map((cartProduct, i) => (
-          <CartProduct key={i} cartProduct={cartProduct} />
-        ))}
+      <div>
+        <div className="cart__items">
+          {cart.map((cartProduct, i) => (
+            <CartProduct
+              key={i}
+              cartProduct={cartProduct}
+              a={(param) => {
+                console.log("clicked " + param);
+              }}
+            />
+          ))}
+
+          <CartTotal />
+        </div>
       </div>
-      <div className="cart__total">Total</div>
-      {cart.amount}
     </React.Fragment>
   );
 };

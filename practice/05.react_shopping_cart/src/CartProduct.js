@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import { useProduct } from "./services/useProduct";
 import { deleteProduct } from "./services/delete";
 
-const CartProduct = ({ cartProduct }) => {
+const CartProduct = ({ cartProduct, a }) => {
   const product = useProduct(cartProduct.id);
 
   const [counter, setCounter] = useState(cartProduct.amount);
@@ -13,45 +13,35 @@ const CartProduct = ({ cartProduct }) => {
 
   const handleClick1 = () => {
     setCounter(counter + 1);
-    // console.log(counter);
+    console.log(counter);
+    a(counter + 1);
+    a(counter -10);
     // console.log(setCounter);
   };
 
   const handleClick2 = () => {
     setCounter(counter - 1);
-    // console.log(counter);
-    if (counter-1 === 0) {
+    console.log(counter);
+    if (counter - 1 === 0) {
       return deleteProduct(cartProduct.id).then(() =>
         window.location.reload(false)
       );
     }
   };
 
-  // if (counter === 0) {
-  // return deleteProduct(cartProduct.id);
-  // }
-
-  // useCallback(async () => {
-  //   for (const cartProduct of cart) {
-  //     await deleteProduct(cartProduct.id);
-  //   }
-  //   window.location.reload(false);
-  // }, [cart]);
-
   const totalPrice = counter * product.price;
 
   return (
     <div className="сart__product">
-      <img
-        src={product.thumbnail}
-        alt={product.title}
-      />
+      <div className="сart__product__img">
+        <img src={product.thumbnail} alt={product.title} />
+      </div>
       <div className="сart__product__details">
         <div className="сart__product__title">{product.title}</div>
         <div className="cart__product__brand">{product.brand}</div>
       </div>
       <div className="cart__product__counter">
-        <button className="btnCounter" onClick={handleClick2}>
+        <button className="btnCounteUseTotalCartr" onClick={handleClick2}>
           -
         </button>
         <div className="сart__product__amount">{counter}</div>
