@@ -13,10 +13,10 @@ const CartProduct = ({ cartProduct, a }) => {
 
   const handleClick1 = () => {
     setCounter(counter + 1);
-    console.log(counter);
-    a(counter + 1);
+    // console.log(counter);
+    a(counter + 185);
     a(counter -10);
-    // console.log(setCounter);
+
   };
 
   const handleClick2 = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import UseTotalCart from "./UseTotalCart";
+import UseTotalCart from "./TotalCart";
 
 export const CartTotal = () => {
   return (
