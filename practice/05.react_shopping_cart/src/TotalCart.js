@@ -2,7 +2,7 @@ import { useCart } from "./services/useCart";
 import { useProducts } from "./services/useProducts";
 import { useState, useEffect } from "react";
 
-const UseTotalCart = () => {
+const TotalCart = () => {
   const products = useProducts();
   const cart = useCart();
 
@@ -39,4 +39,4 @@ const UseTotalCart = () => {
   return <div className="UseTotalCart">{totalPrice}</div>;
 };
 
-export default UseTotalCart;
+export default TotalCart;
