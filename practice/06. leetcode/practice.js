@@ -52,38 +52,101 @@
 
 // https://leetcode.com/problems/valid-parentheses
 
+// const bracket= {
+//   "(": ")",
+//   "{": "}",
+//   "[": "]",
+// };
 
+// for (let i = 0; i < 9; i++) {
+//   console.log(i);
+//   // more statements
+// }
 
-  // const bracket= {
-  //   "(": ")",
-  //   "{": "}",
-  //   "[": "]",
-  // };
+// function plusOne(digits) {
+//   // Loop through the digits array starting from the end
+//   for (let i = digits.length - 1; i >= 0; i--) {
+//     // Increment the current digit by one
+//     digits[i]++;
 
+//     // If the current digit is less than 10, we don't need to carry over to the next digit
+//     if (digits[i] < 10) {
+//       return digits;
+//     }
+//     // Otherwise, we need to carry over to the next digit and set the current digit to 0
+//     digits[i] = 0;
+//   }
 
+//   // If we have looped through the entire digits array and haven't returned, we need to add an extra digit to the beginning of the array
+//   digits.unshift(1);
 
+//   return digits;
+// }
 
-  for (let i = 0; i < 9; i++) {
-    console.log(i);
-    // more statements
-  }
+// https://leetcode.com/problems/search-insert-position/
 
-  function plusOne(digits) {
-    // Loop through the digits array starting from the end
-    for (let i = digits.length - 1; i >= 0; i--) {
-      // Increment the current digit by one
-      digits[i]++;
+// function searchInsert(nums, target) {
+//   let index = 0;
+//   let index2 = nums.length + 1;
 
-      // If the current digit is less than 10, we don't need to carry over to the next digit
-      if (digits[i] < 10) {
-        return digits;
-      }
-      // Otherwise, we need to carry over to the next digit and set the current digit to 0
-      digits[i] = 0;
-    }
+//    console.log(index);
+//    console.log(index2);
+//   while (index <= index2) {
+//     console.log(index);
+//        console.log(index2)
+//   }
+// }
 
-    // If we have looped through the entire digits array and haven't returned, we need to add an extra digit to the beginning of the array
-    digits.unshift(1);
+// function searchInsert(nums, target) {
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] >= target) {
+//       return i;
+//     }
+//   }
+//   return nums.length;
+// }
 
-    return digits;
-  }
+// const nums = [1, 3, 5, 6];
+// const target = 5;
+// let result = searchInsert(nums, target);
+
+// console.log(result);
+
+// https://leetcode.com/problems/climbing-stairs/
+
+// let n = 2;
+
+// function climbStairs(n) {
+//   if (n <= 1) {
+//     return n;
+//   } else {
+//     return (n - 1) + (n - 2);
+//   }
+// }
+
+// console.log(climbStairs(n));
+
+// https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+
+// const haystack = "hello";
+// const needle = "ll";
+
+// console.log(haystack.indexOf(needle))
+
+// function strStr (haystack, needle) {
+
+//     return haystack.indexOf(needle);
+// };
+// console.log(strStr(haystack, needle));
+
+// https://leetcode.com/problems/length-of-last-word/
+
+const s = "   fly me   to   the moon   ";
+
+const a = (s.trimEnd());
+// console.log(s.length - s.indexOf(" ", -1));
+// console.log(s.search(" "));
+
+console.log(a.charAt(" "))
+console.log(a.slice(-1, Number(a.length)));
+console.log(s.indexOf());
