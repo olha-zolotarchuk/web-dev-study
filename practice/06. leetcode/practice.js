@@ -141,12 +141,26 @@
 
 // https://leetcode.com/problems/length-of-last-word/
 
-const s = "   fly me   to   the moon   ";
+const s = "   fly me   to   the moonff   ";
 
-const a = (s.trimEnd());
-// console.log(s.length - s.indexOf(" ", -1));
-// console.log(s.search(" "));
+const a = s.trimEnd();
 
-console.log(a.charAt(" "))
-console.log(a.slice(-1, Number(a.length)));
-console.log(s.indexOf());
+// console.log(s.length);
+// console.log(a.length)
+
+// let length = 0;
+
+function lengthOfLastWord(a) {
+  for (let i = a.length - 1; i >= 0; i--) {
+    // console.log(a[i]);
+  
+    if (a[i] == " ") {
+        // console.log(i);
+       return a.length -i - 1
+    } 
+  }
+   return a.length
+}
+// console.log(a)
+
+console.log(lengthOfLastWord(a));
