@@ -50,39 +50,6 @@
 // console.log(val);
 // num.find((element) => console.log(element.symbol));
 
-// https://leetcode.com/problems/valid-parentheses
-
-// const bracket= {
-//   "(": ")",
-//   "{": "}",
-//   "[": "]",
-// };
-
-// for (let i = 0; i < 9; i++) {
-//   console.log(i);
-//   // more statements
-// }
-
-// function plusOne(digits) {
-//   // Loop through the digits array starting from the end
-//   for (let i = digits.length - 1; i >= 0; i--) {
-//     // Increment the current digit by one
-//     digits[i]++;
-
-//     // If the current digit is less than 10, we don't need to carry over to the next digit
-//     if (digits[i] < 10) {
-//       return digits;
-//     }
-//     // Otherwise, we need to carry over to the next digit and set the current digit to 0
-//     digits[i] = 0;
-//   }
-
-//   // If we have looped through the entire digits array and haven't returned, we need to add an extra digit to the beginning of the array
-//   digits.unshift(1);
-
-//   return digits;
-// }
-
 // https://leetcode.com/problems/search-insert-position/
 
 // function searchInsert(nums, target) {
@@ -141,26 +108,57 @@
 
 // https://leetcode.com/problems/length-of-last-word/
 
-const s = "   fly me   to   the moonff   ";
+// const s = "   fly me   to   the moonff   ";
 
-const a = s.trimEnd();
+// const a = s.trimEnd();
 
-// console.log(s.length);
-// console.log(a.length)
+// // console.log(s.length);
+// // console.log(a.length)
 
-// let length = 0;
+// // let length = 0;
 
-function lengthOfLastWord(a) {
-  for (let i = a.length - 1; i >= 0; i--) {
-    // console.log(a[i]);
-  
-    if (a[i] == " ") {
-        // console.log(i);
-       return a.length -i - 1
-    } 
+// function lengthOfLastWord(a) {
+//   for (let i = a.length - 1; i >= 0; i--) {
+//     // console.log(a[i]);
+
+//     if (a[i] == " ") {
+//         // console.log(i);
+//        return a.length -i - 1
+//     }
+//   }
+//    return a.length
+// }
+// // console.log(a)
+
+// console.log(lengthOfLastWord(a));
+
+// https://leetcode.com/problems/valid-parentheses
+
+// const bracket= {
+//   "(": ")",
+//   "{": "}",
+//   "[": "]",
+// };
+
+// for (let i = 0; i < 9; i++) {
+//   console.log(i);
+// }
+
+// https://leetcode.com/problems/plus-one/
+
+const digits = [1, 9,9];
+
+function plusOne(digits) {
+  for (let i = digits.length - 1; i >= 0; i--) {
+    digits[i]++;
+    return digits
+    // console.log(digits[i] + 1);
+
+    // if (digits[1] < 10) {
+    //     console.log(digits[i] + 1);
+    // }
   }
-   return a.length
-}
-// console.log(a)
 
-console.log(lengthOfLastWord(a));
+  return digits;
+}
+console.log(plusOne(digits));
