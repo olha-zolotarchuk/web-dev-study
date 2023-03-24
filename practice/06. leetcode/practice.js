@@ -132,6 +132,25 @@
 
 // console.log(lengthOfLastWord(a));
 
+// https://leetcode.com/problems/plus-one/
+
+// const digits = [9];
+
+// function plusOne(digits) {
+//   for (let i = digits.length - 1; i >= 0; i--) {
+//     digits[i]++;
+
+//     if (digits[i] > 9) {
+//       digits[i]=0;
+//     } else {
+//       return digits;
+//     }
+//   }
+//   digits.unshift(1);
+//   return digits;
+// }
+// console.log(plusOne(digits));
+
 // https://leetcode.com/problems/valid-parentheses
 
 // const bracket= {
@@ -140,25 +159,54 @@
 //   "[": "]",
 // };
 
-// for (let i = 0; i < 9; i++) {
-//   console.log(i);
+// const s = "()";
+
+// // console.log(s)
+
+// function isValid(s) {
+
+//   for (let i = 0; i < 9; i++) {
+//     console.log(s[i]);
+
+//     if (s >  )
+//     // console.log(s.length)
+//   }
 // }
+// console.log(isValid(s))
 
-// https://leetcode.com/problems/plus-one/
+// https://leetcode.com/problems/longest-common-prefix/
 
-const digits = [1, 9,9];
+const strs = ["flower", "flow", "flight"];
 
-function plusOne(digits) {
-  for (let i = digits.length - 1; i >= 0; i--) {
-    digits[i]++;
-    return digits
-    // console.log(digits[i] + 1);
+// console.log(strs)
+// console.log(strs.toString());
 
-    // if (digits[1] < 10) {
-    //     console.log(digits[i] + 1);
-    // }
-  }
 
-  return digits;
+
+function longestCommonPrefix(strs) {
+  let run = true
+ let r = "";
+  for (let i = 0; run ; i++) {
+    // console.log(strs[i]);
+
+    for (let j = 0; j < strs.length; j++) {
+      // console.log(strs[j]);
+      // console.log(strs[j][i]);
+      // console.log(strs[i][j]);
+      // console.log(strs[0][j]);
+      // a;
+      // console.log(a)
+      
+      if (strs[j].length <= i) {
+        run = false;
+        console.log(strs[j]);
+      }
+      // break;
+    }
+    r += strs[0][i]
+    //  break;
+  } 
+  return r
+
 }
-console.log(plusOne(digits));
+console.log(longestCommonPrefix(strs));
