@@ -16,11 +16,21 @@
   --ease: cubic-bezier(0.62, 0.05, 0.01, 0.99);
 }
 
-
 body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  justify-content: center;
 }
 
 section {
@@ -37,10 +47,13 @@ img {
 
 .header__nav {
   width: 100%;
-  height: 20vh;
+  height: 10vh;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  align-items: center;
+  padding-right: 60px;
+
   gap: clamp(1rem, 3vw, 2rem);
 
   background-image: url("./img/nav.png");
@@ -52,7 +65,7 @@ img {
 .header__nav a {
   position: relative;
   color: var(--black);
-  font-size: clamp(0.5rem, 5vw, 4rem);
+  font-size: clamp(0.5rem, 4vw, 3rem);
   text-decoration: none;
   padding-bottom: 0.2em;
   width: max-content;
@@ -62,7 +75,7 @@ img {
 .header__nav a span {
   display: inline-block;
   white-space: nowrap;
-  transition: all 350ms ease-out;
+  /* transition: all 350ms ease-out; */
   transform-origin: center center;
   transform-style: preserve-3d;
 }
@@ -73,7 +86,7 @@ img {
 
 .header__nav a .secondary {
   position: absolute;
-  transform: translateY(0.5em) rotateX(90deg);
+  /* transform: translateY(0.5em) rotateX(90deg); */
   left: 0;
 }
 
@@ -90,11 +103,11 @@ img {
 }
 
 .header__nav a:hover .primary {
-  transform: translateY(-0.5em) rotateX(90deg);
+  /* transform: translateY(-0.5em) rotateX(90deg); */
 }
 
 .header__nav a:hover .secondary {
-  transform: translateY(0em);
+  /* transform: translateY(0em); */
 }
 
 .header__nav a:hover::before {
@@ -105,11 +118,60 @@ img {
 /* HOME */
 
 .home {
-  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+P {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.home__section {
+  margin-top: 2rem;
+  line-height: 2rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* WORKS */
+.works {
+  height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 0.8rem;
 }
 
 .works_projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+}
+
+/* ABOUTE */
+.about {
+  height: 100vh;
+}
+
+/* CONTACT */
+.contact {
+  height: 100vh;
 }
