@@ -37,6 +37,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 input,
 button,
 textarea {
@@ -90,20 +91,23 @@ body {
 
 .wrapper {
   min-height: 100%;
-  overflow: hidden;
+  overflow: hidden; /*  для не зявляння горизонтального скролу */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* притискати футер до низу сторінки */
 }
 /*=======================================*/
 .page {
-  flex: 1 1 auto;
+  flex: 1 1 auto; /* дозволили мейну розшираватися.  wrapper флекс контейнер,все інше page флекс елементи, коли контенту мало то футер все одно знизу */
 }
 /*=======================================*/
 
+/*селектор. застосовується на всі класи */
 [class*="__container"] {
-  max-width: 1170px;
-  margin: 0 auto;
+  max-width: 1170px; /* розмір обмежуючого контейнеру   1170 +15+15 =1200 */
+  margin: 0 auto; /* виставляємо по центру */
+  /* padding: 0px 15px відступи безпеки таким чином збільшуємо контейнер з 1170 до 1200  але контент на 1170 залишиться */
 }
+
 @media (max-width: 1199.98px) {
   [class*="__container"] {
     max-width: 970px;
@@ -122,20 +126,21 @@ body {
 }
 /*=======================================*/
 .header {
-position: absolute;
-top:0;
-left: 0;
-width: 100% ;
-z-index: 50;
+  position: absolute; /*  зробили її абсолютною . вона стратила своє тіло і все йде зверху */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
 }
+
 .header__container {
   display: flex;
   justify-content: space-between;
   column-gap: 10px;
   row-gap: 15px;
-  min-height: 103px;
+  min-height: 103px; /*  по макету робимо висоту */
   align-items: center;
-  padding-top: 10px;
+  padding-top: 10px; /*щоб контент не прилип до країв. не гарно */
   padding-bottom: 10px;
 }
 
@@ -149,7 +154,7 @@ z-index: 50;
 .header__logo {
   font-weight: 800;
   font-size: 23px;
-  color: inherit;
+  color: inherit; /*   приймає загальний колір шрифта */
 }
 .header__menu {
 }
@@ -158,7 +163,7 @@ z-index: 50;
 }
 .menu__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*  можливість ламатися. нижні 2 додаються відступи + добре коли добавить пункти до списку, додає надійності */
   column-gap: 46px;
   row-gap: 15px;
 }
@@ -172,1087 +177,242 @@ z-index: 50;
   text-decoration: underline;
 }
 @media (max-width: 767.98px) {
-    .menu__list {
-      justify-content: center;
-    }
-    .menu__link{
-        font-size: 18px;
-    }
+  .menu__list {
+    justify-content: center;
   }
+  .menu__link {
+    font-size: 18px;
+  }
+}
 /*=======================================*/
 
 /* .page__main{} */
 
-.main-block{
-
+.main-block {
+  padding-bottom: 110px;
 }
 
-.main-block__container{
-    padding-top: 183px;
-    position: relative;
+.main-block__container {
+  padding-top: 183px;
+  position: relative;
 }
-.main-block__container::after{
-    background-color: #BDCCFF;
-    content: "";
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 68%;
-    height: 200%;
-
-}
-
-.body-main-block{
-    display: flex;
+.main-block__container::after {
+  background-color: #bdccff;
+  content: "";
+  position: absolute;
+  width: 200%;
+  top: 0;
+  left: 68%;
+  height: 100%;
 }
 
-.body-main-block__content{
-    flex: 0 1 50%;
+.main-block__body {
+  margin-bottom: 14px;
 }
 
-.content-main-block{}
-.ontent-main-block__body{
-    padding-right: 80px;
+.body-main-block {
+  display: flex;
+  position: relative;
+  align-items: flex-start; /*  пропало для підхід IBG*/
+}
+
+.body-main-block__content {
+  flex: 0 1 50%;
+}
+
+.content-main-block {
+  padding-top: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.content-main-block__body {
+  padding-right: 80px; /* добавив коли треба було зробити відступи тільки по тестовим блокам */
 }
 
 .content-main-block__sub-title {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 29px;
-    color: #FF9900;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 29px; /* треба робити відносний до розміру шрифту  */
+  color: #ff9900;
+  text-transform: uppercase;
+  margin-bottom: 20px; /* треба задавати тільки якщо обєкт не останній */
 }
-.content-main-block__title{
-    font-weight: 800;
-    font-size: 54px;
-    line-height: 73px;
+.content-main-block__title {
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 73px;
 }
-.content-main-block__text{
-    font-weight: 17px;
-    line-height: 23px;
-    letter-spacing: 0.01em;
-    margin-bottom: 45px;
+.content-main-block__text {
+  font-weight: 17px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  margin-bottom: 45px;
 }
-.content-main-block__form{}
+.content-main-block__form {
+}
 
-.form-main-block{
-    display: flex;
+.form-main-block {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  margin-right: -188px;
+  background: #fff url("img/main/home.svg") 33px 32px no-repeat;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03);
+}
+.form-main-block__input {
+  height: 86px;
+  border: 1px solid #dadada;
+  padding: 0px 0px 0px 74px;
+  background-color: transparent;
+  width: 100%;
+  flex: 1 1 auto;
+  font-size: 20px;
+}
+
+.form-main-block__input::after {
+  color: rgba(49, 53, 59, 0.192);
+}
+
+.form-main-block__button {
+  height: 86px;
+  cursor: pointer;
+  background-color: #f85a47;
+  width: 188px;
+  flex: 0 0 188px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 17px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  padding: 5px 15px;
+}
+
+.body-main-block__slider {
+  flex: 0 1 50%;
+  min-width: 0;
+}
+
+/* підхід IBG коли зображення яке вставлене через тег img але буде себе поводити як беграунд крута щтука для надійності */
+.slider-main-block {
+}
+.slider-main-block__wrapper {
+}
+.slider-main-block__swiper {
+  position: relative;
+  padding-bottom: 95%;
+}
+.slider-main-block__swiper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body-main-block__arrows {
+  position: absolute;
+  bottom: -52px;
+  right: 0;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.body-main-block__arrow.swiper-button-prev,
+.body-main-block__arrow.swiper-button-next {
+  position: static;
+  height: 20px;
+  width: 11px;
+  background: url(img/icons/arrow.svg) 0 0 /100% no-repeat;
+}
+
+.body-main-block__arrow::after {
+  display: none;
+}
+.body-main-block__arrow.swiper-button-prev {
+  transform: rotate(-180deg);
+}
+
+/* swiper-button-prev{} */
+/* swiper-button-next{} */
+
+.partners-main-block {
+  max-width: 65%; /*обмежувач на вміст контенту на стр рахує щоб не виліз задалеко */
+}
+.partners-main-block__label {
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+.partners-main-block__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.partners-main-block__item {
+}
+
+.partners-main-block__item img {
+  max-width: 100%; /* зробити їх адаптивними якщо засунуть ведику  */
+}
+
+@media (max-width: 1199.98px) {
+  .main-block__container {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+  .content-main-block__body {
+    padding-right: 0px;
+  }
+  .body-main-block {
+    display: block;
+  }
+  .form-main-block {
+    margin-right: 0;
+  }
+  .body-main-block__content {
+    margin-bottom: 40px;
+  }
+  .main-block__body {
+    margin-bottom: 40px;
+  }
+  .partners-main-block {
     position: relative;
     z-index: 2;
-    margin-right: -188px;
-    height: 86px;
-    border: 1px solid #DADADA;
-    background: #fff url("img/02.png") 23px 50% no-repeat;
-    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03);
+    max-width: none;
+  }
 }
-.form-main-block__input{
-    padding: 0px 0px 0px 74px;
-    background-color: transparent;
+@media (max-width: 991.98px) {
+  .main-block {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 767.98px) {
+  .partners-main-block__items {
+    justify-content: center;
+  }
+  .content-main-block__title {
+    font-size: 30px;
+    line-height: 120%;
+  }
+  .form-main-block {
+    display: block;
+  }
+  .form-main-block__button {
     width: 100%;
-    flex: 1 1 auto;
+  }
+  .main-block {
+    padding-bottom: 30px;
+  }
 }
-.form-main-block__button{
-    cursor: pointer;
-    background-color: #F85A47;
-    width: 188px;
-    flex: 0 0 188px;
-    font-weight: 600;
-    color: #fff;
-    font-size: 17px;
-    line-height: 23px;
-    letter-spacing: 0.01em;
-    padding: 5px 15px;
+@media (max-width: 479.98px) {
+  .form-main-block {
+    background: #fff;
+  }
+  .form-main-block__input {
+    padding: 0px 15px;
+  }
 }
-
-.body-main-block__slider{  
-    flex: 0 1 50%;
-    min-width: 0;
-}
-
-.partners-main-block{}
-.partners-main-block__label{}
-.partners-main-block__items{}
-.partners-main-block__item{}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
