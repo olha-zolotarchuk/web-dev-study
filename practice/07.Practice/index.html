@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+            height: 10000px;
+        }
+      .semicircle {
+         width: 1000px;
+        height: 1000px;
+        border-top-right-radius: 500px;
+        border-top-left-radius: 500px;
+        background-color: red;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="semicircle"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra ipsum felis, id elementum velit fermentum vel. Duis sed lectus quis nibh sodales blandit ac eu mauris. Proin id libero massa. Integer eu congue erat. Quisque vitae felis magna. Aliquam sed purus vel odio suscipit convallis vel a turpis. </p>
+    <script>
+      window.addEventListener('scroll', function() {
+        const semicircle = document.querySelector('.semicircle');
+        const scrollTop = window.scrollY;
+        semicircle.style.transform = `translate(-50%, -50%) rotate(${scrollTop / 5}deg)`;
+      });
+    </script>
+  </body>
+</html>
+<!-- 
+ window.addEventListener('scroll', function() {
+        const semicircle = document.querySelector('.semicircle');
+        const scrollTop = window.scrollY;
+        if (scrollTop <= window.innerHeight / 2) {
+          // calculate rotation angle based on scroll position
+          const angle = scrollTop / 5;
+          // apply rotation transform to semicircle
+          semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+        } else {
+          // stop rotation once semicircle is horizontal
+          semicircle.style.transform = `translate(-50%, -50%) rotate(0deg)`;
+        }
+      }); -->
