@@ -2,15 +2,18 @@
 <html>
   <head>
     <style>
-        body {
-            height: 10000px;
-        }
+      body {
+        height: 10000px;
+      }
       .semicircle {
-         width: 1000px;
-        height: 1000px;
-        border-top-right-radius: 500px;
-        border-top-left-radius: 500px;
-        background-color: red;
+        width: 1500px;
+        height: 800px;
+        border-radius: 1000px 1000px 0 0;
+        background: linear-gradient(
+          0deg,
+          rgba(243, 208, 33, 0.925),
+          rgba(255, 0, 0, 0) 100%
+        );
         position: fixed;
         top: 50%;
         left: 50%;
@@ -21,12 +24,20 @@
   </head>
   <body>
     <div class="semicircle"></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra ipsum felis, id elementum velit fermentum vel. Duis sed lectus quis nibh sodales blandit ac eu mauris. Proin id libero massa. Integer eu congue erat. Quisque vitae felis magna. Aliquam sed purus vel odio suscipit convallis vel a turpis. </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra
+      ipsum felis, id elementum velit fermentum vel. Duis sed lectus quis nibh
+      sodales blandit ac eu mauris. Proin id libero massa. Integer eu congue
+      erat. Quisque vitae felis magna. Aliquam sed purus vel odio suscipit
+      convallis vel a turpis.
+    </p>
     <script>
-      window.addEventListener('scroll', function() {
-        const semicircle = document.querySelector('.semicircle');
+      window.addEventListener("scroll", function () {
+        const semicircle = document.querySelector(".semicircle");
         const scrollTop = window.scrollY;
-        semicircle.style.transform = `translate(-50%, -50%) rotate(${scrollTop / 5}deg)`;
+        semicircle.style.transform = `translate(-50%, -50%) rotate(${
+          scrollTop / 5
+        }deg)`;
       });
     </script>
   </body>
