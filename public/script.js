@@ -13,7 +13,7 @@ window.addEventListener("scroll", () => {
   testEl.style.transform = `translateY(${newY}px)`;
 });
 
-// 
+//
 // const homeEl = document.querySelector(".home");
 // const homeHeight = homeEl.clientHeight;
 
@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
 //   homeEl.style.transform = `translateY(${newY}px) scale(${1 - scrollPercent})`;
 // });
 
-// 
+//
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -45,8 +45,6 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
-
-
 
 // const testEl = document.querySelector(".test");
 // const windowHeight = window.innerHeight;
@@ -66,17 +64,91 @@ window.addEventListener("scroll", reveal);
 //    }deg)`;
 //  });
 
+window.addEventListener("scroll", function () {
+  const semicircle = document.querySelector(".test");
+  const scrollTop = window.scrollY;
+  if (scrollTop <= window.innerHeight / 2) {
+    // calculate rotation angle based on scroll position
+    const angle = scrollTop / 5;
+    // apply rotation transform to semicircle
+    semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+  } else {
+    // stop rotation once semicircle is horizontal
+    semicircle.style.transform = `translate(-50%, -50%) rotate(0deg)`;
+  }
+});
 
- window.addEventListener('scroll', function() {
-        const semicircle = document.querySelector(".test");
-        const scrollTop = window.scrollY;
-        if (scrollTop <= window.innerHeight / 2) {
-          // calculate rotation angle based on scroll position
-          const angle = scrollTop / 5;
-          // apply rotation transform to semicircle
-          semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-        } else {
-          // stop rotation once semicircle is horizontal
-          semicircle.style.transform = `translate(-50%, -50%) rotate(0deg)`;
-        }
-      }); 
+// about ==================================== about
+
+// const animItems = document.querySelectorAll("._anim-items");
+
+// if (animItems.length > 0) {
+//   window.addEventListener("scroll", animOnScroll);
+
+//   function animOnScroll() {
+//     for (let index = 0; index < animItems.length; index++) {
+//       const animItem = animItems[index];
+//       const animItemHeight = animItem.offsetHeight;
+//       const animItemOffset = offset(animItem).top;
+//       const animStart = 4;
+
+//       let animItemPoint = window.innerHeight - animItemHeight / animStart;
+//       if (animItemHeight > window.innerHeight) {
+//         animItemPoint = window.innerHeight - window.innerHeight / animStart;
+//       }
+
+//       if (
+//         window.scrollY > animItemOffset - animItemPoint &&
+//         window.scrollY < animItemOffset + animItemHeight
+//       ) {
+//         animItem.classList.add("_active");
+//       } else {
+//         animItem.classList.remove("_active");
+//       }
+//     }
+//   }
+
+//   function offset(el) {
+//     const rect = el.getBoundingClientRect();
+//     return { top: rect.top + window.scrollY, left: rect.left };
+//   }
+
+//   animOnScroll();
+// }
+ const section = document.querySelector(".about__work");
+ const listItems = section.querySelectorAll("._anim-items li");
+
+ function isElementInViewport(element) {
+   const rect = element.getBoundingClientRect();
+   return (
+     rect.top >= 0 &&
+     rect.left >= 0 &&
+     rect.bottom <=
+       (window.innerHeight || document.documentElement.clientHeight) &&
+     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+   );
+ }
+
+ function showListItems() {
+   let delay = 0;
+   listItems.forEach((item) => {
+     setTimeout(() => {
+       item.classList.add("show");
+     }, delay);
+     delay += 200; // add 200ms delay for each item
+   });
+ }
+
+ function toggleListItems() {
+   listItems.forEach((item) => {
+     if (isElementInViewport(item)) {
+       item.classList.add("show");
+     } else {
+       item.classList.remove("show");
+     }
+   });
+ }
+
+ toggleListItems();
+
+ window.addEventListener("scroll", toggleListItems);
