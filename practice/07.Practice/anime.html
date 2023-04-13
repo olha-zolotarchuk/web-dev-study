@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        height: 10000px;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      ._anim-items li {
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      }
+
+      ._anim-items li.animate {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="about__work">
+      <h1>Work Experience</h1>
+
+      <h2>Finance Manager | Feb 2014 - Feb 2022 | Vodaland</h2>
+      <ul class="_anim-items">
+        <li>
+          Closed monthly/quarterly/yearly accounts and prepared management
+          reports (balance sheet, P&L, cash flow).
+        </li>
+        <li>
+          Managed accounting controls to ensure compliance with financial
+          regulations and accurate recording of operations in the management
+          accounting system.
+        </li>
+        <li>
+          Worked with the 1C program to input data and calculate the monthly
+          premium part of the staff.
+        </li>
+      </ul>
+
+      <h2>
+        Analyst 1c (combination of positions) | July 2021 - February 2022 |
+        Vodaland
+      </h2>
+      <ul class="_anim-items">
+        <li>
+          Prepare technical specifications for new reports, documents, and other
+          mechanisms used or planned for use in the company.
+        </li>
+        <li>
+          Test completed revisions to existing and newly created 1C objects in
+          accordance with development requests.
+        </li>
+        <li>
+          Write instructions for using changes and new mechanisms, including
+          documents, reports, and processing.
+        </li>
+      </ul>
+    </section>
+    <script>
+      const animItems = document.querySelectorAll("._anim-items");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const items = entry.target.querySelectorAll("li");
+            items.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add("animate");
+              }, index * 100);
+            });
+          }
+        });
+      });
+
+      animItems.forEach((item) => {
+        observer.observe(item);
+      });
+    </script>
+  </body>
+</html>
