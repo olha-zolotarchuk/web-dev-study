@@ -139,6 +139,7 @@ main {
   gap: 8px;
   /* opacity: 1; */
   text-decoration: none;
+  border: none;
 }
 
 .leng__items img {
@@ -149,30 +150,32 @@ main {
 /* HOME */
 
 .home {
-  padding-top: 110px;
+  /* padding-top: 110px; */
   padding-bottom: 110px;
   /* position: relative; */
   display: flex;
   flex-direction: row;
 
   align-items: center;
+
 }
 
 @media (max-width: 991.98px) {
   .home {
-    padding-top: 70px;
+    /* padding-top: 70px; */
     padding-bottom: 70px;
   }
 }
 @media (max-width: 767.98px) {
   .home {
-    padding-top: 30px;
+    /* padding-top: 30px; */
     padding-bottom: 30px;
   }
 }
 
 .home__name {
   display: flex;
+
 }
 
 .home__name h1 {
@@ -186,7 +189,7 @@ main {
 
 .home__name p {
   font-size: 3rem;
-  margin: 7rem 0 0;
+  margin: 7rem 2rem 0;
   line-height: 1.5;
   text-align: end;
 }
@@ -200,28 +203,19 @@ main {
   height: 800px;
   bottom: 0;
 }
-
-.test {
-  /* width: 1000px;
-  height: 1000px;
-
+.center {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
   position: absolute;
-  left: 0px;
-  padding-bottom: 110px;
-  bottom: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
 
-  clip-path: ellipse(1000px 1000px at 0% 100%);
- */
-  /* background: linear-gradient(
-  33deg,
-    rgba(243, 208, 33, 0.925),
-    rgba(255, 0, 0, 0) 70%
-  ); */
-
-  /* transform: translateY(0);
-  transition: transform 0.3s ease-out;
-  transform-origin: bottom center; * */
-  transform: translateY(0);
+.semicircle {
   width: 1500px;
   height: 800px;
   border-radius: 1000px 1000px 0 0;
@@ -230,12 +224,14 @@ main {
     rgba(243, 208, 33, 0.925),
     rgba(255, 0, 0, 0) 100%
   );
-  position: absolute;
-  /* top: 50%; */
-  left: 0;
-  bottom: 0;
+
   transform: translate(-50%, -50%);
   transition: transform 0.3s ease-out;
+  position: absolute;
+  /* bottom: 0; */
+  left: 50%;
+  /* right: 0; */
+  top: 50%;
 }
 
 /* About Presentation */
@@ -413,7 +409,7 @@ main {
 }
 
 ._anim-items li::before {
-  content: "\2022"; 
+  content: "\2022";
   color: var(--pikachu);
   margin-right: 0.5rem;
 }

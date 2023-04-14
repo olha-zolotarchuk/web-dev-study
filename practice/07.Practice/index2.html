@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation Example</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #eee;
+			height: 2000px;
+			font-family: Arial, sans-serif;
+		}
+		.box {
+			position: absolute;
+			left: 50%;
+			top: 100px;
+			width: 50px;
+			height: 50px;
+			background-color: #f00;
+			transform-origin: bottom center;
+			animation: rotate 2s infinite linear;
+		}
+		.test {
+			position: absolute;
+			left: 50%;
+			top: 100px;
+			width: 50px;
+			height: 50px;
+			background-color: #00f;
+			transform-origin: bottom center;
+			animation: rotate 2s infinite linear;
+		}
+		@keyframes rotate {
+			from {
+				transform: translate(-50%, 0) rotate(0);
+			}
+			to {
+				transform: translate(-50%, 2000px) rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="test"></div>
+	<script type="text/javascript">
+		var boxes = document.querySelectorAll('.box, .test');
+
+		function update() {
+			var scrollPosition = window.scrollY;
+
+			boxes.forEach(function(box) {
+				var rotation = scrollPosition * 0.001;
+				box.style.transform = 'translate(-50%, ' + scrollPosition + 'px) rotate(' + rotation + 'turn)';
+			});
+		}
+
+		window.addEventListener('scroll', update);
+	</script>
+</body>
+</html>
