@@ -12,9 +12,18 @@
       <header class="header">
         <div class="leng__items">
           <img src="img/2014411.png" />
-          <a href=""> <div class="">UA</div> </a>
-          <a href=""> <div class="">EN</div></a>
-        </div>
+
+
+          <button id="en-btn">UA</button>
+          <button id="ua-btn">EN</button>
+
+
+
+          <!-- <a href="#" onclick="changeLanguage()">
+            <div class="">UA</div>
+          </a>
+          <a href="#" onclick="changeLanguage()"> <div class="">EN</div></a>
+        </div> -->
         <div class="header__right">
           <nav class="header__nav">
             <a href="#home">
@@ -44,7 +53,16 @@
         <article class="home" id="home">
           <div class="home__name">
             <div>
-              <h1>Hi, my name is</h1>
+
+              <h1 data-lang-en="Hi, my name is" data-lang-ua="Привіт, мене звати">fgrg</h1>
+
+
+              <!-- <h1
+                data-lang-en="Hi, my name is"
+                data-lang-es="Привіт. мене звати"
+              >
+                Hi, my name is
+              </h1> -->
               <h2>Olha Zolotarchuk</h2>
               <p class="home__p">
                 I am a self-taught junior frontend developer with a passion for
@@ -53,8 +71,10 @@
             </div>
             <img class="home__img" src="img/photo_5287278456079501033_y.jpg" />
           </div>
+          <div class="semicircle"></div>
+          <!-- <div class="center"></div> -->
         </article>
-        <div class="test"></div>
+        <!-- <div class="semicircle"></div> -->
 
         <section class="about__presentation reveal">
           <div class="about__presentation container reveal">

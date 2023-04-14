@@ -1,33 +1,22 @@
-// Get a reference to the test element
-const testEl = document.querySelector(".test");
-
-// Detect when the user scrolls
-window.addEventListener("scroll", () => {
-  // Get the distance the user has scrolled
-  const scrollTop = window.pageYOffset;
-
-  // Calculate the new position of the test element based on the scroll position
-  const newY = -scrollTop;
-
-  // Apply the new position to the test element
-  testEl.style.transform = `translateY(${newY}px)`;
-});
-
-//
-// const homeEl = document.querySelector(".home");
-// const homeHeight = homeEl.clientHeight;
-
-// window.addEventListener("scroll", () => {
-//   const scrollTop = window.pageYOffset;
-//   const scrollPercent =
-//     scrollTop / (document.body.scrollHeight - window.innerHeight);
-
-//   // Calculate new position for home__name element
-//   const newY = -(scrollTop * (1 - scrollPercent) + homeHeight * scrollPercent);
-//   homeEl.style.transform = `translateY(${newY}px) scale(${1 - scrollPercent})`;
+// window.addEventListener("scroll", function () {
+//   const semicircle = document.querySelector(".test");
+//   const pageHeight = document.body.scrollHeight - window.innerHeight;
+//   const angle = (360 * window.scrollY) / pageHeight; // calculate the rotation angle
+//   semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
 // });
 
-//
+window.addEventListener("scroll", function () {
+  const semicircle = document.querySelector(".semicircle");
+  const center = document.querySelector(".center");
+  const pageHeight = document.body.scrollHeight - window.innerHeight;
+  const angle = (360 * window.scrollY) / pageHeight;
+  semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(${window.scrollY}px)`;
+  center.style.bottom = `${10 + window.scrollY}px`;
+  center.style.right = `${10}px`;
+});
+
+// about__presentation ==================================== about__presentation
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -46,109 +35,70 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-// const testEl = document.querySelector(".test");
-// const windowHeight = window.innerHeight;
-
-// window.addEventListener("scroll", () => {
-//   const scrollTop = window.pageYOffset;
-//   const scrollPercent = scrollTop / (document.body.scrollHeight - windowHeight);
-//   const newClipPath = `ellipse(1000px 1000px at 0% ${scrollPercent * 100}%)`;
-//   testEl.style.clipPath = newClipPath;
-// });
-
-//  window.addEventListener("scroll", function () {
-//    const semicircle = document.querySelector(".test");
-//    const scrollTop = window.scrollY;
-//    semicircle.style.transform = `translate(-50%, -50%) rotate(${
-//      scrollTop / 5
-//    }deg)`;
-//  });
-
-window.addEventListener("scroll", function () {
-  const semicircle = document.querySelector(".test");
-  const scrollTop = window.scrollY;
-  if (scrollTop <= window.innerHeight / 2) {
-    // calculate rotation angle based on scroll position
-    const angle = scrollTop / 5;
-    // apply rotation transform to semicircle
-    semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-  } else {
-    // stop rotation once semicircle is horizontal
-    semicircle.style.transform = `translate(-50%, -50%) rotate(0deg)`;
-  }
-});
+// about__presentation ==================================== about__presentation
 
 // about ==================================== about
 
-// const animItems = document.querySelectorAll("._anim-items");
+const section = document.querySelector(".about__work");
+const listItems = section.querySelectorAll("._anim-items li");
 
-// if (animItems.length > 0) {
-//   window.addEventListener("scroll", animOnScroll);
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
-//   function animOnScroll() {
-//     for (let index = 0; index < animItems.length; index++) {
-//       const animItem = animItems[index];
-//       const animItemHeight = animItem.offsetHeight;
-//       const animItemOffset = offset(animItem).top;
-//       const animStart = 4;
+function showListItems() {
+  let delay = 0;
+  listItems.forEach((item) => {
+    setTimeout(() => {
+      item.classList.add("show");
+    }, delay);
+    delay += 200; // add 200ms delay for each item
+  });
+}
 
-//       let animItemPoint = window.innerHeight - animItemHeight / animStart;
-//       if (animItemHeight > window.innerHeight) {
-//         animItemPoint = window.innerHeight - window.innerHeight / animStart;
-//       }
+function toggleListItems() {
+  listItems.forEach((item) => {
+    if (isElementInViewport(item)) {
+      item.classList.add("show");
+    } else {
+      item.classList.remove("show");
+    }
+  });
+}
 
-//       if (
-//         window.scrollY > animItemOffset - animItemPoint &&
-//         window.scrollY < animItemOffset + animItemHeight
-//       ) {
-//         animItem.classList.add("_active");
-//       } else {
-//         animItem.classList.remove("_active");
-//       }
-//     }
-//   }
+toggleListItems();
 
-//   function offset(el) {
-//     const rect = el.getBoundingClientRect();
-//     return { top: rect.top + window.scrollY, left: rect.left };
-//   }
+window.addEventListener("scroll", toggleListItems);
 
-//   animOnScroll();
-// }
- const section = document.querySelector(".about__work");
- const listItems = section.querySelectorAll("._anim-items li");
+// about ==================================== about
 
- function isElementInViewport(element) {
-   const rect = element.getBoundingClientRect();
-   return (
-     rect.top >= 0 &&
-     rect.left >= 0 &&
-     rect.bottom <=
-       (window.innerHeight || document.documentElement.clientHeight) &&
-     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-   );
- }
+// Add click event listeners to the language buttons
+document.getElementById("en-btn").addEventListener("click", function () {
+  setLanguage("en");
+});
 
- function showListItems() {
-   let delay = 0;
-   listItems.forEach((item) => {
-     setTimeout(() => {
-       item.classList.add("show");
-     }, delay);
-     delay += 200; // add 200ms delay for each item
-   });
- }
+document.getElementById("ua-btn").addEventListener("click", function () {
+  setLanguage("ua");
+});
 
- function toggleListItems() {
-   listItems.forEach((item) => {
-     if (isElementInViewport(item)) {
-       item.classList.add("show");
-     } else {
-       item.classList.remove("show");
-     }
-   });
- }
+// Define a function to set the language
+function setLanguage(language) {
+  // Set the language of the HTML document
+  document.documentElement.lang = language;
 
- toggleListItems();
+  // Update the text content of the elements with their corresponding translations
+  var elements = document.querySelectorAll("[data-lang-en], [data-lang-ua]");
+  elements.forEach(function (element) {
+    var text = element.getAttribute("data-lang-" + language);
+    element.textContent = text;
+  });
+}
 
- window.addEventListener("scroll", toggleListItems);
+  setLanguage("en");

@@ -4,6 +4,10 @@
     <style>
       body {
         height: 10000px;
+        margin: 0;
+      }
+      section {
+        min-height: 4000px;
       }
       .semicircle {
         width: 1500px;
@@ -14,36 +18,77 @@
           rgba(243, 208, 33, 0.925),
           rgba(255, 0, 0, 0) 100%
         );
+
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease-out;
+        position: absolute;
+        /* right: 50%;
+        bottom: 50%; */
+
+        top: 50%;
+        left: 0;
+      }
+      .center {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: transform 0.3s ease-out;
+        z-index: 1;
       }
     </style>
   </head>
   <body>
-    <div class="semicircle"></div>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra
-      ipsum felis, id elementum velit fermentum vel. Duis sed lectus quis nibh
-      sodales blandit ac eu mauris. Proin id libero massa. Integer eu congue
-      erat. Quisque vitae felis magna. Aliquam sed purus vel odio suscipit
-      convallis vel a turpis.
-    </p>
+    <section>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra
+          ipsum felis, id elementum velit fermentum vel. Duis sed lectus quis
+          nibh sodales blandit ac eu mauris. Proin id libero massa. Integer eu
+          congue erat. Quisque vitae felis magna. Aliquam sed purus vel odio
+          suscipit convallis vel a turpis.
+        </p>
+      </div>
+      <div class="semicircle"></div>
+      <div class="center"></div>
+    </section>
+    <section class="section-A">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra
+        ipsum felis, id elementum velit fermentum vel. Duis sed lectus quis nibh
+        sodales blandit ac eu mauris. Proin id libero massa. Integer eu congue
+        erat. Quisque vitae felis magna. Aliquam sed purus vel odio suscipit
+        convallis vel a turpis.
+      </p>
+    </section>
+    <section class="section-B">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra
+        ipsum felis, id elementum velit fermentum vel. Duis sed lectus quis nibh
+        sodales blandit ac eu mauris. Proin id libero massa. Integer eu congue
+        erat. Quisque vitae felis magna. Aliquam sed purus vel odio suscipit
+        convallis vel a turpis.
+      </p>
+    </section>
+
     <script>
       window.addEventListener("scroll", function () {
         const semicircle = document.querySelector(".semicircle");
-        const scrollTop = window.scrollY;
-        semicircle.style.transform = `translate(-50%, -50%) rotate(${
-          scrollTop / 5
-        }deg)`;
+        const center = document.querySelector(".center");
+        const pageHeight = document.body.scrollHeight - window.innerHeight;
+        const angle = (360 * window.scrollY) / pageHeight;
+        semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(${window.scrollY}px)`;
+        center.style.bottom = `${10 + window.scrollY}px`;
+        center.style.right = `${10}px`;
       });
     </script>
   </body>
 </html>
-<!-- 
- window.addEventListener('scroll', function() {
+
+<!-- window.addEventListener('scroll', function() {
         const semicircle = document.querySelector('.semicircle');
         const scrollTop = window.scrollY;
         if (scrollTop <= window.innerHeight / 2) {
@@ -56,3 +101,22 @@
           semicircle.style.transform = `translate(-50%, -50%) rotate(0deg)`;
         }
       }); -->
+
+<!-- window.addEventListener("scroll", function () {
+  const semicircle = document.querySelector(".semicircle");
+  const scrollTop = window.scrollY;
+  if (scrollTop >= 1550) { // adjust this value to match the scroll position at which you want to stop the rotation
+    semicircle.style.transform = "translate(-50%, -50%) rotate(90.6667deg)";
+    window.removeEventListener("scroll", arguments.callee); // remove the event listener to stop further rotation
+  } else {
+    semicircle.style.transform = `translate(-50%, -50%) rotate(${scrollTop / 5}deg)`;
+  }
+}); -->
+
+<!-- // window.addEventListener("scroll", function () {
+      //   const semicircle = document.querySelector(".semicircle");
+      //   const scrollTop = window.scrollY;
+      //   semicircle.style.transform = `translate(-50%, -50%) rotate(${
+      //     scrollTop / 5
+      //   }deg)`;
+      // }); -->
