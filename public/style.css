@@ -83,6 +83,7 @@ main {
   text-decoration: none;
   padding-bottom: 0.2em;
 }
+
 .header__right {
   display: flex;
   align-items: center;
@@ -95,10 +96,10 @@ main {
   transform-origin: center center;
   transform-style: preserve-3d;
 }
-
+/* 
 .header__nav a .primary {
   position: relative;
-}
+} */
 
 .header__nav a::before {
   content: "";
@@ -127,22 +128,24 @@ main {
   color: #005246;
 }
 
-.leng__items a {
-  text-decoration: none;
-  color: #005246;
-}
-
-.leng__items {
+.lang__items {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
   /* opacity: 1; */
-  text-decoration: none;
-  border: none;
+  /* text-decoration: none; */
+  /* border: none; */
+  color: #005246;
+  background-color: #ffffff;
 }
 
-.leng__items img {
+.lang__btn{
+  /* width: 40px;
+  height: 40px; */
+}
+
+.lang__items img {
   width: 40px;
   height: 40px;
 }
@@ -157,7 +160,6 @@ main {
   flex-direction: row;
 
   align-items: center;
-
 }
 
 @media (max-width: 991.98px) {
@@ -175,7 +177,7 @@ main {
 
 .home__name {
   display: flex;
-
+  z-index: 1;
 }
 
 .home__name h1 {
@@ -203,17 +205,6 @@ main {
   height: 800px;
   bottom: 0;
 }
-.center {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
 
 .semicircle {
   width: 1500px;
@@ -229,9 +220,10 @@ main {
   transition: transform 0.3s ease-out;
   position: absolute;
   /* bottom: 0; */
-  left: 50%;
+  left: 0;
   /* right: 0; */
-  top: 50%;
+  /* top: 50%; */
+  z-index: 0;
 }
 
 /* About Presentation */
@@ -246,10 +238,12 @@ main {
   display: flex;
   gap: 50px;
 }
+
 .text-container .text-box:nth-child(2) {
   text-align: end;
   font-weight: bold;
 }
+
 .text-box {
   font-size: 2rem;
   line-height: 1.5;
@@ -257,11 +251,13 @@ main {
   margin: 10px;
 }
 
+
+
 .reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
-  transition: 1s all ease;
+  transition: 0.3s all ease;
 }
 
 .reveal.active {

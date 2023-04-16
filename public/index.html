@@ -10,39 +10,51 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="leng__items">
-          <img src="img/2014411.png" />
-
-
-          <button id="en-btn">UA</button>
-          <button id="ua-btn">EN</button>
-
-
-
-          <!-- <a href="#" onclick="changeLanguage()">
-            <div class="">UA</div>
-          </a>
-          <a href="#" onclick="changeLanguage()"> <div class="">EN</div></a>
-        </div> -->
+        <div class="lang__items">
+          <img src="img/lang/2014411.png" />
+          <img
+            class="lang__btn"
+            id="en-btn"
+            src="img/lang/united-kingdom-flag-icon.svg"
+          />
+          <img
+            class="lang__btn"
+            id="ua-btn"
+            src="img/lang/ukraine-flag-icon.svg"
+          />
+        </div>
         <div class="header__right">
           <nav class="header__nav">
             <a href="#home">
-              <span class="primary">Home</span>
+              <span class="primary" data-lang-en="Home" data-lang-ua="Головна"
+                >Home</span
+              >
             </a>
             <a href="#works">
-              <span class="primary">Works</span>
+              <span class="primary" data-lang-en="Works" data-lang-ua="Проекти"
+                >Works</span
+              >
             </a>
             <a href="#about">
-              <span class="primary">About</span>
+              <span class="primary" data-lang-en="About" data-lang-ua="Про мене"
+                >About</span
+              >
             </a>
             <a href="#contact">
-              <span class="primary">Contact</span>
+              <span
+                class="primary"
+                data-lang-en="Contact"
+                data-lang-ua="Контакти"
+                >Contact</span
+              >
             </a>
           </nav>
           <div class="btn__cv">
             <a
               href="https://drive.google.com/file/d/1Gv1TCnTjet4xvh3gsVb3qFxqDankEgH3/view"
               target="_blank"
+              data-lang-en="CV"
+              data-lang-ua="Резюме"
             >
               CV
             </a>
@@ -53,34 +65,43 @@
         <article class="home" id="home">
           <div class="home__name">
             <div>
-
-              <h1 data-lang-en="Hi, my name is" data-lang-ua="Привіт, мене звати">fgrg</h1>
-
-
-              <!-- <h1
+              <h1
                 data-lang-en="Hi, my name is"
-                data-lang-es="Привіт. мене звати"
+                data-lang-ua="Привіт, мене звати"
               >
                 Hi, my name is
-              </h1> -->
-              <h2>Olha Zolotarchuk</h2>
-              <p class="home__p">
+              </h1>
+
+              <h2 data-lang-en="Olha Zolotarchuk" data-lang-ua="Оля Золотарчук">
+                Olha Zolotarchuk
+              </h2>
+              <p
+                class="home__p"
+                data-lang-en=" I am a self-taught junior frontend developer with a passion for
+                web development."
+                data-lang-ua="Я молодший фронтенд-розробник-самоучка з пристрастю до веб-розробки."
+              >
                 I am a self-taught junior frontend developer with a passion for
                 web development.
               </p>
             </div>
             <img class="home__img" src="img/photo_5287278456079501033_y.jpg" />
           </div>
-          <div class="semicircle"></div>
-          <!-- <div class="center"></div> -->
+          <div><div class="semicircle"></div></div>
         </article>
-        <!-- <div class="semicircle"></div> -->
 
         <section class="about__presentation reveal">
           <div class="about__presentation container reveal">
             <div class="text-container">
               <div class="text-box">
-                <p>
+                <p
+                  data-lang-en=" Although I have an 8-year background in finance, I have recently completed several online courses to acquire new
+                  skills and transition into a career in web development. I have
+                  a basic understanding of React, JS, HTML, and CSS and I am
+                  eager to learn new technologies and collaborate with a team to
+                  build innovative and engaging web applications."
+                  data-lang-ua="Незважаючи на мії 8-річний досвід в фінансах, я нещодавно успішно пройшла кілька онлайн-курсів, щоб здобути нові навички та перейти до кар'єри веб-розробника. У мене є базове розуміння React, JS, HTML та CSS, і я з нетерпінням готова вивчати нові технології та співпрацювати з командою для створення інноваційних та захоплюючих веб-додатків."
+                >
                   Although I have an 8-year background in finance, I have
                   recently completed several online courses to acquire new
                   skills and transition into a career in web development. I have
@@ -90,7 +111,10 @@
                 </p>
               </div>
               <div class="text-box">
-                <p>
+                <p
+                  data-lang-en="As a beginner developer, I am confident in my ability to contribute to a company's projects and growth."
+                  data-lang-ua="Як розробник початківець, я впевнена у своїй здатності допомогти компанії у її проектах та розвитку."
+                >
                   As a beginner developer, I am confident in my ability to
                   contribute to a company's projects and growth.
                 </p>
@@ -98,7 +122,8 @@
             </div>
           </div>
           <div style="display: flex; align-items: center; justify-content: end">
-            <a class="btn__about" href="#about"> <div>About me</div></a>
+            <a class="btn__about" href="#about" data-lang-en="About me"
+                data-lang-ua="Про мене"> <div>About me</div></a>
           </div>
         </section>
 
@@ -247,9 +272,16 @@
           <!-- <h1>Contact</h1> -->
           <div class="contact">
             <div class="contact__write">
-              <p>Write me</p>
+              <p data-lang-en="Write me" data-lang-ua="Напишіть мені">
+                Write me
+              </p>
               <div>
-                <a class="contact__centered" href="tel:+380501045035">
+                <a
+                  class="contact__centered"
+                  href="tel:+380501045035"
+                  data-lang-en="Phone: (+380) 050-104-5035"
+                  data-lang-ua="Телефон: (+380) 050-104-5035"
+                >
                   <img
                     src="img/social/phone-call-svgrepo-com (1).svg"
                     width="30"
@@ -272,6 +304,8 @@
                 class="contact__centered"
                 href="mailto:olha.zolotarchuk@gmail.com"
                 target="_blank"
+                data-lang-en="Email: olha.zolotarchuk@gmail.com"
+                data-lang-ua="Ел.пошта: olha.zolotarchuk@gmail.com"
               >
                 <img src="img/social/email-icon.svg" width="30" height="30" />
                 Email: olha.zolotarchuk@gmail.com</a
@@ -279,7 +313,12 @@
             </div>
 
             <div class="contact__work">
-              <p>My work pages</p>
+              <p
+                data-lang-en="My work pages"
+                data-lang-ua="Мої робочі сторінки"
+              >
+                My work pages
+              </p>
               <a href="https://github.com/olha-zolotarchuk" target="_blank">
                 <img
                   src="img/social/pngimg.com - github_PNG80.png"
@@ -296,7 +335,12 @@
               >
             </div>
             <div class="contact__social">
-              <p>My social pages</p>
+              <p
+                data-lang-en="My social pages"
+                data-lang-ua="Соціальні профілі"
+              >
+                My social pages
+              </p>
               <a
                 href="https://www.instagram.com/oliazolotarchuk/"
                 target="_blank"
