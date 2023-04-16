@@ -1,19 +1,14 @@
-// window.addEventListener("scroll", function () {
-//   const semicircle = document.querySelector(".test");
-//   const pageHeight = document.body.scrollHeight - window.innerHeight;
-//   const angle = (360 * window.scrollY) / pageHeight; // calculate the rotation angle
-//   semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-// });
+
+// semicircle ==================================== semicircle
 
 window.addEventListener("scroll", function () {
   const semicircle = document.querySelector(".semicircle");
-  const center = document.querySelector(".center");
   const pageHeight = document.body.scrollHeight - window.innerHeight;
-  const angle = (360 * window.scrollY) / pageHeight;
+  const angle = (180 * window.scrollY) / pageHeight;
   semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(${window.scrollY}px)`;
-  center.style.bottom = `${10 + window.scrollY}px`;
-  center.style.right = `${10}px`;
 });
+
+// semicircle ==================================== semicircle
 
 // about__presentation ==================================== about__presentation
 
@@ -79,7 +74,8 @@ window.addEventListener("scroll", toggleListItems);
 
 // about ==================================== about
 
-// Add click event listeners to the language buttons
+// language buttons==================================== language buttons
+
 document.getElementById("en-btn").addEventListener("click", function () {
   setLanguage("en");
 });
@@ -88,12 +84,9 @@ document.getElementById("ua-btn").addEventListener("click", function () {
   setLanguage("ua");
 });
 
-// Define a function to set the language
 function setLanguage(language) {
-  // Set the language of the HTML document
   document.documentElement.lang = language;
 
-  // Update the text content of the elements with their corresponding translations
   var elements = document.querySelectorAll("[data-lang-en], [data-lang-ua]");
   elements.forEach(function (element) {
     var text = element.getAttribute("data-lang-" + language);
@@ -101,4 +94,12 @@ function setLanguage(language) {
   });
 }
 
-  setLanguage("en");
+// language buttons ==================================== language buttons
+
+
+// LocalStorage ==================================== LocalStorage
+
+localStorage.setItem("language");
+var language = localStorage.getItem("language");
+// var language = localStorage.getItem("language") || "en";
+// LocalStorage ==================================== LocalStorage
