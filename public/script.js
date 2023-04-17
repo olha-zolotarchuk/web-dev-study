@@ -1,4 +1,3 @@
-
 // semicircle ==================================== semicircle
 
 window.addEventListener("scroll", function () {
@@ -96,10 +95,22 @@ function setLanguage(language) {
 
 // language buttons ==================================== language buttons
 
-
 // LocalStorage ==================================== LocalStorage
 
-localStorage.setItem("language");
-var language = localStorage.getItem("language");
-// var language = localStorage.getItem("language") || "en";
+const enBtn = document.getElementById("en-btn");
+const uaBtn = document.getElementById("ua-btn");
+
+const languagePreference = localStorage.getItem("language");
+if (languagePreference) {
+  setLanguage(languagePreference);
+}
+
+enBtn.addEventListener("click", function () {
+  localStorage.setItem("language", "en");
+  setLanguage("en");
+});
+uaBtn.addEventListener("click", function () {
+  localStorage.setItem("language", "ua");
+  setLanguage("ua");
+});
 // LocalStorage ==================================== LocalStorage
