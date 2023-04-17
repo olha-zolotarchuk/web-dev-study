@@ -35,8 +35,8 @@ body {
 }
 
 main {
-  max-width: 1400px;
-  margin: 0 auto;
+  /* max-width: 1400px; */
+  /* margin: 0 auto; */
 }
 
 .wrapper {
@@ -49,6 +49,17 @@ main {
   margin: 0 auto;
 }
 
+@media (max-width: 1023.98px) {
+  .wrapper {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 767.98px) {
+  .header {
+    /* padding-bottom: 30px; */
+  }
+}
+
 /* HEADER  */
 .header {
   padding-bottom: 110px;
@@ -56,7 +67,7 @@ main {
   justify-content: space-between;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) {
   .header {
     padding-bottom: 70px;
   }
@@ -250,8 +261,6 @@ main {
   /* text-transform: uppercase; */
   margin: 10px;
 }
-
-
 
 .reveal {
   position: relative;
