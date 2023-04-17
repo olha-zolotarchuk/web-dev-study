@@ -31,7 +31,7 @@ aside {
 html,
 body {
   height: 100%;
-  /* background-color: var(--col2); */
+  min-width: 1400px;
 }
 
 main {
@@ -42,11 +42,12 @@ main {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  max-width: 1400px;
+  flex-wrap: wrap; */
+  width: 1400px;
   margin: 0 auto;
+  padding: 0px 20px;
 }
 
 @media (max-width: 1023.98px) {
