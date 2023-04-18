@@ -42,9 +42,6 @@ main {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  /* display: flex; */
-  /* flex-direction: column;
-  flex-wrap: wrap; */
   max-width: 1400px;
   margin: 0 auto;
   padding: 0px 20px;
@@ -65,6 +62,7 @@ main {
     max-width: none;
   }
 }
+/* ================================== */
 
 /* HEADER  */
 .header {
@@ -113,10 +111,6 @@ main {
   transform-origin: center center;
   transform-style: preserve-3d;
 }
-/* 
-.header__nav a .primary {
-  position: relative;
-} */
 
 .header__nav a::before {
   content: "";
@@ -166,6 +160,7 @@ main {
   width: 40px;
   height: 40px;
 }
+/* ================================== */
 
 /* HOME */
 
@@ -242,6 +237,7 @@ main {
   /* top: 50%; */
   z-index: 0;
 }
+/* ================================== */
 
 /* About Presentation */
 
@@ -322,9 +318,6 @@ main {
 }
 
 .works {
-  /* height: 100vh; */
-  /* display: flex; */
-  /* flex-direction: column; */
   margin: 0.8rem;
 }
 
@@ -333,6 +326,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
 }
+/* ================================== */
 
 /* ABOUTE */
 .about {
@@ -422,25 +416,6 @@ main {
   margin-right: 0.5rem;
 }
 
-/* .about__work li {
-  transform: translate(-120%, 0px);
-  transition: all 0.3s ease 0s;
-}
-
-.about__work._active li:nth-child(1) {
-  transition: all 0.3s ease 0s;
-}
-.about__work._active li:nth-child(2) {
-  transition: all 0.3s ease 0.2s;
-}
-.about__work._active li:nth-child(3) {
-  transition: all 0.3s ease 0.4s;
-}
-
-.about__work._active li {
-  transform: translate(120%, 0px);
-} */
-
 .about__education {
   background-color: var(--col1);
   color: white;
@@ -454,7 +429,27 @@ main {
   align-items: center;
   flex-direction: row-reverse;
 }
-@media (max-width: 992px) {
+
+.about__education h1 {
+  color: var(--pikachu);
+}
+
+@media (max-width: 991.98px) {
+  .about__education {
+    flex-direction: column;
+  }
+  .about {
+    font-size: 1.5rem;
+  }
+  .about h1 {
+    font-size: 3em;
+  }
+  .about h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767.98px) {
   .about__education {
     flex-direction: column;
   }
@@ -468,37 +463,28 @@ main {
     font-size: 1rem;
   }
 }
-.about__education h1 {
-  color: var(--pikachu);
+@media (max-width: 360px) {
+  .about__education {
+    flex-direction: column;
+  }
+  .about {
+    font-size: 1rem;
+  }
+  .about h1 {
+    font-size: 2rem;
+  }
+  .about h2 {
+    font-size: 1rem;
+  }
 }
 
 /* ================================== */
-
-/* Add a button that takes the reader to the education section */
-/* .about__skills button {
-  background-color: #f3cf21;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.about__skills button:hover {
-  background-color: #fff;
-  color: #f3cf21;
-} */
 
 /* CONTACT */
 .contact__page {
   padding-top: 110px;
   padding-bottom: 110px;
-  font-size: 2rem;
-  line-height: 1.5;
-  display: flex;
-  flex: 1 1 33.3333%;
-  flex-wrap: wrap;
+  padding: 0px 20px;
 }
 
 .contact__page p {
@@ -508,8 +494,7 @@ main {
 .contact {
   gap: 100px;
   display: flex;
-  flex-direction: row;
-  flex: 1 1 33.3333%;
+  justify-content: space-around;
 }
 
 .contact a {
@@ -558,19 +543,19 @@ main {
   align-items: center;
   gap: 20px;
 }
-/* @media (max-width: 1400px) {
+@media (max-width: 1400px) {
   .contact__page {
     max-width: 1100px;
   }
 }
 @media (max-width: 992px) {
   .contact__page {
-     max-width: 750px;
+    max-width: 750px;
   }
 }
 @media (max-width: 767px) {
   .contact__page {
-     max-width: none;
+    max-width: none;
   }
 }
 @media (max-width: 991.98px) {
@@ -579,9 +564,67 @@ main {
     padding-bottom: 70px;
   }
 }
+
 @media (max-width: 767.98px) {
+  .contact {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    /* flex-direction: column; */
+    gap: 30px;
+  }
+
+  .contact a {
+    font-size: 1rem;
+  }
+
+  .contact p {
+    font-size: 1.5rem;
+  }
+
+  .contact__write {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact__centered {
+    /* display: flex;
+    align-items: center; */
+    /* gap: 20px; */
+  }
+
+  .contact__work {
+    gap: 10px;
+  }
+
+  .contact__work a {
+    gap: 10px;
+  }
+
+  .contact__social {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: 10px;
+  }
+
+  .contact__social a {
+    /* display: flex;
+    align-items: center;
+    gap: 20px; */
+  }
+}
+
+@media (max-width: 500px) {
   .contact {
     padding-top: 30px;
     padding-bottom: 30px;
+    flex-direction: column;
   }
-} */
+
+  .contact a {
+    font-size: 1rem;
+  }
+
+  .contact p {
+    font-size: 1.5rem;
+  }
+}
