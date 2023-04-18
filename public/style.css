@@ -42,22 +42,27 @@ main {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  /* display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column;
   flex-wrap: wrap; */
   max-width: 1400px;
   margin: 0 auto;
   padding: 0px 20px;
 }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 1400px) {
   .wrapper {
-    max-width: 1024px;
+    max-width: 1100px;
   }
 }
-@media (max-width: 767.98px) {
-  .header {
-    /* padding-bottom: 30px; */
+@media (max-width: 992px) {
+  .wrapper {
+     max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper {
+     max-width: none;
   }
 }
 
@@ -152,7 +157,7 @@ main {
   background-color: #ffffff;
 }
 
-.lang__btn{
+.lang__btn {
   /* width: 40px;
   height: 40px; */
 }
@@ -452,6 +457,11 @@ main {
   align-items: center;
   flex-direction: row-reverse;
 }
+@media (max-width: 992px) {
+  .about__education {
+    flex-direction: column;
+  }
+}
 .about__education h1 {
   color: var(--pikachu);
 }
@@ -479,7 +489,10 @@ main {
   padding-top: 110px;
   padding-bottom: 110px;
   font-size: 2rem;
-  line-height: 1.5;
+  line-height: 1.5;  
+  display: flex;
+    flex: 1 1 33.3333%;
+    flex-wrap: wrap;
 }
 
 .contact__page p {
@@ -487,14 +500,10 @@ main {
   text-decoration-color: #f3cf21;
 }
 .contact {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
   gap: 100px;
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  /* margin: 10px; */
-  justify-content: space-between;
+  flex-direction: row;
+  flex: 1 1 33.3333%;
 }
 
 .contact a {
@@ -507,18 +516,6 @@ main {
 
 .contact p {
   font-size: 3rem;
-}
-@media (max-width: 991.98px) {
-  .contact {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-}
-@media (max-width: 767.98px) {
-  .contact {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
 }
 
 .contact__write {
@@ -555,3 +552,30 @@ main {
   align-items: center;
   gap: 20px;
 }
+/* @media (max-width: 1400px) {
+  .contact__page {
+    max-width: 1100px;
+  }
+}
+@media (max-width: 992px) {
+  .contact__page {
+     max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .contact__page {
+     max-width: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .contact {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 767.98px) {
+  .contact {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+} */
