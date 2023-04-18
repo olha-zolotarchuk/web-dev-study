@@ -57,12 +57,12 @@ main {
 }
 @media (max-width: 992px) {
   .wrapper {
-     max-width: 750px;
+    max-width: 750px;
   }
 }
 @media (max-width: 767px) {
   .wrapper {
-     max-width: none;
+    max-width: none;
   }
 }
 
@@ -345,11 +345,8 @@ main {
   gap: 40px;
 }
 .about h1 {
-  /* font-size: 3rem; */
   text-align: end;
-  /* font-family: "Montserrat", sans-serif; */
   font-size: 4rem;
-  /* font-weight: 700; */
 }
 .about h2 {
   font-size: 2rem;
@@ -461,6 +458,15 @@ main {
   .about__education {
     flex-direction: column;
   }
+  .about {
+    font-size: 1rem;
+  }
+  .about h1 {
+    font-size: 2rem;
+  }
+  .about h2 {
+    font-size: 1rem;
+  }
 }
 .about__education h1 {
   color: var(--pikachu);
@@ -489,10 +495,10 @@ main {
   padding-top: 110px;
   padding-bottom: 110px;
   font-size: 2rem;
-  line-height: 1.5;  
+  line-height: 1.5;
   display: flex;
-    flex: 1 1 33.3333%;
-    flex-wrap: wrap;
+  flex: 1 1 33.3333%;
+  flex-wrap: wrap;
 }
 
 .contact__page p {
