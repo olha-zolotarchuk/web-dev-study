@@ -173,6 +173,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 100vh;
 }
 
 @media (max-width: 991.98px) {
@@ -259,7 +260,10 @@ main {
     width: 600px;
     height: 400px;
     border-radius: 500px 500px 0 0;
+
+    position: fixed;
     bottom: 0;
+    /* top: 0; */
   }
 }
 /* ================================== */
@@ -290,11 +294,10 @@ main {
 }
 @media (max-width: 991.98px) {
   .text-box {
-  font-size: 1.5rem;
-  margin: 10px;
+    font-size: 1.5rem;
+    margin: 10px;
+  }
 }
-}
-
 
 .reveal {
   position: relative;
@@ -328,7 +331,13 @@ main {
 .btn__about:hover {
   background-color: #005246be;
 }
+
 @media (max-width: 991.98px) {
+  .btn__about {
+    width: clamp(6em, 12vw, 11em);
+    height: clamp(6em, 12vw, 11em);
+  }
+}
 .btn__about {
   width: clamp(6em, 12vw, 11em);
   height: clamp(6em, 12vw, 11em);
