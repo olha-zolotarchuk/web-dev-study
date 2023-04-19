@@ -72,13 +72,18 @@ main {
   display: flex;
   justify-content: space-between;
 }
-
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .header {
     padding-bottom: 70px;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    padding-bottom: 50px;
     flex-direction: column-reverse;
     align-items: flex-end;
     gap: 10px;
+    margin: 10px;
   }
 }
 @media (max-width: 767.98px) {
@@ -92,10 +97,12 @@ main {
   display: flex;
   align-items: center;
   gap: clamp(1rem, 3vw, 2rem);
-
-  /* font-size: 5rem; */
 }
-
+@media (max-width: 1024px) {
+  .header__nav {
+    min-height: 10vh;
+  }
+}
 .header__nav a {
   position: relative;
   color: var(--black);
@@ -110,10 +117,10 @@ main {
   gap: 30px;
 }
 @media (max-width: 1024px) {
- .header__right {
+  .header__right {
     flex-direction: column;
     align-items: flex-end;
-    gap: 20px;
+    gap: 3px;
   }
 }
 .header__nav a span {
@@ -149,6 +156,10 @@ main {
   border-radius: 30%;
   padding: 10px 15px;
   color: #005246;
+}
+@media (max-width: 1024px) {
+  .btn__cv a {
+  }
 }
 
 .lang__items {
@@ -187,8 +198,9 @@ main {
 
 @media (max-width: 991.98px) {
   .home {
-    /* flex-direction: column-reverse; */
-    /* padding-bottom: 10px; */
+  align-items: flex-end;
+align-content: flex-end;
+justify-content: flex-end;
   }
 }
 @media (max-width: 767.98px) {
@@ -214,7 +226,7 @@ main {
 
 .home__name h2 {
   font-size: 6rem;
-  /* margin: 5rem 0; */
+  margin: 1rem 0;
 }
 @media (max-width: 1200px) {
   .home__name h2 {
@@ -229,7 +241,7 @@ main {
 
 .home__name p {
   font-size: 3rem;
-  /* margin: 7rem 2rem 0; */
+  margin: 1rem 0;
   line-height: 1.5;
   text-align: end;
 }
@@ -248,13 +260,18 @@ main {
 }
 
 .home__img {
-  height: 800px;
+  height: 700px;
   bottom: 0;
 }
 
 @media (max-width: 1200px) {
   .home__img {
     height: 600px;
+  }
+}
+@media (max-width: 1100px) {
+  .home__img {
+    height: 500px;
   }
 }
 @media (max-width: 991.98px) {
@@ -295,7 +312,13 @@ main {
     border-radius: 600px 600px 0 0;
   }
 }
-
+@media (max-width: 1100px) {
+  .semicircle {
+    width: 1000px;
+    height: 350px;
+    border-radius: 500px 500px 0 0;
+  }
+}
 /* ================================== */
 
 /* About Presentation */
