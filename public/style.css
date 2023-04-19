@@ -172,8 +172,10 @@ main {
   padding-bottom: 110px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: flex-start;
+  /* align-items: center; */
   height: 100vh;
+  vertical-align: top;
 }
 
 @media (max-width: 991.98px) {
@@ -204,7 +206,7 @@ main {
 
 .home__name h2 {
   font-size: 6rem;
-  margin: 5rem 0;
+  /* margin: 5rem 0; */
 }
 @media (max-width: 991.98px) {
   .home__name h2 {
@@ -215,7 +217,7 @@ main {
 
 .home__name p {
   font-size: 3rem;
-  margin: 7rem 2rem 0;
+  /* margin: 7rem 2rem 0; */
   line-height: 1.5;
   text-align: end;
 }
@@ -252,7 +254,7 @@ main {
   /* bottom: 0; */
   left: 0;
   /* right: 0; */
-  /* top: 50%; */
+  top: 50%;
   z-index: 0;
 }
 @media (max-width: 991.98px) {
