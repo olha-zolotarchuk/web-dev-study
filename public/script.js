@@ -22,7 +22,7 @@ function reveal() {
   }
 }
 window.addEventListener("scroll", reveal);
-// about__presentation
+// about__work
 const section = document.querySelector(".about__work");
 const listItems = section.querySelectorAll("._anim-items li");
 function isElementInViewport(element) {
