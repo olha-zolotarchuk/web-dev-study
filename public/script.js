@@ -1,16 +1,11 @@
-// semicircle ==================================== semicircle
-
+// semicircle 
 window.addEventListener("scroll", function () {
   const semicircle = document.querySelector(".semicircle");
   const pageHeight = document.body.scrollHeight - window.innerHeight;
   const angle = (180 * window.scrollY) / pageHeight;
   semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(${window.scrollY}px)`;
 });
-
-// semicircle ==================================== semicircle
-
-// about__presentation ==================================== about__presentation
-
+// about__presentation
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -26,16 +21,10 @@ function reveal() {
     }
   }
 }
-
 window.addEventListener("scroll", reveal);
-
-// about__presentation ==================================== about__presentation
-
-// about ==================================== about
-
+// about__presentation
 const section = document.querySelector(".about__work");
 const listItems = section.querySelectorAll("._anim-items li");
-
 function isElementInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -46,7 +35,6 @@ function isElementInViewport(element) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
-
 function showListItems() {
   let delay = 0;
   listItems.forEach((item) => {
@@ -56,7 +44,6 @@ function showListItems() {
     delay += 200; // add 200ms delay for each item
   });
 }
-
 function toggleListItems() {
   listItems.forEach((item) => {
     if (isElementInViewport(item)) {
@@ -66,45 +53,30 @@ function toggleListItems() {
     }
   });
 }
-
 toggleListItems();
-
 window.addEventListener("scroll", toggleListItems);
-
-// about ==================================== about
-
-// language buttons==================================== language buttons
-
+// language buttons
 document.getElementById("en-btn").addEventListener("click", function () {
   setLanguage("en");
 });
-
 document.getElementById("ua-btn").addEventListener("click", function () {
   setLanguage("ua");
 });
-
 function setLanguage(language) {
   document.documentElement.lang = language;
-
   var elements = document.querySelectorAll("[data-lang-en], [data-lang-ua]");
   elements.forEach(function (element) {
     var text = element.getAttribute("data-lang-" + language);
     element.textContent = text;
   });
 }
-
-// language buttons ==================================== language buttons
-
-// LocalStorage ==================================== LocalStorage
-
+// LocalStorage
 const enBtn = document.getElementById("en-btn");
 const uaBtn = document.getElementById("ua-btn");
-
 const languagePreference = localStorage.getItem("language");
 if (languagePreference) {
   setLanguage(languagePreference);
 }
-
 enBtn.addEventListener("click", function () {
   localStorage.setItem("language", "en");
   setLanguage("en");
@@ -113,4 +85,3 @@ uaBtn.addEventListener("click", function () {
   localStorage.setItem("language", "ua");
   setLanguage("ua");
 });
-// LocalStorage ==================================== LocalStorage

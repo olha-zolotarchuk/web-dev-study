@@ -181,12 +181,10 @@ const strs = ["flower", "flow", "flight"];
 // console.log(strs)
 // console.log(strs.toString());
 
-
-
 function longestCommonPrefix(strs) {
-  let run = true
- let r = "";
-  for (let i = 0; run ; i++) {
+  let run = true;
+  let r = "";
+  for (let i = 0; run; i++) {
     // console.log(strs[i]);
 
     for (let j = 0; j < strs.length; j++) {
@@ -196,17 +194,16 @@ function longestCommonPrefix(strs) {
       // console.log(strs[0][j]);
       // a;
       // console.log(a)
-      
+
       if (strs[j].length <= i) {
         run = false;
         console.log(strs[j]);
       }
       // break;
     }
-    r += strs[0][i]
+    r += strs[0][i];
     //  break;
-  } 
-  return r
-
+  }
+  return r;
 }
 console.log(longestCommonPrefix(strs));
