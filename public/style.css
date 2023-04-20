@@ -148,7 +148,7 @@ main {
   transition-delay: 200ms;
 }
 .btn__cv {
-  margin: 15px 0px;
+  margin: 20px 0px 10px 0px;
 }
 .btn__cv a {
   font-size: 1.8rem;
