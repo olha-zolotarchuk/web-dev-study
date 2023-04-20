@@ -176,34 +176,63 @@
 
 // https://leetcode.com/problems/longest-common-prefix/
 
-const strs = ["flower", "flow", "flight"];
+// const strs = ["flower", "flow", "flight"];
 
-// console.log(strs)
-// console.log(strs.toString());
+// // console.log(strs)
+// // console.log(strs.toString());
 
-function longestCommonPrefix(strs) {
-  let run = true;
-  let r = "";
-  for (let i = 0; run; i++) {
-    // console.log(strs[i]);
+// function longestCommonPrefix(strs) {
+//   let run = true;
+//   let r = "";
+//   for (let i = 0; run; i++) {
+//     // console.log(strs[i]);
 
-    for (let j = 0; j < strs.length; j++) {
-      // console.log(strs[j]);
-      // console.log(strs[j][i]);
-      // console.log(strs[i][j]);
-      // console.log(strs[0][j]);
-      // a;
-      // console.log(a)
+//     for (let j = 0; j < strs.length; j++) {
+//       // console.log(strs[j]);
+//       // console.log(strs[j][i]);
+//       // console.log(strs[i][j]);
+//       // console.log(strs[0][j]);
+//       // console.log(strs[0][i]);
+//       // a;
+//       // console.log(a)
 
-      if (strs[j].length <= i) {
-        run = false;
-        console.log(strs[j]);
-      }
-      // break;
-    }
-    r += strs[0][i];
-    //  break;
-  }
-  return r;
-}
-console.log(longestCommonPrefix(strs));
+//       if (strs[j].length <= i || strs[j][i] !== strs[0][i]) {
+//         run = false;
+//         // console.log(strs[j]);
+//         // console.log(strs[j][i]);
+//         // console.log(strs[0][i]);
+//         break
+//       }
+//       // break;
+//     }
+//     if (run) {
+//       r += strs[0][i];
+//     }
+//     //  break;
+//   }
+//   return r;
+// }
+// console.log(longestCommonPrefix(strs));
+
+// https://leetcode.com/problems/valid-palindrome/
+
+// grep -E '^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$' file.txt
+
+// https://leetcode.com/problems/valid-palindrome/
+
+// const s = "race a car";
+
+// function isPalindrome(s) {
+//   const completeSentence = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+//   const palindrome = completeSentence.split("").reverse().join("");
+//   console.log(completeSentence);
+//   console.log(palindrome);
+//   if (completeSentence === palindrome) {
+//     return true;
+//   } else {
+//     return false
+//   }
+// }
+// console.log(isPalindrome(s));
+
+// https://leetcode.com/problems/single-number/
