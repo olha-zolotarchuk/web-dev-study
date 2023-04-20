@@ -101,6 +101,7 @@ main {
 @media (max-width: 1024px) {
   .header__nav {
     min-height: 10vh;
+      align-items: flex-end;
   }
 }
 .header__nav a {
