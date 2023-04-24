@@ -236,3 +236,76 @@
 // console.log(isPalindrome(s));
 
 // https://leetcode.com/problems/single-number/
+
+// nums = [4, 1, 2, 1, 2];
+// let r = {};
+// function singleNumber(nums) {
+//   let r = {};
+//   //  console.log(r);
+//   for (let i = 0; i < nums.length; i++) {
+//     console.log(r);
+//     // console.log(r[nums[i]]);
+//     if (r[nums[i]]) {
+//       // console.log(r[nums[i]]);
+//       delete r[nums[i]];
+//     } else {
+//       r[nums[i]] = true;
+//       // console.log(r);
+//       // console.log(r[nums[i]]);
+//     }
+//   }
+//   return Object.keys(r)[0];
+// }
+// console.log(singleNumber(nums));
+
+// nums = [4, 1, 2, 1, 2];
+// let r = 0;
+// function singleNumber(nums) {
+//   for (let i = 0; i < nums.length; i++) {
+//     // console.log(nums[i])
+//     // console.log(i);
+//     r ^= nums[i];
+//   }
+//   return r;
+// }
+// console.log(singleNumber(nums));
+
+// https://leetcode.com/problems/majority-element/
+
+// nums = [2, 2, 1, 1, 1, 2, 2, 5, 5, 5, 5, 5, 5, 5, 5];
+// function majorityElement(nums) {
+//   let r = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     //  console.log(r);
+//     if (r[nums[i]]) {
+//       r[nums[i]]++;
+//       // console.log(r[nums[i]]);
+//     } else {
+//       r[nums[i]] = 1;
+//     }
+//     // console.log(r);
+//   }
+//   console.log(r);
+
+//   let maxCount = 0;
+//   let majority = null;
+
+//   for (let key in r) {
+//     if (r[key] > maxCount) {
+//       maxCount = r[key];
+//       majority = key;
+//     }
+//   }
+//   return majority;
+// }
+// console.log(majorityElement(nums));
+
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+const prices = [7, 1, 5, 3, 6, 4];
+
+function maxProfit(prices) {
+  let max = 0;
+  
+}
+console.log(maxProfit(prices));
