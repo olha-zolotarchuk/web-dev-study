@@ -302,10 +302,80 @@
 
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
-const prices = [7, 1, 5, 3, 6, 4];
+// const prices = [7, 1, 5, 3, 6, 4];
+// const prices = [7, 6, 4, 3, 1];
+const prices = [2, 4, 1];
 
-function maxProfit(prices) {
-  let max = 0;
-  
-}
-console.log(maxProfit(prices));
+// function maxProfit(prices) {
+//   let minPrice = prices[0];
+//   let maxPrice = prices[0];
+//   let minIndex = 0;
+//   let maxIndex = 0;
+
+//   for (let i = 1; i < prices.length; i++) {
+//     if (prices[i] < minPrice) {
+//       minPrice = prices[i];
+//       minIndex = i;
+//     } else if (prices[i] > maxPrice) {
+//       maxPrice = prices[i];
+//       maxIndex = i;
+//     } else if (maxIndex < minIndex) {
+//       maxPrice = prices[i];
+//       maxIndex = i;
+//     }
+//   }
+
+//   if (maxIndex > minIndex) {
+//     profit = maxPrice - minPrice;
+//   } else {
+//     return profit = 0;
+//   }
+//   console.log(profit);
+
+//   console.log(minPrice);
+//   console.log(minIndex);
+//   console.log(maxIndex);
+//   console.log(maxPrice);
+//   // return profit;
+//   return [
+//     { price: minPrice, index: minIndex },
+//     { price: maxPrice, index: maxIndex },
+//   ];
+// }
+
+// function maxProfit(prices) {
+//   let minPrice = prices[0];
+//   let maxProfit = 0;
+
+//   for (let i = 1; i < prices.length; i++) {
+//     if (prices[i] < minPrice) {
+//       minPrice = prices[i];
+//     // } else {
+//     //   maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+//     // }
+//   } else if (prices[i] - minPrice > maxProfit) {
+//     maxProfit = prices[i] - minPrice
+//    }
+//   }
+
+//   return maxProfit;
+// }
+// console.log(maxProfit(prices));
+
+// https://leetcode.com/problems/valid-anagram/
+
+const s = "anagram";
+const t = "nagaram";
+
+// function isAnagram(s, t) {
+//   if (s.length !== t.length) {
+//     return false;
+//   }
+
+//   let a = s.split("").sort().join("");
+//   let b = t.split("").sort().join("");
+//   console.log(a);
+//   console.log(b);
+//   return a === b;
+// }
+// console.log(isAnagram(s, t));
