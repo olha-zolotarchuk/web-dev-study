@@ -364,8 +364,8 @@ const prices = [2, 4, 1];
 
 // https://leetcode.com/problems/valid-anagram/
 
-const s = "anagram";
-const t = "nagaram";
+// const s = "anagram";
+// const t = "nagaram";
 
 // function isAnagram(s, t) {
 //   if (s.length !== t.length) {
@@ -379,3 +379,22 @@ const t = "nagaram";
 //   return a === b;
 // }
 // console.log(isAnagram(s, t));
+
+// https://leetcode.com/problems/palindrome-linked-list/
+
+const head = [1, 2, 2, 1];
+
+function isPalindrom(head) {
+  const num = head;
+  let a = num.join("");
+  let b = num.reverse("").join("");
+  console.log(a);
+  console.log(b);
+
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isPalindrom(head));
