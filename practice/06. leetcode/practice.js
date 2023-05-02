@@ -398,3 +398,11 @@ function isPalindrom(head) {
   }
 }
 console.log(isPalindrom(head));
+
+
+// https://leetcode.com/problems/powx-n/
+// https://leetcode.com/problems/remove-linked-list-elements/
+// https://leetcode.com/problems/contains-duplicate/
+// https://leetcode.com/problems/contains-duplicate-ii/
+// https://leetcode.com/problems/power-of-two/
+// https://leetcode.com/problems/palindrome-linked-list/
