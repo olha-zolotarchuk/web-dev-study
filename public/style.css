@@ -13,7 +13,7 @@
   --white: #ffffff;
   --pikachu: #f3cf21;
   --col1: #005246;
-  --col2: #fff0ca;
+
   --col3: #c4fcf0;
   --col4: #669b90;
 
@@ -411,6 +411,15 @@ main {
   padding-bottom: 110px;
   font-size: 2rem;
   line-height: 1.5;
+  margin: 0.8rem;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.works h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
 }
 
 @media (max-width: 991.98px) {
@@ -426,18 +435,96 @@ main {
   }
 }
 
-.works {
-  margin: 0.8rem;
+.works__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+/* 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center; */
 }
 
-.works_projects {
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem; */
-}
-.works__cart{
-  display: flex;
+.works__cart {
+  /* display: flex;
   flex-direction: row;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+
+  /* width: 350px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; */
+
+  /* width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; */
+
+
+    width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.works__cart:hover {
+ transform: translateY(-5px);
+}
+
+.works__cart img {
+  width: 100%;
+  height: auto;
+  /* display: block; */
+  border-radius: 8px 8px 0 0;
+}
+
+.works__cart div {
+  padding: 20px;
+}
+
+.works__cart p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.works__cart p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  /* color: var(--col1); */
+
+  color: #333;
+}
+
+.works__cart p:last-child {
+  font-size: 1rem;
+  color: var(--black);
+  color: #666;
+}
+
+.works__cart a {
+  text-decoration: none;
+  color: #333;
+}
+.works__cart a:hover {
+  color: #000;
+}
+@media (max-width: 767.98px) {
+  .works__cart {
+    /* width: 100%; */
+     grid-template-columns: 1fr;
+  }
 }
 /* ================================== */
 
@@ -698,5 +785,3 @@ main {
     gap: 5px;
   }
 }
-
-
