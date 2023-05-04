@@ -7,9 +7,8 @@ export const Categories: React.VFC = ({}) => {
 
   return (
     <div>
-      Categories
-      <CategoryTable categories={categories} />  
-
+      <h1> Categories</h1>
+      <CategoryTable categories={categories} />
     </div>
   );
 };

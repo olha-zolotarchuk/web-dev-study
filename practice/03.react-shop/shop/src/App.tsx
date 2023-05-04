@@ -25,25 +25,26 @@ function App() {
               <Link to="/">Home</Link>
             </div>
             <div>
-              <Link to="/categories">Categories</Link>
+              <div>
+                <Link to="/categories">Categories</Link>
+              </div>
+              {/* <div>
+                <Link to="/cart">Cart</Link>
+              </div>
+              <div>
+                <Link to="/category">Category</Link>
+              </div> */}
             </div>
             <div>
-              <Link to="/cart">Cart</Link>
-            </div>
-            <div>
-              <Link to="/category">Category</Link>
-            </div>
-            <div>
-              <Link to="/users">Users</Link>
-            </div>
-            <div>
-              <Link to="/weathers">Weather</Link>
-            </div>
-            <div>
-              <Link to="/wind-speed">Speed</Link>
-            </div>
-            <div>
-              <Link to="/wind-speed">Speed</Link>
+              <div>
+                <Link to="/users">Users</Link>
+              </div>
+              <div>
+                <Link to="/weathers">Weather</Link>
+              </div>
+              <div>
+                {/* <Link to="/wind-speed">Speed</Link> */}
+              </div>
             </div>
             <div>
               <Link to="/jokes">Jokes</Link>
@@ -51,9 +52,7 @@ function App() {
             <div>
               <Link to="/books">Books</Link>
             </div>
-            <div>
-              {/* <Link to="/test">Test</Link> */}
-            </div>
+            <div>{/* <Link to="/test">Test</Link> */}</div>
           </ul>
         </nav>
 

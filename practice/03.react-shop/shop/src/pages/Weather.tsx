@@ -14,19 +14,19 @@ export const Weathers: React.VFC = ({}) => {
 
   return (
     <div>
-      Weather
-       
-        {users.map((user, i) => (
-          <div key={i}>
-            {user.id
-             +" --- "+
-            user.address.coordinates.lat
-            +" --- "+
-            user.address.coordinates.lng + " --- "}            
-            {weathers && weathers[user.id]?.temperature + " --- "}  
-            {weathers && weathers[user.id]?.windspeed}            
-          </div>
-        ))}
-      </div>
+      <h1> Weather</h1>
+      {users.map((user, i) => (
+        <div key={i}>
+          {user.id +
+            " --- " +
+            user.address.coordinates.lat +
+            " --- " +
+            user.address.coordinates.lng +
+            " --- "}
+          {weathers && weathers[user.id]?.temperature + " --- "}
+          {weathers && weathers[user.id]?.windspeed}
+        </div>
+      ))}
+    </div>
   );
 };

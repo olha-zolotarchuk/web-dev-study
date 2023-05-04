@@ -8,10 +8,12 @@ export const Jokes : React.VFC = ({}) => {
         return null
       }
 
-    return(
-    <div>
+    return (
+      <div>
         {jokes[5].setup}
+        <br></br>
+        <br></br>
         {jokes[5].punchline}
-    </div>
+      </div>
     );
 } 

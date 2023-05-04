@@ -13,7 +13,7 @@ export const useWindSpeed = (user?:User): WindSpeed | null => {
 
   // const users: User[] | null = useUsers();
   
-  // console.log(speed)
+  console.log(speed)
 
   
  

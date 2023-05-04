@@ -13,13 +13,15 @@ export const Users: React.VFC = ({}) => {
   }
   return (
     <div>
-      Users
+      <h1> Users </h1> 
       <div>
         {users?.map((user, i) => (
-          <UserCard key={i} user={user} temperature={weathers[user.id]?.temperature} />
+          <UserCard
+            key={i}
+            user={user}
+            temperature={weathers[user.id]?.temperature}
+          />
         ))}
-        
-
       </div>
     </div>
   );

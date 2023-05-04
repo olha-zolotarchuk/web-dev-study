@@ -15,18 +15,25 @@ export const Home: React.VFC = ({}) => {
 
   return (
     <div>
-      Home
-      <ProductCard product={p1} />
-      <ProductCard product={p2} />
-      <ProductCard product={p3} />
-      <button
-        onClick={() => {
-          setProductId(productId + 1);
-        }}
-      >
-        next
-      </button>
-      <CategoryTable categories={categories} />
+      <h1> Home</h1>
+      <div className="home">
+        <div>
+          <CategoryTable categories={categories} />
+        </div>
+        <div className="home__cart">
+          <ProductCard product={p1} />
+          <ProductCard product={p2} />
+          <ProductCard product={p3} />
+          <button
+            className="home__btn"
+            onClick={() => {
+              setProductId(productId + 1);
+            }}
+          >
+            next
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

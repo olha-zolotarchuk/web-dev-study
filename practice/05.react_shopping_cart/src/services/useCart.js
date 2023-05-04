@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 export const useCart = () => {
-  const API_URL_CART = "http://localhost:3600/cart";
+  const API_URL_CART = "http://localhost:3500/cart";
   const [cart, setCart] = useState([]);
 
   useEffect(
