@@ -24,18 +24,18 @@ body {
   height: 100vh;
   width: 100%;
   max-width: 500px;
-  border: 1px solid mediumblue;
+  border: 1px solid green;
   margin: auto;
 }
 
 header {
   width: 100%;
   padding: 0 0.25em;
-  background-color: mediumblue;
-  color: aliceblue;
+  background-color: yellow;
+  color: rgb(65, 65, 65);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  height: 70px;
 }
 
 main {
@@ -51,10 +51,11 @@ main {
 footer {
   width: 100%;
   padding: 0.25em;
-  background-color: mediumblue;
-  color: aliceblue;
+  background-color: yellow;
+  color: rgb(65, 65, 65);
   display: grid;
   place-content: center;
+  height: 60px;
 }
 
 ul {
@@ -130,7 +131,7 @@ ul li::before {
   left: -99999px;
 }
 
-.addForm input[type='text'] {
+.addForm input[type="text"] {
   flex-grow: 1;
   max-width: calc(100% - 50px);
   min-height: 48px;
@@ -152,7 +153,7 @@ button {
   cursor: pointer;
 }
 
-button:focus, 
+button:focus,
 button:hover {
   color: white;
   background-color: limegreen;
@@ -173,7 +174,7 @@ button:hover {
   left: -99999px;
 }
 
-.searchForm input[type='text'] {
+.searchForm input[type="text"] {
   flex-grow: 1;
   max-width: 100%;
   min-height: 48px;

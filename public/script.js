@@ -6,22 +6,56 @@ window.addEventListener("scroll", function () {
   semicircle.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateY(${window.scrollY}px)`;
 });
 // about__presentation
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
+document.addEventListener("DOMContentLoaded", function () {
+  var section = document.querySelector(".about__presentation");
+  setTimeout(function () {
+    section.classList.add("show");
+  }, 500);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var section = document.querySelector(".about__presentation");
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
 
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
+  function handleScroll() {
+    if (isElementInViewport(section)) {
+      section.classList.add("active");
+      window.removeEventListener("scroll", handleScroll);
     }
   }
-}
-window.addEventListener("scroll", reveal);
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", reveal);
+
+  handleScroll();
+  reveal(); 
+});
+
 // about__work
 const section = document.querySelector(".about__work");
 const listItems = section.querySelectorAll("._anim-items li");
