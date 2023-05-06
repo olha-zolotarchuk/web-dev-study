@@ -119,3 +119,16 @@ uaBtn.addEventListener("click", function () {
   localStorage.setItem("language", "ua");
   setLanguage("ua");
 });
+// Home page
+// const homeP = document.querySelector('.home__p');
+// function handleWindowResize() {
+//   if (window.innerWidth >= 767) {
+//     homeP.classList.remove('exclude');
+//     homeP.classList.add('include');
+//   } else {
+//     homeP.classList.remove('include');
+//     homeP.classList.add('exclude');
+//   }
+// }
+// handleWindowResize(); // Call the function initially
+// window.addEventListener('resize', handleWindowResize); // Call the function on window resize

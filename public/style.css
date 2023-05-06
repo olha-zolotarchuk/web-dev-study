@@ -44,7 +44,7 @@ main {
   overflow: hidden;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0px 25px;
+  padding: 0px 35px;
 }
 
 @media (max-width: 1200px) {
@@ -74,12 +74,12 @@ main {
 }
 @media (max-width: 1200px) {
   .header {
-    padding-bottom: 70px;
+    padding-bottom: 60px;
   }
 }
 @media (max-width: 1024px) {
   .header {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     flex-direction: column-reverse;
     align-items: flex-end;
     gap: 10px;
@@ -102,7 +102,7 @@ main {
 @media (max-width: 1024px) {
   .header__nav {
     min-height: 10vh;
-    align-items: flex-end;
+    /* align-items: flex-end; */
   }
 }
 
@@ -202,10 +202,6 @@ main {
 
 .home {
   padding-bottom: 110px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 @media (max-width: 991.98px) {
@@ -217,10 +213,18 @@ main {
     padding-bottom: 30px;
   }
 }
+@media (max-width: 630px) {
+  .home {
+    padding-bottom: 30px;
+  }
+}
 
 .home__name {
   display: flex;
-  z-index: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
 }
 
 .home__name h1 {
@@ -268,70 +272,48 @@ main {
 }
 
 .home__foto {
-  height: 800px;
-  bottom: 0;
+  height: auto;
+  max-width: 100%;
+  border-radius: 5%;
 }
-@media (max-width: 1200px) {
+
+@media (max-width: 767px) {
+  .home__noMedia {
+    display: none;
+  }
+  .home__media {
+    display: block;
+  }
+  .home__name {
+    flex-direction: column;
+  }
+  .home__text {
+    display: flex;
+  }
   .home__foto {
-    height: 600px;
+    height: auto;
+    max-width: 100%;
   }
-}
-@media (max-width: 1100px) {
-  .home__foto {
-    height: 500px;
+  .home__name h2 {
+    font-size: 2.5rem;
   }
-}
-@media (max-width: 992px) {
-  .home__foto {
-    height: 400px;
+
+  .home__name p {
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-align: center;
   }
 }
 
-.semicircle {
-  /* width: 1500px;
-  height: 800px;
-  border-radius:1000px 1000px 0 0 ;
-  background: linear-gradient(
-    0deg,
-    rgba(243, 208, 33, 0.925),
-    rgba(255, 0, 0, 0) 100%
-  );
-
-  transform: translate(-50%, -50%);
-  transition: transform 0.3s ease-out;
-  position: absolute;
-  left: 0; */
-
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: red;
+@media (min-width: 768px) {
+  .home__media {
+    display: none;
+  }
+  .home__noMedia {
+    display: block;
+  }
 }
 
-@media (max-width: 1330px) {
-  .semicircle {
-    width: 1200px;
-    height: 500px;
-    border-radius: 700px 700px 0 0;
-  }
-}
-@media (max-width: 1200px) {
-  .semicircle {
-    border-radius: 400px 400px 0 0;
-  }
-}
-@media (max-width: 1100px) {
-  .semicircle {
-    border-radius: 400px 400px 0 0;
-  }
-}
-@media (max-width: 992px) {
-  .semicircle {
-    width: 900px;
-    height: 400px;
-    border-radius: 300px 300px 0 0;
-  }
-}
 /* ================================== */
 
 /* About Presentation */
@@ -440,13 +422,12 @@ main {
 }
 
 .works__cart {
-  width: 600px;
+  width: 500px;
   border: 3px solid var(--pikachu);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-
 }
 
 .works__cart:hover {
@@ -466,8 +447,8 @@ main {
 }
 
 .works__header {
-  /* display: flex; */
-  /* justify-content: space-around; */
+  display: flex;
+  justify-content: space-around;
 }
 
 .works__header p:first-child {
@@ -475,19 +456,29 @@ main {
   font-weight: bold;
 }
 
+.works__header p:last-child {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
 .works__link {
-  /* margin-top: 10px; */
-  width: 10px;
-  height: 10px;
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* gap: 10px; */
-  /* justify-content: flex-start; */
+  margin-top: 10px;
+}
+
+.works__link a:hover .works__icon {
+  background-color: #f3cf21;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact__page a:hover .contact__hover {
+  background-color: #f3cf21;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .works__icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 @media (max-width: 767.98px) {
