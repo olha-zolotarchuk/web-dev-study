@@ -24,6 +24,7 @@ body {
   height: 100vh;
   width: 100%;
   max-width: 500px;
+  /* border: 1px solid green; */
   border: 1px solid green;
   margin: auto;
 }
@@ -34,7 +35,7 @@ header {
   background-color: yellow;
   color: rgb(65, 65, 65);
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   height: 70px;
 }
 

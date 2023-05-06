@@ -441,13 +441,12 @@ main {
 
 .works__cart {
   width: 600px;
-  /* background-color: var(--col2); */
   border: 3px solid var(--pikachu);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  position: relative;
+
 }
 
 .works__cart:hover {
@@ -459,16 +458,36 @@ main {
   color: #333;
 }
 
-.works__cart img {
+.works__img {
   width: 100%;
-  height: auto;
   border-radius: 8px 8px 0 0;
   object-fit: cover;
+  margin: 0px;
+}
+
+.works__header {
+  /* display: flex; */
+  /* justify-content: space-around; */
 }
 
 .works__header p:first-child {
   margin-top: 10px;
   font-weight: bold;
+}
+
+.works__link {
+  /* margin-top: 10px; */
+  width: 10px;
+  height: 10px;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* gap: 10px; */
+  /* justify-content: flex-start; */
+}
+
+.works__icon {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 767.98px) {
@@ -487,7 +506,7 @@ main {
   transition: opacity 0.3s;
 }
 
-.works__cart:hover .works__description{
+.works__cart:hover .works__description {
   display: block;
 }
 
@@ -659,6 +678,7 @@ main {
 .contact__page p {
   text-decoration: underline;
   text-decoration-color: #f3cf21;
+  font-size: 3rem;
 }
 .contact {
   gap: 80px;
@@ -674,15 +694,12 @@ main {
   line-height: 1.5;
 }
 
-.contact p {
-  font-size: 3rem;
-}
-
 .contact__write {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .contact__centered {
   display: flex;
   align-items: center;
@@ -712,6 +729,16 @@ main {
   align-items: center;
   gap: 20px;
 }
+
+.contact__page img {
+  border-radius: 10px;
+}
+.contact__page a:hover .contact__hover {
+  background-color: #f3cf21;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 @media (max-width: 648px) {
   .contact__write {
     justify-content: center;
@@ -744,7 +771,7 @@ main {
     gap: 5px;
   }
   .contact__work a {
-    gap: 5px;
+    /* gap: 5px; */
   }
   .contact__social {
     gap: 5px;

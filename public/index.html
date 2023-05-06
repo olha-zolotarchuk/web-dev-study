@@ -75,7 +75,7 @@
                 data-lang-en="Hi, my name is"
                 data-lang-ua="Привіт, мене звати"
               >
-               еруру Hi, my name is
+                Hi, my name is
               </h1>
 
               <h2 data-lang-en="Olha Zolotarchuk" data-lang-ua="Оля Золотарчук">
@@ -98,7 +98,6 @@
             />
           </div>
           <!-- <div><div class="semicircle"></div></div> -->
-          /
         </article>
 
         <section class="about__presentation reveal">
@@ -149,12 +148,14 @@
             My Projects
           </h1>
           <div class="works_projects">
-            <figure class="works__cart">
+            <div class="works__cart">
               <a
                 href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/03.Adaptive%20site%20layout%20HTML,CSS/index.html"
                 target="_blank"
               >
-                <div class="works__header">
+              </a>
+              <div class="works__header">
+                <div>
                   <p
                     data-lang-en="Adaptive site layout"
                     data-lang-ua="Адаптивна верстка сайту"
@@ -165,13 +166,33 @@
                     HTML, CSS, JS
                   </p>
                 </div>
-                <img
-                  src="img/projects/1.png"
-                  alt="Adaptive site layout HTML,CSS"
-                  title="Adaptive site layout HTML,CSS"
-                />
 
-                <div class="works__description">
+                <div class="works__link">
+       
+                  <img
+                    class="works__icon"
+                    src="img/social/github-work.svg"
+                    alt="github"
+                    title="github"
+                  />
+              
+                  <img
+                    class="works__icon"
+                    src="img/social/external-link work.svg"
+                    alt="external-link"
+                    title="external-link"
+                  />
+               
+                </div>
+              </div>
+              <!-- <img
+                class="works__img"
+                src="img/projects/Screenshot from 2023-05-06 07-40-31.png"
+                alt="Adaptive site layout HTML,CSS"
+                title="Adaptive site layout HTML,CSS"
+              /> -->
+
+              <!-- <div class="works__description">
                   <p
                     data-lang-en="A web page that demonstrates examples related to creating responsive site layouts"
                     data-lang-ua="Веб-сторінка, яка демонструє приклади створення адаптивних макетів сайту"
@@ -179,9 +200,8 @@
                     A web page that demonstrates examples related to creating
                     responsive site layouts
                   </p>
-                </div></a
-              >
-            </figure>
+                </div> -->
+            </div>
 
             <figure class="works__cart">
               <a
@@ -189,17 +209,36 @@
                 target="_blank"
               >
                 <div class="works__header">
-                  <p
-                    data-lang-en="Copying a YouTube page"
-                    data-lang-ua="Копіювання сторінки  YouTube"
-                  >
-                    Copying a YouTube page
-                  </p>
-                  <p data-lang-en="HTML,CSS" data-lang-ua="HTML,CSS">
-                    HTML,CSS
-                  </p>
+                  <div>
+                    <p
+                      data-lang-en="Copying a YouTube page"
+                      data-lang-ua="Копіювання сторінки  YouTube"
+                    >
+                      Copying a YouTube page
+                    </p>
+                    <p data-lang-en="HTML,CSS" data-lang-ua="HTML,CSS">
+                      HTML,CSS
+                    </p>
+                  </div>
+                  <div class="works__link">
+                    <a href="https://dennissnellenberg.com/" target="_blank">
+                      <img
+                        class="works__icon"
+                        src="img/social/github-work.svg"
+                        alt="github"
+                        title="github"
+                    /></a>
+                    <a href="https://dennissnellenberg.com/" target="_blank">
+                      <img
+                        class="works__icon"
+                        src="img/social/external-link work.svg"
+                        alt="external-link"
+                        title="external-link"
+                    /></a>
+                  </div>
                 </div>
                 <img
+                  class="works__img"
                   src="img/projects/2.png"
                   alt="CSS Workshop"
                   title="CSS Workshop"
@@ -358,7 +397,7 @@
               >
                 <div class="works__header">
                   <p data-lang-en="Blog page" data-lang-ua="Сторінка блогу">
-                   Blog page
+                    Blog page
                   </p>
                   <p
                     data-lang-en="React, JS, HTML, CSS"
@@ -377,7 +416,8 @@
                     data-lang-en="A app that allows users to add, edit, and delete post using the Axios"
                     data-lang-ua="Додаток, який дозволяє користувачам додавати, редагувати та видаляти публікації за допомогою Axios"
                   >
-                  A app that allows users to add, edit, and delete post using the Axios
+                    A app that allows users to add, edit, and delete post using
+                    the Axios
                   </p>
                 </div></a
               >
@@ -552,13 +592,9 @@
                 Write me
               </p>
               <div>
-                <a
-                  class="contact__centered"
-                  href="tel:+380501045035"
-                  data-lang-en="Phone: (+380) 050-104-5035"
-                  data-lang-ua="Телефон: (+380) 050-104-5035"
-                >
+                <a class="contact__centered" href="tel:+380501045035">
                   <img
+                    class="contact__hover"
                     src="img/social/phone-call-svgrepo-com (1).svg"
                     alt="phone-call"
                     width="30"
@@ -577,21 +613,22 @@
                   >Telegram)</a
                 >
               </div>
+
               <a
                 class="contact__centered"
                 href="mailto:olha.zolotarchuk@gmail.com"
                 target="_blank"
-                data-lang-en="Email: olha.zolotarchuk@gmail.com"
-                data-lang-ua="Ел.пошта: olha.zolotarchuk@gmail.com"
               >
                 <img
+                  class="contact__hover"
                   src="img/social/email-icon.svg"
                   alt="email-icon"
                   width="30"
                   height="30"
                 />
-                Email: olha.zolotarchuk@gmail.com</a
-              >
+
+                Email: olha.zolotarchuk@gmail.com
+              </a>
             </div>
 
             <div class="contact__work">
@@ -603,6 +640,7 @@
               </p>
               <a href="https://github.com/olha-zolotarchuk" target="_blank">
                 <img
+                  class="contact__hover"
                   src="img/social/pngimg.com - github_PNG80.png"
                   alt="github"
                   width="30"
@@ -611,6 +649,7 @@
               >
               <a href="https://leetcode.com/olha-zolotarchuk/" target="_blank">
                 <img
+                  class="contact__hover"
                   src="img/social/leetcode-3628297-3031905.png"
                   alt="leetcode"
                   width="30"
@@ -626,21 +665,24 @@
                 My social pages
               </p>
               <a
-                href="https://www.instagram.com/oliazolotarchuk/"
+                href="https://www.linkedin.com/in/olha-zolotarchuk-9530a2269/"
                 target="_blank"
               >
                 <img
+                  class="contact__hover"
                   src="img/social/04.svg"
                   alt="Linkedin"
                   width="30"
                   height="30"
-                />Linkedin</a
-              >
+                />
+                Linkedin
+              </a>
               <a
                 href="https://www.instagram.com/oliazolotarchuk/"
                 target="_blank"
               >
                 <img
+                  class="contact__hover"
                   src="img/social/02.svg"
                   alt="Instagram"
                   width="30"
@@ -649,7 +691,6 @@
               >
             </div>
           </div>
-          <div id="scores"></div>
         </article>
       </main>
 
