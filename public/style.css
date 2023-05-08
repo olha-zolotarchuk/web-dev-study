@@ -228,51 +228,19 @@ main {
 }
 
 .home__name h1 {
-  font-size: 2rem;
-}
-@media (max-width: 992px) {
-  .home__name h1 {
-    font-size: 1.5rem;
-  }
+    font-size: 2vw;
 }
 
 .home__name h2 {
-  font-size: 6rem;
+  font-size: 5vw;
   margin: 1rem 0;
 }
-@media (max-width: 1200px) {
-  .home__name h2 {
-    font-size: 4rem;
-  }
-}
-@media (max-width: 992px) {
-  .home__name h2 {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 992px) {
-  .home__name h2 {
-    font-size: 1rem;
-  }
-}
+
 .home__name p {
-  font-size: 3rem;
+  font-size: 3vw;
   margin: 1rem 0;
   line-height: 1.5;
   text-align: end;
-}
-@media (max-width: 1200px) {
-  .home__name p {
-    font-size: 2.5rem;
-    margin: 2rem 0;
-  }
-}
-@media (max-width: 992px) {
-  .home__name p {
-    font-size: 2rem;
-    margin: 2rem 2rem 0;
-    text-align: center;
-  }
 }
 
 .home__foto {
@@ -298,14 +266,9 @@ main {
     height: auto;
     max-width: 100%;
   }
-  /* .home__name h2 {
-    font-size: 2.5rem;
-  } */
 
   .home__name p {
-    font-size: 2rem;
-    margin: 2rem 0;
-    text-align: center;
+    text-align: center; 
   }
 }
 
