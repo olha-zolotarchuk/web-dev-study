@@ -1,6 +1,10 @@
 {
 	"scripts": {
-		 "start": "yarn --cwd practice/03.react-shop/shop start",
-		 "install": "yarn --cwd practice/03.react-shop/shop install"
-	}	
+		"start": "yarn --cwd practice/03.react-shop/shop start",
+		"install": "yarn --cwd practice/03.react-shop/shop install"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
 }
