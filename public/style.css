@@ -205,7 +205,7 @@ main {
 .home {
   padding-bottom: 110px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 993px) {
   .home {
     padding-bottom: 30px;
   }
@@ -216,20 +216,12 @@ main {
   }
 }
 
-/* .home__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-} */
-
 .home__name {
-   display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 25px; 
+  gap: 25px;
   flex: 1;
 }
 
@@ -250,17 +242,16 @@ main {
 }
 
 .home__foto {
- max-width:700px;
+  max-width: 600px;
   border-radius: 5%;
 }
 
-@media (max-width: 2400px) {
-.home__foto {
-   height: auto;
-  max-width: 100%;
+@media (max-width: 2000px) {
+  .home__foto {
+    height: auto;
+    max-width: 100%;
   }
 }
- 
 
 @media (max-width: 767px) {
   .home__noMedia {
