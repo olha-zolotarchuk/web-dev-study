@@ -225,7 +225,7 @@ main {
 }
 
 .home__name h1 {
-    font-size: 2.5vw;
+  font-size: 2.5vw;
 }
 
 .home__name h2 {
@@ -247,8 +247,7 @@ main {
 }
 @media (min-width: 768px) {
   .home__foto {
-    /* max-width: 50%; */
-      /* height: 50%; */
+    /* max-width:200px; */
   }
 }
 
@@ -265,13 +264,10 @@ main {
   .home__text {
     display: flex;
   }
-  .home__foto {
-    /* height: auto;
-    max-width: 100%; */
-  }
+ 
 
   .home__name p {
-    text-align: center; 
+    text-align: center;
   }
 }
 
