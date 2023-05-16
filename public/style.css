@@ -299,12 +299,26 @@ main {
   flex-direction: column;
   gap: 50px;
 }
-
+@media (max-width: 767.98px) {
+  .about__presentation {
+    gap: 10px;
+  }
+}
 .text-container {
   display: flex;
   gap: 50px;
 }
-
+@media (max-width: 767.98px) {
+  .text-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .text-container .text-box:nth-child(1) {
+    border: 2px #f3cf21 solid;
+    border-radius: 10%;
+    padding: 10px;
+  }
+}
 .text-container .text-box:nth-child(2) {
   text-align: end;
   font-weight: bold;
@@ -321,7 +335,11 @@ main {
     margin: 10px;
   }
 }
-
+@media (max-width: 767.98px) {
+  .text-box {
+    font-size: 1rem;
+  }
+}
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -341,7 +359,7 @@ main {
   background: var(--col1);
   color: #f3cf21;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 2vw;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -355,8 +373,8 @@ main {
 
 @media (max-width: 991.98px) {
   .btn__about {
-    width: clamp(6em, 12vw, 11em);
-    height: clamp(6em, 12vw, 11em);
+    width: clamp(5em, 12vw, 11em);
+    height: clamp(5em, 12vw, 11em);
   }
 }
 
@@ -732,7 +750,7 @@ main {
     gap: 5px;
   }
   .contact p {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .contact__work {
     gap: 5px;
@@ -749,7 +767,12 @@ main {
   .contact a {
     font-size: 1rem;
   }
-   .contact p {
-    font-size: 1.5rem;
+  .contact p {
+    font-size: 2rem;
+  }
+  .contact__page img {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
   }
 }
