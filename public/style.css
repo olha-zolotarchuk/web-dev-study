@@ -35,8 +35,8 @@ body {
 }
 
 main {
-  /* max-width: 1400px; */
-  /* margin: 0 auto; */
+  /* max-width: 1400px;
+  margin: 0 auto; */
 }
 
 .wrapper {
@@ -47,7 +47,7 @@ main {
   padding: 0px 35px;
 }
 
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
   .wrapper {
     max-width: 1000px;
   }
@@ -61,7 +61,7 @@ main {
   .wrapper {
     max-width: none;
   }
-} */
+}
 
 /* ================================== */
 
@@ -225,7 +225,7 @@ main {
 }
 
 .home__name h1 {
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 
 .home__name h2 {
@@ -234,7 +234,7 @@ main {
 }
 
 .home__name p {
-  font-size: 3vw;
+  font-size: 2.5vw;
   margin: 1rem 0;
   line-height: 1.5;
   text-align: end;
