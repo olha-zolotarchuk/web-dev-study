@@ -300,7 +300,7 @@ main {
 }
 @media (max-width: 460px) {
   .home__name p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 
