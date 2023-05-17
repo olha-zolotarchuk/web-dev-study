@@ -404,7 +404,7 @@ main {
     font-size: 1.3rem;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 460px) {
   .text-box {
     font-size: 1.1rem;
   }
