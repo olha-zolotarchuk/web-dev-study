@@ -305,9 +305,7 @@ main {
   }
 }
 
-/* ================================== */
-
-/* About Presentation */
+/* About Presentation *//* ================================== */
 
 .about__presentation {
   display: flex;
@@ -319,20 +317,23 @@ main {
     gap: 10px;
   }
 }
+
 .text-container {
   display: flex;
   gap: 50px;
 }
-.text-container .text-box:nth-child(2) {
-  text-align: end;
-  font-weight: bold;
-}
-
 @media (max-width: 500px) {
   .text-container {
     flex-direction: column;
     gap: 10px;
   }
+}
+
+.text-container .text-box:nth-child(2) {
+  text-align: end;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
   .text-container .text-box:nth-child(1) {
     border: 2px #f3cf21 solid;
     border-radius: 10%;
@@ -350,15 +351,16 @@ main {
 }
 @media (max-width: 991.98px) {
   .text-box {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 10px;
   }
 }
 @media (max-width: 767.98px) {
   .text-box {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
+
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -386,10 +388,6 @@ main {
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
 }
-.btn__about:hover {
-  background-color: #005246be;
-}
-
 @media (max-width: 991.98px) {
   .btn__about {
     width: clamp(5em, 12vw, 11em);
@@ -397,8 +395,11 @@ main {
   }
 }
 
-/* ================================== */
-/* WORKS */
+.btn__about:hover {
+  background-color: #005246be;
+}
+
+/* WORKS *//* ================================== */
 
 .works {
   padding-top: 110px;
@@ -407,7 +408,6 @@ main {
   line-height: 1.5;
   text-align: center;
 }
-
 @media (max-width: 991.98px) {
   .works {
     padding-top: 70px;
@@ -418,6 +418,13 @@ main {
   .works {
     padding-top: 30px;
     padding-bottom: 30px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 360px) {
+  .works {
+    font-size: 1rem;
   }
 }
 
@@ -425,6 +432,23 @@ main {
   font-size: 4rem;
   margin-bottom: 30px;
   color: var(--col1);
+}
+@media (max-width: 991.98px) {
+  .works h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .works h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 360px) {
+  .works h1 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+  }
 }
 
 .works_projects {
@@ -454,6 +478,7 @@ main {
 
 .works__img {
   width: 100%;
+  height: auto;
   border-radius: 8px 8px 0 0;
   object-fit: cover;
   margin: 0px;
@@ -473,6 +498,19 @@ main {
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
+@media (max-width: 767.98px) {
+  .works__header p:last-child {
+    margin-bottom: 7px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .works__header p:last-child {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+  }
+}
+
 .works__link {
   margin-top: 10px;
 }
@@ -493,10 +531,16 @@ main {
   width: 25px;
   height: 25px;
 }
-
 @media (max-width: 767.98px) {
-  .works__cart {
-    width: 100%;
+  .works__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .works__icon {
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -509,14 +553,25 @@ main {
   padding: 20px;
   transition: opacity 0.3s;
 }
+@media (max-width: 767.98px) {
+  .works__description {
+    position: relative;
+    display: block;
+    padding: 15px;
+  }
+}
+@media (max-width: 360px) {
+  .works__description {
+    padding: 10px;
+  }
+}
 
 .works__cart:hover .works__description {
   display: block;
 }
 
-/* ================================== */
+/* ABOUTE *//* ================================== */
 
-/* ABOUTE */
 .about {
   padding-top: 110px;
   padding-bottom: 110px;
