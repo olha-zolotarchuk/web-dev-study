@@ -298,7 +298,7 @@ main {
     font-size: 2rem;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 460px) {
   .home__name p {
     font-size: 1.3rem;
   }
@@ -423,8 +423,8 @@ main {
 }
 
 .btn__about {
-  width: clamp(7em, 10vw, 11em);
-  height: clamp(7em, 10vw, 11em);
+  width: clamp(5em, 10vw, 6em);
+  height: clamp(5em, 10vw, 6em);
   border-radius: 50%;
   background: var(--col1);
   color: #f3cf21;
@@ -442,13 +442,14 @@ main {
     width: clamp(6em, 12vw, 11em);
     height: clamp(6em, 12vw, 11em);
   }
-}
-@media (max-width: 360px) {
+}*/
+@media (max-width: 460px) {
   .btn__about {
-    width: clamp(6em, 12vw, 11em);
-    height: clamp(6em, 12vw, 11em);
+    width: 4rem;
+    height: 4rem;
   }
-} */
+}
+
 .btn__about:hover {
   background-color: #005246be;
 }
@@ -476,7 +477,7 @@ main {
     line-height: 1.2;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 460px) {
   .works {
     font-size: 0.9rem;
   }
