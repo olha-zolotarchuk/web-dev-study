@@ -242,13 +242,13 @@ body._touch .menu__list > li._active .menu__arrow {
     content: "";
   }
   .menu__icon::before {
-    top: -10px;
+    margin-top: 0px;
   }
   .menu__icon::after {
     bottom: 0;
   }
   .menu__icon span {
-    top: 50%;
+    margin-top: 50%;
     transform: scale(1) translate(0px, -50%);
   }
 

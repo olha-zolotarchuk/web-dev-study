@@ -29,6 +29,22 @@
             alt="ukraine-flag"
           />
         </div>
+        <div id="menu">
+          <div id="menu-bar" onclick="menuOnClick()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <nav class="nav" id="nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu-bg" id="menu-bg"></div>
         <div class="header__right">
           <nav class="header__nav">
             <a href="#home">
@@ -68,44 +84,42 @@
         </div>
       </header>
       <main>
-        <article class="home" id="home">  
+        <article class="home" id="home">
           <div class="home__noMedia">
-         
-              <div class="home__name">
-                <div>
-                  <h1
-                    data-lang-en="Hi, my name is"
-                    data-lang-ua="Привіт, мене звати"
-                  >
-                    Hi, my name is
-                  </h1>
+            <div class="home__name">
+              <div>
+                <h1
+                  data-lang-en="Hi, my name is"
+                  data-lang-ua="Привіт, мене звати"
+                >
+                  Hi, my name is
+                </h1>
 
-                  <h2
-                    data-lang-en="Olha Zolotarchuk"
-                    data-lang-ua="Оля Золотарчук"
-                  >
-                    Olha Zolotarchuk
-                  </h2>
-                  <p
-                    class="home__p"
-                    data-lang-en=" I am a self-taught junior frontend developer with a passion for
+                <h2
+                  data-lang-en="Olha Zolotarchuk"
+                  data-lang-ua="Оля Золотарчук"
+                >
+                  Olha Zolotarchuk
+                </h2>
+                <p
+                  class="home__p"
+                  data-lang-en=" I am a self-taught junior frontend developer with a passion for
                 web development."
-                    data-lang-ua="Я молодший фронтенд-розробник-самоучка з пристрастю до веб-розробки."
-                  >
-                    I am a self-taught junior frontend developer with a passion
-                    for web development.
-                  </p>
-                </div>
-                <div>
-                  <img
-                    class="home__foto"
-                    src="img/photo_5287278456079501033_y.jpg"
-                    alt="personal foto"
-                  />
-                </div>
+                  data-lang-ua="Я молодший фронтенд-розробник-самоучка з пристрастю до веб-розробки."
+                >
+                  I am a self-taught junior frontend developer with a passion
+                  for web development.
+                </p>
+              </div>
+              <div>
+                <img
+                  class="home__foto"
+                  src="img/photo_5287278456079501033_y.jpg"
+                  alt="personal foto"
+                />
               </div>
             </div>
-      
+          </div>
 
           <div class="home__media">
             <div class="home__name">
@@ -254,7 +268,7 @@
                   alt="Adaptive site layout HTML,CSS"
                   title="Adaptive site layout HTML,CSS"
                 />
-                <div class="works__description ">
+                <div class="works__description">
                   <p
                     data-lang-en="A web page that demonstrates examples related to creating responsive site layouts"
                     data-lang-ua="Веб-сторінка, яка демонструє приклади створення адаптивних макетів сайту"
@@ -375,7 +389,7 @@
                 target="_blank"
               >
                 <img
-                    class="works__img"
+                  class="works__img"
                   src="img/projects/3.png"
                   alt="CSS/HTML Project, restaurant website"
                   title="CSS/HTML Project, restaurant website"
@@ -441,7 +455,7 @@
                 target="_blank"
               >
                 <img
-                    class="works__img"
+                  class="works__img"
                   src="img/projects/4.png"
                   alt="JS,Product shop"
                   title="JS,Product shop"
@@ -507,7 +521,7 @@
                 target="_blank"
               >
                 <img
-                    class="works__img"
+                  class="works__img"
                   src="img/projects/5.png"
                   alt="JS,Product shop"
                   title="JS,Product shop"
@@ -572,7 +586,7 @@
                 target="_blank"
               >
                 <img
-                    class="works__img"
+                  class="works__img"
                   src="img/projects/6.png"
                   alt="JS,Product shop"
                   title="JS,Product shop"
@@ -636,7 +650,7 @@
                 target="_blank"
               >
                 <img
-                    class="works__img"
+                  class="works__img"
                   src="img/projects/7.png"
                   alt="JS,Product shop"
                   title="JS,Product shop"

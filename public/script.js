@@ -132,3 +132,10 @@ uaBtn.addEventListener("click", function () {
 // }
 // handleWindowResize(); // Call the function initially
 // window.addEventListener('resize', handleWindowResize); // Call the function on window resize
+
+// NAV menu
+function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
+}
