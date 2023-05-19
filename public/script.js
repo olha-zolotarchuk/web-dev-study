@@ -1,4 +1,4 @@
-// semicircle 
+// semicircle
 window.addEventListener("scroll", function () {
   const semicircle = document.querySelector(".semicircle");
   const pageHeight = document.body.scrollHeight - window.innerHeight;
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", reveal);
 
   handleScroll();
-  reveal(); 
+  reveal();
 });
 
 // about__work
@@ -139,3 +139,92 @@ function menuOnClick() {
   document.getElementById("nav").classList.toggle("change");
   document.getElementById("menu-bg").classList.toggle("change-bg");
 }
+
+function smoothScroll(target) {
+  const element = document.querySelector(target);
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll('nav.header__nav a[href^="#"]');
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = this.getAttribute("href");
+      smoothScroll(target);
+    });
+  });
+
+  const homeLink = document.querySelector('li a[href="#home"]');
+  homeLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    smoothScroll("#home");
+  });
+
+  const workLink = document.querySelector('li a[href="#works"]');
+  workLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    smoothScroll("#works");
+  });
+
+  const aboutLink = document.querySelector('li a[href="#about"]');
+  aboutLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    smoothScroll("#about");
+  });
+
+  const contactLink = document.querySelector('li a[href="#contact"]');
+  contactLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    smoothScroll("#contact");
+  });
+
+  const homeButton = document.querySelector('a[href="#home"]');
+  homeButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    smoothScroll("#home");
+  });
+
+  const workButton = document.querySelector('a[href="#works"]');
+  workButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    smoothScroll("#works");
+  });
+
+  const aboutButton = document.querySelector('a[href="#about"]');
+  aboutButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    smoothScroll("#about");
+  });
+
+  const contactButton = document.querySelector('a[href="#contact"]');
+  contactButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    smoothScroll("#contact");
+  });
+});
+
+//
+window.addEventListener("load", function () {
+  var menuElement = document.getElementById("menu");
+  var menuBgElement = document.getElementById("menu-bg");
+  function handleScroll() {
+    if (window.scrollY > 0) {
+      menuElement.style.display = "block";
+      menuElement.style.position = "fixed";
+      menuElement.style.top = "0";
+      menuBgElement.style.display = "block";
+      menuBgElement.style.position = "fixed";
+      menuBgElement.style.top = "0";
+    } else {
+      menuElement.style.display = "none";
+      menuBgElement.style.display = "none";
+    }
+  }
+
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll);
+});

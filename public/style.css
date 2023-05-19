@@ -908,10 +908,11 @@ main {
   }
 }
 
-
-
 #menu {
   z-index: 2;
+}
+.menu {
+  display: none;
 }
 
 #menu-bar {
@@ -978,6 +979,7 @@ main {
   background: radial-gradient(circle, #005246, #005246);
   border-radius: 50%;
   transition: 0.3s ease;
+  position: none;
 }
 
 .change {
