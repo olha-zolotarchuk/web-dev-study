@@ -207,11 +207,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //
+var menuElement, menuBgElement;
 window.addEventListener("load", function () {
-  var menuElement = document.getElementById("menu");
-  var menuBgElement = document.getElementById("menu-bg");
+   menuElement = document.getElementById("menu");
+   menuBgElement = document.getElementById("menu-bg");
   function handleScroll() {
     if (window.scrollY > 0) {
+      menuElement.classList.toggle("_active");
+      menuBgElement.classList.toggle("_active");
       menuElement.style.display = "block";
       menuElement.style.position = "fixed";
       menuElement.style.top = "0";

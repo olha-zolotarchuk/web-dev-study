@@ -855,11 +855,10 @@ main {
   cursor: pointer;
 }
 
-@media (max-width: 648px) {
-  .contact__write {
+@media (max-width: 600px) {
+  .contact__write p {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    align-content: center;
   }
 }
 
@@ -907,7 +906,7 @@ main {
     border-radius: 5px;
   }
 }
-
+/* =========================menu======================== */
 #menu {
   z-index: 2;
 }
@@ -1008,3 +1007,5 @@ main {
   /* transform: translate(-60%, -30%); */
   transform: translate(60%, -30%);
 }
+
+/*  */
