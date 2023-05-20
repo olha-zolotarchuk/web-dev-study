@@ -212,9 +212,9 @@ window.addEventListener("load", function () {
    menuElement = document.getElementById("menu");
    menuBgElement = document.getElementById("menu-bg");
   function handleScroll() {
-    if (window.scrollY > 0) {
-      menuElement.classList.toggle("_active");
-      menuBgElement.classList.toggle("_active");
+    if (window.scrollY > 150 ){
+      // menuElement.classList.toggle("_active");
+      // menuBgElement.classList.toggle("_active");
       menuElement.style.display = "block";
       menuElement.style.position = "fixed";
       menuElement.style.top = "0";
