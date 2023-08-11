@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation-transitions</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+      img {
+        vertical-align: top;
+      }
+      img {
+        vertical-align: top;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: inherit;
+        font-size: inherit;
+      }
+      html,
+      body {
+        height: 100%;
+        line-height: 1;
+      }
+      button,
+      input {
+        font-weight: inherit;
+        font-size: inherit;
+        color: inherit;
+        font-family: inherit;
+      }
+      button {
+        cursor: pointer;
+        background-color: inherit;
+      }
+      div {
+        padding: 10px;
+      }
+      .hover {
+        color: tomato;
+        transition: all 0.5s;
+      }
+      .hover:hover {
+        color: green;
+        background-color: bisque;
+        font-size: 20px;
+        letter-spacing: 10px;
+      }
+      .hover2 {
+        color: tomato;
+        /* transition-property: all;
+        transition-duration: 0.5s;
+        transition-delay: 1s;
+        transition-timing-function: ease; */
+        transition: all 0.5s ease-in;
+      }
+      .hover2:hover {
+        color: green;
+        background-color: bisque;
+        font-size: 20px;
+        letter-spacing: 10px;
+      }
+      .hover3 {
+        color: aqua;
+        font-size: 15px;
+        transition: all 1s ease-in 1s;
+      }
+      .hover3:hover {
+        color: green;
+        font-size: 10px;
+      }
+      /* =========================================== */
+      .body-wrapper {
+        background-color: aquamarine;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .title-wrapper {
+        text-align: center;
+        font-size: 30px;
+      }
+      .title {
+      }
+      .menu {
+        display: flex;
+        justify-content: center;
+      }
+      .menu-item {
+      }
+      .menu-link {
+      }
+      .image {
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="hover">Hover over me</div>
+      <div class="hover2">Hover over me!</div>
+      <div class="hover3">Hover over me!</div>
+    </div>
+    <div class="body-wrapper">
+      <div class="title-wrapper">
+        <h1 class="title">The Website!</h1>
+      </div>
+      <div class="menu">
+        <div class="menu-item"><a href="#" class="menu-link">Home</a></div>
+        <div class="menu-item"><a href="#" class="menu-link">About Us</a></div>
+        <div class="menu-item"><a href="#" class="menu-link">Services</a></div>
+        <div class="menu-item"><a href="#" class="menu-link">Portfolio</a></div>
+        <div class="menu-item">
+          <a href="#" class="menu-link">Contact Us</a>
+        </div>
+      </div>
+      <img
+        src="why_you_should_learn_the_names_of_trees_1050x700.webp"
+        alt="image"
+        class="image"
+      />
+    </div>
+  </body>
+</html>
