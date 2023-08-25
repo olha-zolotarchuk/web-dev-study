@@ -65,9 +65,57 @@
       }
       @keyframes transforms {
         100% {
-          width: 100px;
-          height: 100px;
-          background-color: green;
+          /* transform: scale(2, 0.5); */
+          /* transform: translate(100px, 100px); */
+          /* transform: rotate(-90deg); */
+          transform: skew(50deg, 0deg);
+        }
+      }
+
+      .box2 {
+        margin: 50px;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border: 1px solid black;
+        animation-name: transforms2;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes transforms2 {
+        100% {
+          transform: scale(0.5, 0.5);
+          transform: translate(50px, 0px);
+          transform: rotate(45deg);
+        }
+      }
+
+      /* =========================================== */
+      body {
+        background-color: black;
+      }
+      .box3 {
+        width: 30px;
+        height: 30px;
+        animation: move 2s ease-in-out 1s alternate normal both;
+      }
+      .logo {
+      }
+      .box-red {
+        background-color: red;
+      }
+      .box-blue {
+        background-color: blue;
+      }
+      .box-green {
+        background-color: green;
+      }
+      .box-orange {
+        background-color: orange;
+      }
+      @keyframes move {
+        100% {
+          transform: translate(50vw, 50vh) scaleX(10) skewY(60deg);
         }
       }
     </style>
@@ -75,7 +123,14 @@
 
   <body>
     <div>
-      <div class="box"></div>
+      <!-- <div class="box"></div>
+      <div class="box2"></div> -->
+    </div>
+    <div class="logo">
+      <div class="box3 box-red"></div>
+      <div class="box3 box-blue"></div>
+      <div class="box3 box-green"></div>
+      <div class="box3 box-orange"></div>
     </div>
   </body>
 </html>
