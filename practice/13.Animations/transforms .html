@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transforms</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+      img {
+        vertical-align: top;
+      }
+      img {
+        vertical-align: top;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: inherit;
+        font-size: inherit;
+      }
+      html,
+      body {
+        height: 100%;
+        line-height: 1;
+      }
+      button,
+      input {
+        font-weight: inherit;
+        font-size: inherit;
+        color: inherit;
+        font-family: inherit;
+      }
+      button {
+        cursor: pointer;
+        background-color: inherit;
+      }
+
+      .box {
+        margin: 50px;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border: 1px solid black;
+        animation-name: transforms;
+        animation-duration: 2s;
+      }
+      @keyframes transforms {
+        100% {
+          width: 100px;
+          height: 100px;
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
