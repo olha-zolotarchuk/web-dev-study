@@ -32,6 +32,9 @@ html,
 body {
   height: 100%;
   /* min-width: 1400px; */
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 main {
@@ -240,7 +243,6 @@ main {
   align-items: center;
   gap: 25px;
   flex: 1;
-  
 }
 
 .home__name h1 {
@@ -339,7 +341,6 @@ main {
     height: auto;
     max-width: 100%;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -349,9 +350,10 @@ main {
   .home__noMedia {
     display: block;
   }
-     .home__text {
-  z-index: 5;
-  position: relative;}
+  .home__text {
+    z-index: 5;
+    position: relative;
+  }
 }
 
 .semicircle {
@@ -363,7 +365,7 @@ main {
     rgba(243, 208, 33, 0.925),
     rgba(255, 0, 0, 0) 100%
   );
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   position: absolute;
   left: 0;
   top: 80%;
@@ -505,8 +507,7 @@ main {
 .works {
   padding-top: 110px;
   padding-bottom: 110px;
-  font-size: 2rem;
-  line-height: 1.5;
+
   text-align: center;
 }
 @media (max-width: 991.98px) {
@@ -519,13 +520,6 @@ main {
   .works {
     padding-top: 30px;
     padding-bottom: 30px;
-    font-size: 1.4rem;
-    line-height: 1.2;
-  }
-}
-@media (max-width: 460px) {
-  .works {
-    font-size: 1rem;
   }
 }
 
@@ -559,66 +553,82 @@ main {
   gap: 20px;
 }
 
-.works__cart {
-  width: 500px;
-  border: 3px solid var(--pikachu);
+.projects__cart {
+  width: 550px;
+  display: flex;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
 
-.works__cart:hover {
+.projects__cart:hover {
   transform: translateY(-5px);
 }
 
-.works__cart a {
+.projects__cart a {
   text-decoration: none;
   color: #333;
 }
 
-.works__img {
-  width: 100%;
+.projects__img {
+  padding: 1rem;
+  width: 300px;
   height: auto;
-  border-radius: 8px 8px 0 0;
-  object-fit: cover;
-  margin: 0px;
+  border-radius: 8px;
+  object-fit: contain;
+  border: 3px solid var(--pikachu);
 }
 
-.works__header {
+.projects__header {
+  padding: 0.5rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  /* display: flex; */
+  /* justify-content: space-around; */
 }
-
-.works__header p:first-child {
-  margin-top: 10px;
+.projects__title {
+}
+.projects__title p:first-child {
+  /* margin-top: 10px; */
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.works__header p:last-child {
-  margin-bottom: 10px;
-  font-size: 1.3rem;
+.projects__title p:last-child {
+  /* margin-bottom: 10px; */
+  font-size: 0.9rem;
+  text-align: end;
 }
 @media (max-width: 767.98px) {
-  .works__header p:last-child {
+  .projects__header p:last-child {
     margin-bottom: 7px;
     font-size: 1rem;
   }
+  .projects__cart {
+    flex-direction: column;
+    align-items: center;
+    width: 377px;
+  }
+  .projects__img {
+    /* width: 500px; */
+  }
 }
 @media (max-width: 364px) {
-  .works__header p:last-child {
+  .projects__header p:last-child {
     margin-bottom: 5px;
     font-size: 0.8rem;
   }
 }
 
-.works__link {
-  margin-top: 10px;
+.projects__link {
+  /* margin-top: 10px; */
   display: flex;
   gap: 10px;
+  margin-top: auto;
 }
 
-.works__link a:hover .works__icon {
+.projects__link a:hover .projects__icon {
   background-color: #f3cf21;
   border-radius: 10px;
   cursor: pointer;
@@ -630,12 +640,12 @@ main {
   cursor: pointer;
 }
 
-.works__icon {
+.projects__icon {
   width: 25px;
   height: 25px;
 }
 @media (max-width: 767.98px) {
-  .works__icon {
+  .projects__icon {
     width: 20px;
     height: 20px;
   }
@@ -647,29 +657,30 @@ main {
   }
 } */
 
-.works__description {
-  display: none;
+.projects__description {
+  padding: 10px;
+  /* display: none;
   position: absolute;
   bottom: 0;
-  left: 0;
-  background-color: var(--pikachu);
-  padding: 20px;
-  transition: opacity 0.3s;
+  left: 0; */
+  /* background-color: var(--pikachu); */
+  /* padding: 20px; */
+  /* transition: opacity 0.3s; */
 }
 @media (max-width: 767.98px) {
-  .works__description {
+  .projects__description {
     position: relative;
     display: block;
     padding: 15px;
   }
 }
 @media (max-width: 360px) {
-  .works__description {
+  .projects__description {
     padding: 10px;
   }
 }
 
-.works__cart:hover .works__description {
+.projects__cart:hover .projects__description {
   display: block;
 }
 
@@ -721,9 +732,9 @@ main {
 .about__skills h1 {
   color: var(--pikachu);
 }
-.about__skills li:hover {
+/* .about__skills li:hover {
   color: #f3cf21;
-}
+} */
 
 .about__work {
   background-color: white;
@@ -961,10 +972,15 @@ main {
 }
 
 #menu-bar {
-  width: 45px;
+  width: 40px;
   height: 40px;
   margin: 30px;
   cursor: pointer;
+}
+.bar__border {
+  /* width: 50px;
+  height: 50px; */
+  /* border: 2px solid var(--white); */
 }
 
 .bar {

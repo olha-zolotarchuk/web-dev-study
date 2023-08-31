@@ -10,6 +10,12 @@
       content="Olha Zolotarchuk junior frontend developer/ personal website/ portfolio"
     />
     <title>Olha Zolotarchuk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -47,10 +53,12 @@
         <div class="header__right">
           <nav class="header__nav">
             <div id="menu" class="menu">
-              <div id="menu-bar" onclick="menuOnClick()">
-                <div id="bar1" class="bar"></div>
-                <div id="bar2" class="bar"></div>
-                <div id="bar3" class="bar"></div>
+              <div class="bar__border">
+                <div id="menu-bar" onclick="menuOnClick()">
+                  <div id="bar1" class="bar"></div>
+                  <div id="bar2" class="bar"></div>
+                  <div id="bar3" class="bar"></div>
+                </div>
               </div>
               <nav class="nav" id="nav">
                 <ul>
@@ -225,17 +233,17 @@
         </section>
 
         <section class="works" id="works">
-          <h1 data-lang-en="My Projects" data-lang-ua="Мої проекти">
-            My Projects
+          <h1 data-lang-en=" Study  Projects" data-lang-ua="Навчальні проекти">
+            Study Projects
           </h1>
-          <div class="works_projects">
-            <div class="works__cart">
+          <div class="works_projects projects">
+            <figure class="projects__cart">
               <a
                 href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/03.Adaptive%20site%20layout%20HTML,CSS/index.html"
                 target="_blank"
               >
-                <div class="works__header">
-                  <div>
+                <div class="projects__header">
+                  <div class="projects__title">
                     <p
                       data-lang-en="Adaptive site layout"
                       data-lang-ua="Адаптивна верстка сайту"
@@ -249,13 +257,22 @@
                       HTML, CSS, JS
                     </p>
                   </div>
-                  <div class="works__link">
+                  <div class="projects__description">
+                    <p
+                      data-lang-en="A web page that demonstrates examples related to creating responsive site layouts"
+                      data-lang-ua="Веб-сторінка, яка демонструє приклади створення адаптивних макетів сайту"
+                    >
+                      A web page that demonstrates examples related to creating
+                      responsive site layouts
+                    </p>
+                  </div>
+                  <div class="projects__link">
                     <a
                       href="https://github.com/olha-zolotarchuk/web-dev-study/tree/main/exercise/03.Adaptive%20site%20layout%20HTML%2CCSS"
                       target="_blank"
                     >
                       <img
-                        class="works__icon"
+                        class="projects__icon"
                         src="img/social/github-work.svg"
                         alt="github"
                         title="github"
@@ -265,7 +282,7 @@
                       target="_blank"
                     >
                       <img
-                        class="works__icon"
+                        class="projects__icon"
                         src="img/social/external-link-svgrepo-com (1).svg"
                         alt="external-link"
                         title="external-link"
@@ -273,39 +290,25 @@
                     </a>
                   </div>
                 </div>
-              </a>
-              <a
-                href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/03.Adaptive%20site%20layout%20HTML,CSS/index.html"
-                target="_blank"
-              >
                 <img
-                  class="works__img"
+                  class="projects__img"
                   src="img/projects/Screenshot from 2023-05-06 07-40-31.png"
                   alt="Adaptive site layout HTML,CSS"
                   title="Adaptive site layout HTML,CSS"
                 />
-                <div class="works__description">
-                  <p
-                    data-lang-en="A web page that demonstrates examples related to creating responsive site layouts"
-                    data-lang-ua="Веб-сторінка, яка демонструє приклади створення адаптивних макетів сайту"
-                  >
-                    A web page that demonstrates examples related to creating
-                    responsive site layouts
-                  </p>
-                </div>
               </a>
-            </div>
+            </figure>
 
-            <figure class="works__cart">
+            <figure class="projects__cart">
               <a
                 href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/01.HTML_CSS_Beginners/17.html"
                 target="_blank"
               >
-                <div class="works__header">
-                  <div>
+                <div class="projects__header">
+                  <div class="projects__title">
                     <p
                       data-lang-en="Copying a YouTube page"
-                      data-lang-ua="Копіювання сторінки  YouTube"
+                      data-lang-ua="Копіювання сторінки YouTube"
                     >
                       Copying a YouTube page
                     </p>
@@ -313,13 +316,22 @@
                       HTML,CSS
                     </p>
                   </div>
-                  <div class="works__link">
+                  <div class="projects__description">
+                    <p
+                      data-lang-en="Creating a page similar to a YouTube page using basic knowledge."
+                      data-lang-ua="Створення сторінки, аналогічної сторінці YouTube, використовуючи основні знання."
+                    >
+                      Creating a page similar to a YouTube page using basic
+                      knowledge.
+                    </p>
+                  </div>
+                  <div class="projects__link">
                     <a
-                      href="https://github.com/olha-zolotarchuk/web-dev-study/tree/main/exercise/01.HTML_CSS_Beginners"
+                      href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/01.HTML_CSS_Beginners/17.html"
                       target="_blank"
                     >
                       <img
-                        class="works__icon"
+                        class="projects__icon"
                         src="img/social/github-work.svg"
                         alt="github"
                         title="github"
@@ -329,43 +341,30 @@
                       target="_blank"
                     >
                       <img
-                        class="works__icon"
+                        class="projects__icon"
                         src="img/social/external-link-svgrepo-com (1).svg"
                         alt="external-link"
                         title="external-link"
                       />
                     </a>
-                  </div></div
-              ></a>
-              <a
-                href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/01.HTML_CSS_Beginners/17.html"
-                target="_blank"
-              >
+                  </div>
+                </div>
                 <img
-                  class="works__img"
+                  class="projects__img"
                   src="img/projects/2.png"
                   alt="CSS Workshop"
                   title="CSS Workshop"
                 />
-                <div class="works__description">
-                  <p
-                    data-lang-en="Creating a page similar to a YouTube page using basic knowledge."
-                    data-lang-ua="Створення сторінки, аналогічної сторінці YouTube, використовуючи основні знання."
-                  >
-                    Creating a page similar to a YouTube page using basic
-                    knowledge.
-                  </p>
-                </div>
               </a>
             </figure>
 
-            <figure class="works__cart">
+            <figure class="projects__cart">
               <a
                 href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/04.CSS%20Tutorial/CSS%20Project/index.html"
                 target="_blank"
               >
-                <div class="works__header">
-                  <div>
+                <div class="projects__header">
+                  <div class="projects__title">
                     <p
                       data-lang-en=" Restaurant website"
                       data-lang-ua="Bеб-сайт ресторану"
@@ -376,22 +375,32 @@
                       HTML, CSS
                     </p>
                   </div>
-                  <div class="works__link">
+                  <div class="projects__description">
+                    <p
+                      data-lang-en="Development of a restaurant page, with several active menu pages"
+                      data-lang-ua="Розроблення сторінки ресторану, з кількома активними сторінками меню"
+                    >
+                      Development of a restaurant page, with several active menu
+                      pages
+                    </p>
+                  </div>
+                  <div class="projects__link">
                     <a
                       href="https://github.com/olha-zolotarchuk/web-dev-study/tree/main/exercise/04.CSS%20Tutorial/CSS%20Project"
                       target="_blank"
                     >
                       <img
-                        class="works__icon"
+                        class="projects__icon"
                         src="img/social/github-work.svg"
                         alt="github"
                         title="github"
                     /></a>
                     <a
                       href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/04.CSS%20Tutorial/CSS%20Project/index.html"
+                      target="_blank"
                     >
                       <img
-                        class="works__icon"
+                        class="projects__icon"
                         src="img/social/external-link-svgrepo-com (1).svg"
                         alt="external-link"
                         title="external-link"
@@ -399,56 +408,47 @@
                     </a>
                   </div>
                 </div>
-              </a>
-              <a
-                href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/04.CSS%20Tutorial/CSS%20Project/index.html"
-                target="_blank"
-              >
                 <img
-                  class="works__img"
+                  class="projects__img"
                   src="img/projects/3.png"
                   alt="CSS/HTML Project, restaurant website"
                   title="CSS/HTML Project, restaurant website"
                 />
-                <div class="works__description">
-                  <p
-                    data-lang-en="Development of a restaurant page, with several active menu pages"
-                    data-lang-ua="Розроблення сторінки ресторану, з кількома активними сторінками меню"
-                  >
-                    Development of a restaurant page, with several active menu
-                    pages
-                  </p>
-                </div>
               </a>
             </figure>
-
-            <figure class="works__cart">
+            <figure class="projects__cart">
               <a
                 href="../practice/03.react-shop/shop/public/index.html"
                 target="_blank"
               >
-                <div class="works__header">
-                  <div>
-                    <p
-                      data-lang-en="Product shop"
-                      data-lang-ua="Iнтернет-магазин товарів"
-                    >
-                      Product shop
+                <div class="projects__header">
+                  <div class="projects__title">
+                    <p data-lang-en="To-do list" data-lang-ua="Список справ">
+                      To-do list
                     </p>
                     <p
-                      data-lang-en="React, HTML, CSS"
-                      data-lang-ua="React, HTML, CSS"
+                      data-lang-en="React, JS, HTML, CSS"
+                      data-lang-ua="React, JS, HTML, CSS"
                     >
-                      React, HTML, CSS
+                      React, JS, HTML, CSS
                     </p>
                   </div>
-                  <div class="works__link">
+                  <div class="projects__description">
+                    <p
+                      data-lang-en=" Developed a to-do list app using React.js and local storage, allowing users to add, edit, and delete tasks"
+                      data-lang-ua="Розробка додатоку зі списком справ, використовуючи React.js і локальне сховище, дозволяючи користувачам додавати, редагувати та видаляти завдання"
+                    >
+                      Developed a to-do list app using React.js and local
+                      storage, allowing users to add, edit, and delete tasks
+                    </p>
+                  </div>
+                  <div class="projects__link">
                     <a
-                      href="https://github.com/olha-zolotarchuk/web-dev-study/tree/main/practice/03.react-shop/shop"
+                      href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/03.Adaptive%20site%20layout%20HTML,CSS/index.html"
                       target="_blank"
                     >
                       <img
-                        class="works__icon"
+                        class="projects__icon"
                         src="img/social/github-work.svg"
                         alt="github"
                         title="github"
@@ -458,43 +458,156 @@
                       target="_blank"
                     >
                       <img
-                        class="works__icon"
+                        class="projects__icon"
                         src="img/social/external-link-svgrepo-com (1).svg"
                         alt="external-link"
                         title="external-link"
                       />
                     </a>
-                  </div></div
-              ></a>
+                  </div>
+                </div>
+                <img
+                  class="projects__img"
+                  src="img/projects/6.png"
+                  alt="JS,Product shop"
+                  title="JS,Product shop"
+                />
+              </a>
+            </figure>
+            <figure class="projects__cart">
               <a
                 href="../practice/03.react-shop/shop/public/index.html"
                 target="_blank"
               >
+                <div class="projects__header">
+                  <div class="projects__title">
+                    <p data-lang-en="Blog page" data-lang-ua="Сторінка блогу">
+                      Blog page
+                    </p>
+                    <p
+                      data-lang-en="React, JS, HTML, CSS"
+                      data-lang-ua="React, JS, HTML, CSS"
+                    >
+                      React, JS, HTML, CSS
+                    </p>
+                  </div>
+                  <div class="projects__description">
+                    <p
+                      data-lang-en="A app that allows users to add, edit, and delete post using the Axios"
+                      data-lang-ua="Додаток, який дозволяє користувачам додавати, редагувати та видаляти публікації за допомогою Axios"
+                    >
+                      A app that allows users to add, edit, and delete post
+                      using the Axios
+                    </p>
+                  </div>
+                  <div class="projects__link">
+                    <a
+                      href="https://github.com/olha-zolotarchuk/web-dev-study/tree/main/exercise/08.React_JS/04.react"
+                      target="_blank"
+                    >
+                      <img
+                        class="projects__icon"
+                        src="img/social/github-work.svg"
+                        alt="github"
+                        title="github"
+                    /></a>
+                    <a
+                      href="../practice/03.react-shop/shop/public/index.html"
+                      target="_blank"
+                    >
+                      <img
+                        class="projects__icon"
+                        src="img/social/external-link-svgrepo-com (1).svg"
+                        alt="external-link"
+                        title="external-link"
+                      />
+                    </a>
+                  </div>
+                </div>
                 <img
-                  class="works__img"
+                  class="projects__img"
+                  src="img/projects/7.png"
+                  alt="JS,Product shop"
+                  title="JS,Product shop"
+                />
+              </a>
+            </figure>
+          </div>
+        </section>
+        <section class="works" id="works">
+          <h1 data-lang-en="  Work   Projects" data-lang-ua="Робочі проекти">
+            Work Projects
+          </h1>
+          <div class="works_projects projects">
+            <figure class="projects__cart">
+              <a
+                href="../practice/03.react-shop/shop/public/index.html"
+                target="_blank"
+              >
+                <div class="projects__header">
+                  <div class="projects__title">
+                    <p
+                      data-lang-en="Product shop"
+                      data-lang-ua="Iнтернет-магазин товарів"
+                    >
+                      Product shop
+                    </p>
+                    <p
+                      data-lang-en="React, HTML, CSS"
+                      data
+                      -lang-ua="React, HTML, CSS"
+                    >
+                      React, HTML, CSS
+                    </p>
+                  </div>
+                  <div class="projects__description">
+                    <p
+                      data-lang-en=" Developed a product category table and product cards with price ratings and additional information using an API"
+                      data-lang-ua="Розроблення таблиці категорій товарів і картків товарів із ціновими рейтингами та додатковою інформацією за допомогою API"
+                    >
+                      Developed a product category table and product cards with
+                      price ratings and additional information using an API
+                    </p>
+                  </div>
+                  <div class="projects__link">
+                    <a
+                      href="https://github.com/olha-zolotarchuk/web-dev-study/tree/main/practice/03.react-shop/shop"
+                      target="_blank"
+                    >
+                      <img
+                        class="projects__icon"
+                        src="img/social/github-work.svg"
+                        alt="github"
+                        title="github"
+                    /></a>
+                    <a
+                      href="../practice/03.react-shop/shop/public/index.html"
+                      target="_blank"
+                    >
+                      <img
+                        class="projects__icon"
+                        src="img/social/external-link-svgrepo-com (1).svg"
+                        alt="external-link"
+                        title="external-link"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <img
+                  class="projects__img"
                   src="img/projects/4.png"
                   alt="JS,Product shop"
                   title="JS,Product shop"
                 />
-                <div class="works__description">
-                  <p
-                    data-lang-en=" Developed a product category table and product cards with price ratings and additional information using an API"
-                    data-lang-ua="Розроблення таблиці категорій товарів і картків товарів із ціновими рейтингами та додатковою інформацією за допомогою API"
-                  >
-                    Developed a product category table and product cards with
-                    price ratings and additional information using an API
-                  </p>
-                </div></a
-              >
+              </a>
             </figure>
-
-            <figure class="works__cart">
+            <figure class="projects__cart">
               <a
                 href="../practice/03.react-shop/shop/public/index.html"
                 target="_blank"
               >
-                <div class="works__header">
-                  <div>
+                <div class="projects__header">
+                  <div class="projects__title">
                     <p
                       data-lang-en="Shopping cart"
                       data-lang-ua="Кошик покупок"
@@ -508,189 +621,56 @@
                       React, JS, HTML, CSS
                     </p>
                   </div>
-                  <div class="works__link">
-                    <a
-                      href="https://github.com/olha-zolotarchuk/web-dev-study/tree/main/practice/05.react_shopping_cart"
-                      target="_blank"
+                  <div class="projects__description">
+                    <p
+                      data-lang-en=" Developed a shopping cart app allowing users to browse,
+                      add items to cart"
+                      data-lang-ua="Розробка програми кошика для покупок, яка дозволяє користувачам переглядати та додавати товари до кошика"
                     >
-                      <img
-                        class="works__icon"
-                        src="img/social/github-work.svg"
-                        alt="github"
-                        title="github"
-                    /></a>
+                      Developed a shopping cart app allowing users to browse,
+                      add items to cart
+                    </p>
+                  </div>
+                  <div class="projects__link">
                     <a
                       href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/03.Adaptive%20site%20layout%20HTML,CSS/index.html"
                       target="_blank"
                     >
                       <img
-                        class="works__icon"
+                        class="projects__icon"
+                        src="img/social/github-work.svg"
+                        alt="github"
+                        title="github"
+                    /></a>
+                    <a
+                      href="../practice/03.react-shop/shop/public/index.html"
+                      target="_blank"
+                    >
+                      <img
+                        class="projects__icon"
                         src="img/social/external-link-svgrepo-com (1).svg"
                         alt="external-link"
                         title="external-link"
                       />
                     </a>
-                  </div></div
-              ></a>
-              <a
-                href="../practice/03.react-shop/shop/public/index.html"
-                target="_blank"
-              >
+                  </div>
+                </div>
                 <img
-                  class="works__img"
+                  class="projects__img"
                   src="img/projects/5.png"
                   alt="JS,Product shop"
                   title="JS,Product shop"
                 />
-                <div class="works__description">
-                  <p
-                    data-lang-en="  Developed a shopping cart app allowing users to browse,
-                  add items to cart"
-                    data-lang-ua="Розробка програми кошика для покупок, яка дозволяє користувачам переглядати та додавати товари до кошика"
-                  >
-                    Developed a shopping cart app allowing users to browse, add
-                    items to cart
-                  </p>
-                </div></a
-              >
-            </figure>
-
-            <figure class="works__cart">
-              <a
-                href="../practice/03.react-shop/shop/public/index.html"
-                target="_blank"
-              >
-                <div class="works__header">
-                  <div>
-                    <p data-lang-en="To-do list" data-lang-ua="Список справ">
-                      To-do list
-                    </p>
-                    <p
-                      data-lang-en="React, JS, HTML, CSS"
-                      data-lang-ua="React, JS, HTML, CSS"
-                    >
-                      React, JS, HTML, CSS
-                    </p>
-                  </div>
-                  <div class="works__link">
-                    <a
-                      href="https://github.com/olha-zolotarchuk/web-dev-study/tree/main/exercise/08.React_JS/01.react"
-                      target="_blank"
-                    >
-                      <img
-                        class="works__icon"
-                        src="img/social/github-work.svg"
-                        alt="github"
-                        title="github"
-                    /></a>
-                    <a
-                      href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/03.Adaptive%20site%20layout%20HTML,CSS/index.html"
-                      target="_blank"
-                    >
-                      <img
-                        class="works__icon"
-                        src="img/social/external-link-svgrepo-com (1).svg"
-                        alt="external-link"
-                        title="external-link"
-                      />
-                    </a>
-                  </div>
-                </div>
               </a>
-              <a
-                href="../practice/03.react-shop/shop/public/index.html"
-                target="_blank"
-              >
-                <img
-                  class="works__img"
-                  src="img/projects/6.png"
-                  alt="JS,Product shop"
-                  title="JS,Product shop"
-                />
-                <div class="works__description">
-                  <p
-                    data-lang-en="  Developed a to-do list app using React.js and local storage, allowing users to add, edit, and delete tasks"
-                    data-lang-ua="Розробка додатоку зі списком справ, використовуючи React.js і локальне сховище, дозволяючи користувачам додавати, редагувати та видаляти завдання"
-                  >
-                    Developed a to-do list app using React.js and local storage,
-                    allowing users to add, edit, and delete tasks
-                  </p>
-                </div></a
-              >
-            </figure>
-
-            <figure class="works__cart">
-              <a
-                href="../practice/03.react-shop/shop/public/index.html"
-                target="_blank"
-              >
-                <div class="works__header">
-                  <div>
-                    <p data-lang-en="Blog page" data-lang-ua="Сторінка блогу">
-                      Blog page
-                    </p>
-                    <p
-                      data-lang-en="React, JS, HTML, CSS"
-                      data-lang-ua="React, JS, HTML, CSS"
-                    >
-                      React, JS, HTML, CSS
-                    </p>
-                  </div>
-                  <div class="works__link">
-                    <a
-                      href="https://github.com/olha-zolotarchuk/web-dev-study/tree/main/exercise/08.React_JS/04.react"
-                      target="_blank"
-                    >
-                      <img
-                        class="works__icon"
-                        src="img/social/github-work.svg"
-                        alt="github"
-                        title="github"
-                    /></a>
-                    <a
-                      href="https://olha-zolotarchuk.github.io/web-dev-study/exercise/03.Adaptive%20site%20layout%20HTML,CSS/index.html"
-                      target="_blank"
-                    >
-                      <img
-                        class="works__icon"
-                        src="img/social/external-link-svgrepo-com (1).svg"
-                        alt="external-link"
-                        title="external-link"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="../practice/03.react-shop/shop/public/index.html"
-                target="_blank"
-              >
-                <img
-                  class="works__img"
-                  src="img/projects/7.png"
-                  alt="JS,Product shop"
-                  title="JS,Product shop"
-                />
-                <div class="works__description">
-                  <p
-                    data-lang-en="A app that allows users to add, edit, and delete post using the Axios"
-                    data-lang-ua="Додаток, який дозволяє користувачам додавати, редагувати та видаляти публікації за допомогою Axios"
-                  >
-                    A app that allows users to add, edit, and delete post using
-                    the Axios
-                  </p>
-                </div></a
-              >
             </figure>
           </div>
         </section>
-
         <article class="about" id="about">
           <section class="about__skills">
             <h1 data-lang-en="My Skills" data-lang-ua="Професійні Навички">
               My Skills
             </h1>
-            <ul>
+            <ul class="_anim-items">
               <li
                 data-lang-en="Basic knowledge of HTML and CSS"
                 data-lang-ua="Базові знання HTML та CSS"

@@ -57,8 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // about__work
-const section = document.querySelector(".about__work");
-const listItems = section.querySelectorAll("._anim-items li");
+const aboutWorkSection = document.querySelector(".about__work");
+const aboutSkillsSection = document.querySelector(".about__skills");
+const listItemsWork = aboutWorkSection.querySelectorAll("._anim-items li");
+const listItemsSkills = aboutSkillsSection.querySelectorAll("._anim-items li");
+
 function isElementInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -69,7 +72,8 @@ function isElementInViewport(element) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
-function showListItems() {
+
+function showListItems(listItems) {
   let delay = 0;
   listItems.forEach((item) => {
     setTimeout(() => {
@@ -78,7 +82,8 @@ function showListItems() {
     delay += 200; // add 200ms delay for each item
   });
 }
-function toggleListItems() {
+
+function toggleListItems(listItems) {
   listItems.forEach((item) => {
     if (isElementInViewport(item)) {
       item.classList.add("show");
@@ -87,8 +92,17 @@ function toggleListItems() {
     }
   });
 }
-toggleListItems();
-window.addEventListener("scroll", toggleListItems);
+
+// Initially show items that are already in the viewport
+showListItems(listItemsWork);
+showListItems(listItemsSkills);
+
+// Toggle items when scrolling
+window.addEventListener("scroll", function () {
+  toggleListItems(listItemsWork);
+  toggleListItems(listItemsSkills);
+});
+
 // language buttons
 document.getElementById("en-btn").addEventListener("click", function () {
   setLanguage("en");
@@ -209,10 +223,10 @@ document.addEventListener("DOMContentLoaded", function () {
 //
 var menuElement, menuBgElement;
 window.addEventListener("load", function () {
-   menuElement = document.getElementById("menu");
-   menuBgElement = document.getElementById("menu-bg");
+  menuElement = document.getElementById("menu");
+  menuBgElement = document.getElementById("menu-bg");
   function handleScroll() {
-    if (window.scrollY > 150 ){
+    if (window.scrollY > 150) {
       // menuElement.classList.toggle("_active");
       // menuBgElement.classList.toggle("_active");
       menuElement.style.display = "block";
@@ -231,4 +245,3 @@ window.addEventListener("load", function () {
 
   window.addEventListener("scroll", handleScroll);
 });
-
