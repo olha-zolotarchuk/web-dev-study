@@ -45,37 +45,18 @@ main {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0px 35px;
 }
-@media (max-width: 2400px) {
-  .wrapper {
-    max-width: 1400px;
-  }
-}
-@media (max-width: 1200px) {
-  .wrapper {
-    max-width: 1000px;
-  }
-}
-@media (max-width: 992px) {
-  .wrapper {
-    max-width: 750px;
-  }
-}
-@media (max-width: 767px) {
-  .wrapper {
-    max-width: none;
-  }
-}
+
 
 /* ================================== */
 
 /* HEADER  */
 .header {
   padding-top: 10px;
-  padding-bottom: 110px;
+  /* padding-bottom: 100px; */
   display: flex;
   justify-content: space-between;
 }
@@ -116,7 +97,7 @@ main {
 .header__nav a {
   position: relative;
   color: var(--black);
-  font-size: clamp(0.2rem, 4vw, 2rem);
+  font-size: clamp(0.2rem, 4vw, 1.5rem);
   text-decoration: none;
   padding-bottom: 0.2em;
 }
@@ -166,7 +147,7 @@ main {
   font-size: 1.8rem;
   text-decoration: none;
   background-color: #f3cf21;
-  font-size: clamp(0.5rem, 4vw, 2rem);
+  font-size: clamp(0.5rem, 4vw, 1.5rem);
   border-radius: 30%;
   padding: 10px 15px;
   color: #005246;
@@ -286,9 +267,8 @@ main {
 }
 
 .home__name p {
-  font-size: 2.5vw;
+  font-size: 2vw;
   margin: 1rem 0;
-  line-height: 1.5;
   text-align: end;
 }
 @media (max-width: 991.98px) {
@@ -437,8 +417,8 @@ main {
 }
 
 .text-box {
-  font-size: 2rem;
-  line-height: 1.5;
+  font-size: 1.5rem;
+
   margin: 10px;
 }
 @media (max-width: 991.98px) {
@@ -689,8 +669,7 @@ main {
 .about {
   padding-top: 110px;
   padding-bottom: 110px;
-  font-size: 2rem;
-  line-height: 1.5;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -864,7 +843,6 @@ main {
   color: #000000;
   cursor: pointer;
   font-size: 2rem;
-  line-height: 1.5;
 }
 
 .contact__write {
