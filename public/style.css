@@ -50,7 +50,6 @@ main {
   padding: 0px 35px;
 }
 
-
 /* ================================== */
 
 /* HEADER  */
@@ -830,10 +829,10 @@ main {
 .contact__page p {
   text-decoration: underline;
   text-decoration-color: #f3cf21;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 .contact {
-  gap: 80px;
+  gap: 50px;
   display: flex;
   justify-content: space-around;
 }
@@ -842,7 +841,6 @@ main {
   text-decoration: none;
   color: #000000;
   cursor: pointer;
-  font-size: 2rem;
 }
 
 .contact__write {
@@ -890,13 +888,6 @@ main {
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  .contact__write p {
-    display: flex;
-    justify-content: center;
-  }
-}
-
 @media (max-width: 992px) {
   .contact__page {
     gap: 10px;
@@ -907,21 +898,11 @@ main {
     flex-wrap: wrap;
     gap: 15px;
   }
-
-  .contact a {
-    font-size: 1.5rem;
-  }
   .contact__write {
     gap: 5px;
   }
-  .contact p {
-    font-size: 2.5rem;
-  }
   .contact__work {
     gap: 5px;
-  }
-  .contact__work a {
-    /* gap: 5px; */
   }
   .contact__social {
     gap: 5px;
@@ -929,18 +910,22 @@ main {
 }
 
 @media (max-width: 767.98px) {
-  .contact a {
-    font-size: 1rem;
-  }
-  .contact p {
-    font-size: 2rem;
-  }
   .contact__page img {
     width: 20px;
     height: 20px;
     border-radius: 5px;
   }
 }
+@media (max-width: 497px) {
+  .contact__write p {
+    display: flex;
+    justify-content: center;
+  }
+  .contact__centered {
+    justify-content: center;
+  }
+}
+
 /* =========================menu======================== */
 #menu {
   z-index: 2;
