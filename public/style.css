@@ -849,11 +849,11 @@ main {
   gap: 20px;
 }
 
-.contact__centered {
+/* .contact__centered {
   display: flex;
   align-items: center;
   gap: 20px;
-}
+} */
 
 .contact__work {
   display: flex;
